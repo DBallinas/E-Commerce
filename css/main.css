@@ -1,5 +1,5 @@
 * {
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
 	text-align: center;
@@ -19,7 +19,6 @@ h3 {
 
 .descripcion {
 	line-height: 150%;
-	font-family: Cardo;
 }
 
 #cabezera {
@@ -114,8 +113,6 @@ h3 {
 }
 
 .btn:hover {
-	background: #66d701;
-	color: #fff;
 	letter-spacing: .1rem;
 }
 

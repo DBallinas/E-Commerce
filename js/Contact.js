@@ -1,6 +1,6 @@
 let txtNombre=document.getElementById("Name");
-let Number=document.getElementById("phoneNumber");
-let Email=document.getElementById("Email");
+let Phone=document.getElementById("Phone");
+let Correo=document.getElementById("Email");
 let txtAsunto=document.getElementById("Asunto")
 let txtMessage=document.getElementById("Message");
 
@@ -18,22 +18,22 @@ function validarNombre()
 
 }
 
-function ValidarNumber()
+function ValidarPhone()
 {
-    if(Number.value.length==0)
+    if(Phone.value.length==0)
     {
         return false;
     }
-    if(isNaN(Number.value))
+    if(isNaN(Phone.value))
     {
         return false;
     }
     return true;
 }
 
-function ValidarEmail()
+function ValidarCorreo()
 {
-    if(Email.value.length==0)
+    if(Correo.value.length==0)
     {
         return false;
     }
@@ -59,12 +59,11 @@ function ValidarMessage()
 }
 
 let Enviar=document.getElementById("enviar-contacto");
-
 Enviar.addEventListener("click", (event)=>
 {
     event.preventDefault();
 
-    if((!validarNombre())||(!ValidarNumber())||(!ValidarEmail())||(!ValidarAsunto())||(!ValidarMessage()))
+    if((!validarNombre())||(!ValidarPhone())||(!ValidarCorreo())||(!ValidarAsunto())||(!ValidarMessage()))
     {
         let lista="";
         if(!validarNombre())
@@ -73,17 +72,17 @@ Enviar.addEventListener("click", (event)=>
             lista+="<li>Se debe escribir un Nombre válido</li>"
         }else {txtNombre.style.border="";}
 
-        if(!ValidarNumber())
+        if(!ValidarPhone())
         {
-            Number.style.border="red thin solid"
+            Phone.style.border="red thin solid"
             lista+="<li>Se debe escribir un Número válido</li>"
-        }else{Number.style.border="";}
+        }else{Phone.style.border="";}
 
-        if(!ValidarEmail())
+        if(!ValidarCorreo())
         {
-            Email.style.border="red thin solid"
-            lista+="<li>Se debe escribir un Email válido</li>"
-        }else{Email.style.border="";}
+            Correo.style.border="red thin solid"
+            lista+="<li>Se debe escribir un Correo válido</li>"
+        }else{Correo.style.border="";}
 
         if(!ValidarAsunto())
         {
@@ -109,37 +108,30 @@ Enviar.addEventListener("click", (event)=>
 
         return false;
     }
-
-    txtNombre.style.border="";
-    Number.style.border="";
-    Email.style.border="";
-    txtAsunto.style.border="";
-    txtMessage.style.border="";
-
+    
     document.getElementById("alertValidacion").style.display="none";
+
+    Email.send({
+		SecureToken : "053c6fa8-4bbc-4eef-ae27-f2a13492ec41",
+    	To : "gsport.eq4.ch13@gmail.com",
+    	From : Correo,
+    	Subject : Asunto,
+    	Body : txtMessage+"<br/>"+txtNombre+"<br/>"+Phone
+		}).then(message => alert("Gracias por contactarnos.")
+		);
     
-    
-    
-    function sendEmail()
-    {
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "Equipo4",
-            Password : "Parangaricutirimicuaro13",
-            To : Email.value,
-            From : "gsport.eq4.ch13@gmail.com",
-            Subject : txtAsunto.value,
-            Body : txtMessage.value
-        }).then(
-          message => alert(message)
-        );
-    }
     txtNombre.value="";
-    Number.value="";
-    Email.value="";
+    Phone.value="";
+    Correo.value="";
     txtAsunto.value="";
     txtMessage.value="";
-    
+
+    txtNombre.style.border="";
+    Phone.style.border="";
+    txtAsunto.style.border="";
+    Correo.style.border="";
+    txtAsunto.style.border="";
+    txtMessage.style.border="";
 }
 ); //Enviar
 
@@ -148,11 +140,11 @@ txtNombre.addEventListener("blur", (event)=>
     event.target.value=event.target.value.trim();
 });
 
-Number.addEventListener("blur", (event)=>{
+Phone.addEventListener("blur", (event)=>{
     event.target.value=event.target.value.trim();
 });
 
-Email.addEventListener("blur", (event)=>{
+Correo.addEventListener("blur", (event)=>{
     event.target.value=event.target.value.trim();
 });
 

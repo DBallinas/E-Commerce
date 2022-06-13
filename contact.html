@@ -68,27 +68,28 @@
 
     <form style="width: 50%; margin-left: 25%;">
       <div class="form-group">
-          <label>Nombre completo:</label>
+          <label for="">Nombre completo:</label>
           <input type="text" class="form-control" placeholder="Nombre" id="Name">
         </div>
         <div class="form-group">
-          <label>Teléfono:</label>
-          <input type="tel" class="form-control" placeholder="Teléfono" id="phoneNumber">
+          <label for="">Teléfono:</label>
+          <input type="tel" class="form-control" placeholder="Teléfono" id="Phone">
         </div>
       <div class="form-group">
-        <label>Correo electrónico:</label>
+        <label for="">Correo electrónico:</label>
         <input type="email" class="form-control" placeholder="Escribe tu correo" id="Email">
       </div>
       <div class="form-group">
-          <label>Asunto:</label>
+          <label for="">Asunto:</label>
           <input type="text" class="form-control" placeholder="Asunto" id="Asunto">
-        </div>
+        </div><br/>
+
       <div class="form-group">
-        <label>Mensaje:</label>
+        <label for="">Mensaje:</label>
         <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje" id="Message"></textarea>
       </div>
       <div class="d-flex justify-content-center " style="margin: 30px">
-      </br><button type="submit" class="btn" id="enviar-contacto">Enviar</button></br>
+      </br><button  type="submit" class="btn" id="enviar-contacto">Enviar</button></br>
       </div>
     </form>
 
@@ -132,6 +133,9 @@
 </footer>
 <!--Final Pie de pagina-->
 
+<script src="js/Contact.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 <!--Integracion bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

@@ -113,3 +113,12 @@ h3 {
     text-align: justify;
     margin: 6rem;
 }
+
+.reembolso{
+    text-align: justify;
+    margin: 6rem;
+}
+
+.reembolso .center{
+    text-align: center;
+}

@@ -11,7 +11,10 @@ h2 {
 h3 {
 	text-align: center;
 }
+<<<<<<< HEAD
 h6{text-align: right;}
+=======
+>>>>>>> 14aceba53bb626117f3b979b2a21ab4e5cacd55d
 
 .nav-menu {
 	font-size: 22px;
@@ -73,6 +76,7 @@ h6{text-align: right;}
 /*Aquí empieza el diseño de la página de Inicio*/
 .home {
 	padding: 0px;
+<<<<<<< HEAD
 }
 
 .home .home-slider .box {
@@ -116,3 +120,69 @@ h6{text-align: right;}
 .btn:hover {
 	letter-spacing: .1rem;
 }
+=======
+}
+
+.home .home-slider .box {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+.home .home-slider .box .content {
+	text-align: center;
+	max-width: 70rem;
+}
+
+.home .home-slider .box .content h2 {
+	font-size: 5rem;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.home .home-slider .box .content p {
+	font-size: 1.7rem;
+	color: #eee;
+	padding: 1rem 0;
+}
+
+.btn {
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .8rem 3rem;
+	background: #ffff;
+	font-weight: 500;
+	cursor: pointer;
+	color: #66d701;
+	font-size: 1.7rem;
+}
+
+.btn:hover {
+	letter-spacing: .1rem;
+}
+
+<<<<<<< HEAD
+.terminos {
+	text-align: justify;
+	margin: 6rem;
+}
+=======
+.terminos{
+    text-align: justify;
+    margin: 6rem;
+}
+
+.reembolso{
+    text-align: justify;
+    margin: 6rem;
+}
+
+.reembolso .center{
+    text-align: center;
+}
+>>>>>>> francisco
+>>>>>>> 14aceba53bb626117f3b979b2a21ab4e5cacd55d

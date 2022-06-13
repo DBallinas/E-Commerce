@@ -116,7 +116,23 @@ h3 {
 	letter-spacing: .1rem;
 }
 
+<<<<<<< HEAD
 .terminos {
 	text-align: justify;
 	margin: 6rem;
 }
+=======
+.terminos{
+    text-align: justify;
+    margin: 6rem;
+}
+
+.reembolso{
+    text-align: justify;
+    margin: 6rem;
+}
+
+.reembolso .center{
+    text-align: center;
+}
+>>>>>>> francisco

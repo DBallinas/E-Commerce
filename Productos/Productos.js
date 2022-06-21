@@ -1,60 +1,116 @@
 function addItem(item){
-    const itemHTML =     `<div class="col-md-4">
-    <div class="card mb-4 box-shadow">
-      <img class="card-img-top" src="${item.img}" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" style="height: 225px; width: 100%; display: block;"  data-holder-rendered="true">
+
+    const itemHTML =     `  <div class="col">
+    <div class="card h-100">
+     
+      <img src="${item.img1}" class="card-img-top" alt="..." width="100px" height="250px" >
+      <img src="${item.img2}" class="card-img-top" alt="..." width="100px" height="250px" >
+      <img src="${item.img3}" class="card-img-top" alt="..." width="100px" height="250px" >
+      
       <div class="card-body">
-      <h5 class="card-title">${item.name}</h5>
+        <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.description}</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Agrgar al Carrito</button>
-          </div><br/>
-          <small class="text-muted">9 mins</small>
-        </div>
+       </div>
+        <div class="card-footer">
+           <div class="d-flex justify-content-between align-items-center">
+           <div class="btn-group">
+             <button type="button" class="btn btn-sm btn-outline-secondary">Agregar al carrito</button>
+           </div>
+           <small class="text-muted">$${item.precio}</small>
+         </div>
+       
       </div>
     </div>
-  </div>`
-    
+   </div>
+`
+
+
+
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }
 
-addItem({'name':'Tenis adidas Ultimashow Hombre Fx3624',
-    'img':'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/eb8c0bf24c6649519afcab4a009f4e10_9366/Tenis_Ultimashow_Negro_FX3624_01_standard.jpg',
-    'description':'Tenis de running para velocidad y estabilidad. Aíslate de las distracciones. Cuando te exiges al máximo solo piensas en tus movimientos y tu respiración. Nada más. Todo lo trivial desaparece. Muévete rápido.  Muévete despacio. Lo importante es moverte. Toma el control con estos tenis de running adidas. Su diseño liviano con amortiguación está listo para acompañarte en tu próxima salida.'});
+addItem({'name':'Polainas Wilson 4lbs Unisex',
+    'img1':'http://drive.google.com/uc?export=view&id=1k1HGhKaj_UyEg301AF0qwG7I9SQwFwrw',
+    'img2':'http://drive.google.com/uc?export=view&id=1rdT09m9EKex0HPvMjnWYRJdc5jT8PNA0',
+    'img3':'http://drive.google.com/uc?export=view&id=1cOic-_-Cu02DawVFREE9IHd-Djwqnifx',
+    'description':'Las Polainas Wilson tienen el peso extra para seguir fortaleciendo tus piernas y justo en los momentos de mayor intensidad. Cuenta con un diseño espectacular para amoldarse encima de los tobillos con comodidad. Guarda el equilibrio en la postura del avión para trabajar la fuerza en tus piernas al elevarlas, se sujetan de manera perfecta por un sistema de velcro para hacer los movimientos de mayor agilidad en tus prácticas deportivas.',
+    'precio':'459.00'});
     
-addItem({'name':'Tenis De Running Para Hombre Nike Revolution 6 Next Nature',
-    'img':'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7df57edf-bdc6-4320-a956-8ce37228cd1d/calzado-de-running-en-carretera-revolution-6-next-nature-w6NVbd.png',
-    'description':'Por nuevos comienzos.Marca el ritmo al comienzo de tu experiencia de running con la sensación de suavidad del Nike Revolution 6 Next Nature.Sabemos que la comodidad es la clave de una carrera exitosa, así que nos aseguramos de que tus pasos sean amortiguados y flexibles para brindar una pisada suave.Es una evolución de un favorito, con un diseño transpirable confeccionado con al menos un 20% de contenido reciclado por peso. Diseño simple: La malla acolchada se coloca en el antepié y a lo largo del cuello para brindar una sensación de comodidad.Las pieles adicionales aportan mayor durabilidad. Más flexibilidad La entresuela de espuma aporta una pisada más suave que la del Revolution 5.La suela cuenta con un diseño generado por computadora que crea un efecto de pistón natural mientras corres, lo que proporciona más amortiguación y flexibilidad.'});
+addItem({'name':'Ligas Larga de Tensión Wilson',
+    'img1':'http://drive.google.com/uc?export=view&id=1T_TB0qYH9hEf5S5QaQHEE6dwdwO1C1jt',
+    'img2':'http://drive.google.com/uc?export=view&id=1x0AAA3PFBOw-RyOqZjXGxF45_i0-4X9Y',
+    'img3':'http://drive.google.com/uc?export=view&id=1HNpib-2FesLNWkjtGWe3x1RIpbc9WfyM',
+    'description':`Liga de resistencia para tonificación de músculos ampliamente recomendadas en ejercicio cardiovascular para desarrollar fuerza y velocidad. 
+    <ul>
+    <li>Tensión Media (Azul)</li>
+    <li>Tensión Fuerte (Verde)</li>
+    <li>Tensión Extra Fuerte (Gris)</li>
+  </ul>`,
+    'precio':'235.00'});
 
-addItem({'name':'Tenis De Cancha Dura Para Hombre Nikecourt Zoom Lite 3',
-    'img':'https://http2.mlstatic.com/D_NQ_NP_639465-MLM48658946781_122021-O.webp',
-    'description':'Ofrece el rendimiento que necesitas para jugar como nunca con la unidad Zoom Air elástica en el antepié, la suela con agarre y el cuello acolchado e increíblemente cómodo.'})
+addItem({'name':'Xiaomi Mi Watch Negro',
+    'img1':'http://drive.google.com/uc?export=view&id=1A8F9dKmyTOjA-Un4juhaJaqTzCSYS8IO',
+    'img2':'http://drive.google.com/uc?export=view&id=1YaAgm7hqKXMwW3u0wU-zj1cY8fx13s90',
+    'img3':'http://drive.google.com/uc?export=view&id=1YbeP93PR42T64rTQJly3oMLrb-5-z-Tt',
+    'description':`<ul>
+    <li>Pantalla: 1.39 Pulgadas</li>
+    <li>Compatibilidad: Android 4.4 e IOS 10 o superior</li>
+    <li>GPS autónomo incorporado</li>
+    <li>Sensores: Acelerómetro de 3 ejes + Giroscopio de 3 ejes Sensor geomagnético Sensor de presión de aire Sensor de luz ambiental</li>
+    <li>Batería: 230 mAh </li>
+  </ul>`,
+    'precio':'2800'});
 
-addItem({'name':'Tenis Para Mujer Nike Tanjun',
-    'img':'https://http2.mlstatic.com/D_NQ_NP_2X_955525-MLM48743059727_012022-F.webp',
-    'description':'Ligereza.Ventilación.Cómodidad.Son solo palabras.Este calzado es todo lo que necesitas.'})
+addItem({'name':'Muñequeras Nike 2.5 lbs Unisex',
+    'img1':'http://drive.google.com/uc?export=view&id=14pxmSrRbnWMrR-stiZMb_3xgrbMg-UJQ',
+    'img2':'http://drive.google.com/uc?export=view&id=1VriMvmcSa8Ey4D76Drwndk70UzFPpMdm',
+    'img3':'http://drive.google.com/uc?export=view&id=1G56LxfX6fbd7BnqcKhDs5Y-VM5-tvBLj',
+    'description':'Las Muñequeras Nike 2.5 lbs incrementan la carga cuando quieres realizar ejercicios en los musculos superiores del cuerpo, te ayuda con los ejercicios press en hombros y espalda, son perfectas para empezar a entrenar con un peso extra en tus manos, brazos.',
+    'precio':'989'})
 
-addItem({'name':'Tenis Reebok Casual Rider V Negro',
-    'img':'https://assets.reebok.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4ab1a8d97f804d0ebd7aaddc01517810_9366/Tenis_Rider_V_Negro_GZ3112_01_standard.jpg',
-    'description':'Desde el amanecer hasta el crepúsculo, mantén tu look impecable con estos tenis Reebok Rider V. Inspirado en el rango de running de los 90 y 2000, este par te ofrece comodidad y un diseño futurista. '});
-   
-    addItem({'name':'Yes4All Mancuernas Ajustables de 102, 50, 52,5, de 60 A 47,63 kg',
-    'img':'https://m.media-amazon.com/images/I/81CIL-7+n3L._AC_SX569_.jpg',
-    'description':'Juego de 2 mancuernas – 50 libras en total: dos asas de 14 x 1 pulgada, cuatro platos de 3 libras, cuatro platos de 7 libras, cuatro collares'});
+addItem({'name':'Diadema deportiva',
+    'img1':'http://drive.google.com/uc?export=view&id=1XPqZW0lsEY4RAlMwHs4NjkLlzA1mc4ze',
+    'img2':'http://drive.google.com/uc?export=view&id=10tAb_Kjy66zUnOKCn_QBIN-dlqDTo8b6',
+    'img3':'http://drive.google.com/uc?export=view&id=1Wg-XZHSFCfcF9jTAbrySj_E1I9Mxkm-H',
+    'description':'Absorción de Sudor: Esta diadema deportiva absorbe y evapora el sudor más rápido que las diademas de algodón ordinarias, es un buen "asistente" durante el ejercico!. Tiene dos tiras antideslizantes de silicona incorporados para evitar que la diadema se deslice durante el ejercicio intenso, puede prevenir eficazmente que el sudor fluya hacia los ojos.',
+    'precio':'189'});
 
-    addItem({'name':'PASYOU Banco de pesas ajustable de cuerpo completo, multiusos, plegable, inclinable, para ejercicios de declinación, para gimnasio en casa',
-    'img':'https://m.media-amazon.com/images/I/614Gi5ffPbL._AC_SX569_.jpg',
-    'description':'Diseño totalmente ajustable: diseñado con 7 posiciones de espalda para satisfacer todas tus necesidades al hacer entrenamientos, puedes realizar una serie de ejercicios de parte superior e inferior del cuerpo mientras incorporas el uso de mancuernas para alcanzar objetivos y construir y mantener los músculos.'});
+addItem({'name':'Top Nike Swoosh',
+    'img1':'http://drive.google.com/uc?export=view&id=1wCdgjHBjN2X6qWlVN7UEbfkEMZu9xrCt',
+    'img2':'http://drive.google.com/uc?export=view&id=1JhZHTh3BgBzzLmHPt-EEXfIw6_UN6P5Z',
+    'img3':'http://drive.google.com/uc?export=view&id=1sEetZNiRMu1j3uF0TDg2RaTBqyisfppv',
+    'description':'El Top Nike Swoosh tiene prácticamente lo que necesitas para llevar al gimnasio, lo puedes combinar de manera increíble con tus prendas de torso inferior como shorts, leggings, pantalones y capris. Tiene la comodidad para desempeñar tus entrenamientos de la parte superior con total ligereza para tu abdomen, bíceps, tríceps y espalda.',
+    'precio':'649'});
 
-    addItem({'name':'E-G Rueda de Ejercicio Para Abdominales Rueda de Ejercicio Abdominal Redonda Abdomen Wheel Soporte Rodilla para el Entrenamiento de la Fuerza Central del Cuerpo',
-    'img':'https://m.media-amazon.com/images/I/41fMR72XC6L._AC_.jpg',
-    'description':' Rueda de ejercicio para abdominales Con esta Rueda de ejercicio para abdominales obtendrás un entrenamiento completo'});
+    addItem({'name':'Mancuerna Lift 4 kg',
+    'img1':'http://drive.google.com/uc?export=view&id=1GDmkgMOM79UWOAszQSEgtS2pmJ9tOZHp',
+    'img2':'http://drive.google.com/uc?export=view&id=1zW7FJau4DoX8vcjSA8Z1uAf9LUfCMP_i',
+    'img3':'http://drive.google.com/uc?export=view&id=1naYt_2giIUzf2RcbBrPZSO3Q38LXoSEt',
+    'description':'La Mancuerna Lift Acero 4 kg no puede faltar en tu equipo de entrenamiento en los días de fortalecimiento de cualquier músculo. No dejes de prepararte a pesar de las adversidades, mantente activo con sencillas rutinas de ejercicio desde la comodidad y agregando un peso extra a tus rutinas. Tiene una agarradera metálica con un patrón grabado para mejorar la sujeción al momento de entrenar con ella. ',
+    'precio':'400'});
 
-    addItem({'name':'VitalBotanics Pre Workout. Potencia tu Rutina y Entrenamiento en el Gym con L Carnitina + Cafeína + Guarana + Te verde + Cayena. 200 capsulas [6 meses]. Suplemento Multivitamínico para Deportistas Pre Entreno',
-    'img':'https://blife.mx/wp-content/uploads/2020/01/Ashwagandha-Dia-del-Padre-30-Off.png.webp',
-    'description':'¡Lleva tu rutina de entrenamiento al máximo con Pre Workout de VitalBotanics! Nuestro suplemento de pre entreno con ingredientes como l carnitina, guarana y cafeina aportara multiples beneficios a tu organismo a la hora de realizar actividad física, tales como proteger el sistema muscular, mejorar la eficacia del uso de oxígeno, acelerar el metabolismo y ayudar a reducir los niveles de azúcares y grasas en sangre'});
+    addItem({'name':'Muñequera deportiva Nike unisex',
+    'img1':'http://drive.google.com/uc?export=view&id=1l-9Gw8WsOW0b30uw_qhynTRS5ofk8C3U',
+    'img2':'http://drive.google.com/uc?export=view&id=1vAS49k9uTR9Jy-QOnyS-Z3kFcw2A3w9Q',
+    'img3':'http://drive.google.com/uc?export=view&id=1X7kKfd10Gb7PzCrUOzgy1LSN_i_rcjd8',
+    'description':'Utiliza la muñequera Nike como complemento de tus entrenamientos, ya que cuenta con el diseño básico de la pieza y su versátil tonalidad, será la opción ideal para tus looks. La muñequera Nike posee un diseño moderno, además de ciertos detalles que la distinguen como logotipo de la marca y ajuste perfecto a la muñeca por su maravillosa confección.',
+    'precio':'519'});
 
-addItem({'name':'Svelfik Set de Pesas Mancuernas Hexagonales de 10 Libras Recubrimiento de Caucho Alta Calidad Ideal Ejercicio Gym En Casa',
-    'img':'https://m.media-amazon.com/images/I/51n7MuxA0fL._AC_SX569_.jpg',
-    'description':'Perfectas para entrenamiento de resistencia'});
+    addItem({'name':'Balón de Fútbol Americano Wilson NFL Duke',
+    'img1':'http://drive.google.com/uc?export=view&id=1p3cHnrcGyk7BtPzhXH6xcGKokhA3EKto',
+    'img2':'http://drive.google.com/uc?export=view&id=1pq9zpEPe-lIsFbCJeY0y9Rdm96AiSKi-',
+    'img3':'http://drive.google.com/uc?export=view&id=1raKZ8vTi6Gj-ppo7LLVE6Yl83C5-iwYb',
+    'description':'Regresa The Duke al emparrillado. De 1941 a 1969 se le conoció al balón oficial de la NFL como The Duke gracias al antiguo dueño de los Gigantes de Nueva York, Wellington Mara. Consigue este tradicional balón Wilson, el oficial para la NFL. Histórico desde los inicios originales de la Liga de la NFL. Confeccionado a base de piel de ganado porcino y con el tamaño y la dimensión reglamentaria de la NFL para que juegues como los profesionales.',
+    'precio':'3300'});
+
+    addItem({'name':'Balón de Básquetbol Wilson NBA Forge Plus',
+    'img1':'http://drive.google.com/uc?export=view&id=1FWK0asbBqULNSU9eH3i2Yw9nRvyjQQuk',
+    'img2':'http://drive.google.com/uc?export=view&id=1n5wHTFTnPTeHnuQZUn9E8_xYLmukrxwx',
+    'img3':'http://drive.google.com/uc?export=view&id=1ZuAT1OXZzpKgVBexeNNRD7rUvk30EwJB',
+    'description':'Dalo todo por el todo en cada una de tus prácticas y partido con el Balón de Básquetbol Wilson NBA Forge Plus Unisex. Estupendo también para jugar con tus amigos y/o familia. Este material y cubierta ayudarán a que tengas un mejor agarre con tus manos y que el balón tenga una máxima durabilidad al nivel profesional.',
+    'precio':'900'});
+
+
+
+      

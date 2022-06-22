@@ -20,6 +20,7 @@ function validarNombre()
 
 function ValidarPhone()
 {
+    
     if(Phone.value.length==0)
     {
         return false;
@@ -28,16 +29,25 @@ function ValidarPhone()
     {
         return false;
     }
+    if(Phone.value.length<10 || Phone.value.length>10)
+    {
+        return false;
+    }
     return true;
 }
 
 function ValidarCorreo()
 {
-    if(Correo.value.length==0)
+    
+    if(/^[a-zA-Z_0-9._%+-]+@(?:[a-zA-Z_0-9.-]+\.)[a-zA-Z]{2,6}/.test(Correo.value))
     {
-        return false;
+        return true;
     }
-    return true;
+    // if(Correo.value.length==0)
+    // {
+    //     return false;
+    // }
+    else return false;
 }
 
 function ValidarAsunto()

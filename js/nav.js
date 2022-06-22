@@ -11,7 +11,7 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mt-4 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
               </li>
@@ -50,10 +50,11 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                 </ul>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
-              <button class="btn btn-outline-success  border-white text-white" type="submit">Buscar</button>
-            </form>
+            <form class="d-flex mt-2 mb-5">
+              <input class="form-control me-2 mt-5 mb-0" type="search" placeholder="Buscar productos" aria-label="Search">
+              <button class="btn btn-outline-success border-white text-white mb-0 mt-5" type="submit">Buscar</button>
+              <i class="bi bi-cart2 mt-5 mb-0 ms-5 text-white h2"></i>
+              </form>
           </div>
         </div>
       </nav>

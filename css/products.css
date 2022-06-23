@@ -1,0 +1,18 @@
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.product{
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.product-title{
+    text-align: center;
+}
+
+.product-price{
+    color: brown;
+}

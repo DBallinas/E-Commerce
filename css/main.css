@@ -8,6 +8,7 @@ h2 {
 	padding: 20px;
 	text-align: center;
 }
+
 h3 {
 	text-align: center;
 }
@@ -49,57 +50,11 @@ h6{text-align: right;}
 	font-style: italic;
 }
 
-.footer {
-	background-image: linear-gradient(to right, #3262a8, #38b6ff 55%);
-	padding: 0.5%;
-	color: white;
-}
+
 
 #enviar-contacto {
 	color: white;
 	background-color: #66d701;
-}
-.footer__copyright a {
-	outline: none;
-	text-decoration: none;
-	color: white;
-	transition: all 0.5s;
-}
-.footer__copyright a:hover {
-	color: white;
-	font-size: 30px;
-}
-/*Aquí empieza el diseño de la página de Inicio*/
-.home {
-	padding: 0px;
-
-}
-
-.home .home-slider .box {
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 2rem;
-	background-size: cover !important;
-	background-position: center !important;
-}
-
-.home .home-slider .box .content {
-	text-align: center;
-	max-width: 70rem;
-}
-
-.home .home-slider .box .content h2 {
-	font-size: 5rem;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.home .home-slider .box .content p {
-	font-size: 1.7rem;
-	color: #eee;
-	padding: 1rem 0;
 }
 
 .btn {
@@ -117,32 +72,6 @@ h6{text-align: right;}
 	letter-spacing: .1rem;
 }
 
-.home .home-slider .box {
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 2rem;
-	background-size: cover !important;
-	background-position: center !important;
-}
-
-.home .home-slider .box .content {
-	text-align: center;
-	max-width: 70rem;
-}
-
-.home .home-slider .box .content h2 {
-	font-size: 5rem;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.home .home-slider .box .content p {
-	font-size: 1.7rem;
-	color: #eee;
-	padding: 1rem 0;
-}
 
 .btn {
 	margin-top: 1rem;
@@ -168,7 +97,98 @@ h6{text-align: right;}
     text-align: justify;
     margin: 6rem;
 }
+/*Diseño Slider*/
+.carousel-caption {
+	bottom: 250px!important;
+}
+
+.carousel-item { /*Imagenes del slider tamaño*/
+	height: 100vh;
+	min-height: 150px;
+}
+
+.carousel-caption h5 {/*Texto del Slider*/
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+
+.carousel-caption a {/*Botón Tienda*/
+	text-decoration: none;
+	background: #66d701;
+	padding: 10px 30px;
+	color: #000;
+	margin-top: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+	.carousel-caption {
+		bottom: 165px;
+	}
+	.carousel-caption h5 {
+		font-size: 17px;
+	}
+	.carousel-caption a {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+}
+/*Fin*/
 
 .reembolso .center{
     text-align: center;
 }
+
+/*Diseño footer*/
+
+.footer {/*Diseño del footer*/
+	background-image: linear-gradient(to right, #3262a8, #38b6ff 55%);
+	padding: 0.5%;
+	color: white;
+	width: 100%;
+}
+footer a{/*Diseño a los links*/
+	outline: none;
+	text-decoration: none;
+	color: white;
+	transition: all 0.5s;
+}
+footer a:hover{/*Diseño al poner el cursor sobre el link*/
+	color: white;
+}
+
+.footer .footer-contenido{/*Columnas del footer*/
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 50px;
+	padding: 45px 0px;
+}
+
+.footer .row{/*Espacio de margin en las redes sociales del footer*/
+	margin-top: 20px;
+}
+
+
+/*Responsive footer*/
+@media screen and (max-width: 800px){ /*Desde 800px comienza el responsive*/
+	.footer .footer-contenido{
+		width: 90%;/*Ajustamos el contenido ya que en 100, el contenido queda muy pegado al borde*/
+		grid-template-columns: repeat(1, 1fr);/*Reducimos las columnas*/
+		grid-gap: 30px; /*Se disminuye el margen de cada columna*/
+		padding: 35px 0px; /*Se reduce el relleno del contenedor a 30px*/
+	}
+	.main-title-products{
+		font-size: 10px;
+	}
+	
+}
+@media screen and (max-width: 1400px){/*Se ajusta la imagen de pago desde los 1400px hacia abajo a un width de 100%*/
+	.img-pago{
+		max-width: 100%;
+	}
+}
+/*Fin*/

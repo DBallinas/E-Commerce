@@ -3,7 +3,8 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
         super(); //llama al super de la clase HTMLElement
     }
     connectedCallback(){ //Creación del método connectedcallback, trae el html contenido en el inner
-        this.innerHTML = `<nav class="navbar navbar-expand-lg navbar-dark nav-menu" style="background-color: #50CCFF;">
+        this.innerHTML = 
+      `<nav class="navbar navbar-expand-lg navbar-dark nav-menu" style="background-color: #50CCFF;">
         <div class="container-fluid">
           <a class="navbar-brand" href="./index.html"><img src="./img/G-SPORTS-LOGO.png" width="200px" alt="logo-gsports"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

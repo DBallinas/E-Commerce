@@ -81,10 +81,10 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
                   <img src="./img/metodos-pago.png" class="img-pago" width="180%px">
                 </div>
             </div>   
+            <img src="./img/G-SPORTS-LOGO.png" width="100px">
+          <p>© 2022 G-sports. Todos los Derechos Reservados.</p>
           </div>
         </div>
-        <img src="./img/G-SPORTS-LOGO.png" width="100px">
-        <p>© 2022 G-sports. Todos los Derechos Reservados.</p>
       </footer>`;
     }
 }

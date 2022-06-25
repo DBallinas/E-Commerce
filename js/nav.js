@@ -48,13 +48,15 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                   <li><a class="dropdown-item" href="../../about-us.html">Nosotros</a></li>
                   <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
                   <li><a class="dropdown-item" href="../../preguntasfrecuentes.html">Preguntas frecuentes</a></li>
-                </ul>
+                  <li><a class="dropdown-item" href="../REGISTROUSUARIOS/RegistroUsuarios.html">Registrate</a></li>
+                  </ul>
               </li>
             </ul>
-            <form class="d-flex mt-2 mb-5">
-              <input class="form-control me-2 mt-5 mb-0" type="search" placeholder="Buscar productos" aria-label="Search">
-              <button class="btn btn-outline-success border-white text-white mb-0 mt-5" type="submit">Buscar</button>
-              <i class="bi bi-cart2 mt-5 mb-0 ms-5 text-white h2"></i>
+            <form class="d-flex align-items-center mt-4 mb-5">
+              <input class="form-control form-control-sm me-2 mt-5 mb-0" type="search" placeholder="Buscar productos" aria-label="Search">
+              <i id="btn1" class="bi bi-search mt-5 mb-0 ms-1 text-white"></i>
+              <i id="btn2" class="bi bi-person mt-5 mb-0 ms-5 text-white"></i>
+              <i id="btn3" class="bi bi-cart2 mt-5 mb-0 ms-3 text-white"></i>
               </form>
           </div>
         </div>

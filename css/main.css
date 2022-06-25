@@ -77,6 +77,18 @@ h6 {
 	letter-spacing: .1rem;
 }
 
+#btn1 {
+	font-size: 26px;
+}
+
+#btn2 {
+	font-size: 34px;
+}
+
+#btn3 {
+	font-size: 29px;
+}
+
 .btn {
 	margin-top: 1rem;
 	display: inline-block;

@@ -153,6 +153,11 @@ h6 {
 		font-size: 15px;
 	}
 }
+
+/*SLIDER CARRUSEL CARDS PRODUCTOS*/
+#tamañocarrusel .carousel-inner{
+	height: 400px;
+   }
 /*Fin*/
 
 .reembolso .center {

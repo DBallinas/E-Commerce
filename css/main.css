@@ -118,22 +118,19 @@ h6{text-align: right;}
 	text-decoration: none;
 	background: #66d701;
 	padding: 10px 30px;
+	display: inline-block;
 	color: #000;
 	margin-top: 15px;
 }
 
-@media only screen and (max-width: 767px) {
-	.carousel-caption {
-		bottom: 165px;
-	}
-	.carousel-caption h5 {
-		font-size: 17px;
-	}
-	.carousel-caption a {
-		padding: 10px 15px;
-		font-size: 15px;
-	}
+.carousel-caption p{
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
 }
+
+
 /*Fin*/
 
 .reembolso .center{
@@ -172,7 +169,6 @@ footer a:hover{/*Diseño al poner el cursor sobre el link*/
 	margin-top: 20px;
 }
 
-
 /*Responsive footer*/
 @media screen and (max-width: 800px){ /*Desde 800px comienza el responsive*/
 	.footer .footer-contenido{
@@ -189,6 +185,18 @@ footer a:hover{/*Diseño al poner el cursor sobre el link*/
 @media screen and (max-width: 1400px){/*Se ajusta la imagen de pago desde los 1400px hacia abajo a un width de 100%*/
 	.img-pago{
 		max-width: 100%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.carousel-caption {
+		bottom: 165px !important;
+	}
+	.carousel-caption h5 {
+		font-size: 17px !important;
+	}
+	.carousel-caption a {
+		padding: 10px 15px !important;
+		font-size: 15px !important;
 	}
 }
 /*Fin*/

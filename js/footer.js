@@ -3,7 +3,8 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
         super(); //llama al super de la clase HTMLElement
     }
     connectedCallback(){ //Creación del método connectedcallback, trae el html contenido en el inner
-        this.innerHTML = `<footer class="footer">
+        this.innerHTML = `
+      <footer class="footer">
         <div class="footer-contenido">
             <div class="box">
               <h4>General</h4>
@@ -13,7 +14,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="#">
                 <p>Promociones</p>
               </a>
-              <a href="contact.html">
+              <a href="../../contact.html">
                 <p>Contacto</p>
               </a>
             </div>
@@ -53,23 +54,23 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <p>¡Síguenos en nuestras redes sociales!</p>
               <div class="row">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="./img/iconredes/facebook-icon.png" width="13%" alt="logo-facebook">Facebook</a>
+                <img src="../../img/iconredes/facebook-icon.png" width="13%" alt="logo-facebook">Facebook</a>
               </div>
               <div class="row">
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="./img/iconredes/instagram-icon.png" width="13%" alt="logo-instagram">Instagram</a>
+                <img src="../../img/iconredes/instagram-icon.png" width="13%" alt="logo-instagram">Instagram</a>
               </div>
               <div class="row">
                 <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">
-                <img src="./img/iconredes/whatsapp-icon.png" width="13%" alt="logowhatsapp">Whatsapp</a>
+                <img src="../../img/iconredes/whatsapp-icon.png" width="13%" alt="logowhatsapp">Whatsapp</a>
               </div>
               <div class="row">
                 <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                <img src="./img/iconredes/twitter-icon.png" width="13%" alt="logo-twitter">Twitter</a>
+                <img src="../../img/iconredes/twitter-icon.png" width="13%" alt="logo-twitter">Twitter</a>
               </div>
               <div class="row">
                 <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                  <img src="./img/iconredes/youtube-icon.png" width="13%" alt="logo-youtube">Youtube</a>
+                  <img src="../../img/iconredes/youtube-icon.png" width="13%" alt="logo-youtube">Youtube</a>
               </div>
               
             </div>
@@ -78,13 +79,13 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <p>Somos una tienda de artículos deportivos donde encontrarás los mejores productos al mejor precio.</p>
               <h5>¡La nueva Generación en deportes!</h5></br>
                 <div>
-                  <img src="./img/metodos-pago.png" class="img-pago" width="180%px">
+                  <img src="../../img/metodos-pago.png" class="img-pago" width="180%px">
                 </div>
             </div>   
+            <img src="../../img/G-SPORTS-LOGO.png" width="100px">
+          <p>© 2022 G-sports. Todos los Derechos Reservados.</p>
           </div>
         </div>
-        <img src="./img/G-SPORTS-LOGO.png" width="100px">
-        <p>© 2022 G-sports. Todos los Derechos Reservados.</p>
       </footer>`;
     }
 }

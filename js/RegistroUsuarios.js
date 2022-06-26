@@ -19,6 +19,10 @@ function validarNombre
     {
         return false;
     }
+    if(Nombre.value.length>8)
+    {
+        return false;
+    }
     return true;
 }
 
@@ -63,7 +67,7 @@ function validarCorreo
     {
         return true;
     }
-    if(!isNaN(Correo))
+    if(!isNaN(Correo[0]))
     {
         return false;
     }

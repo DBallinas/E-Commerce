@@ -6,16 +6,16 @@ let txtMessage=document.getElementById("Message");
 
 function validarNombre()
 {
-    if(txtNombre.value.length<3)
-    {
-        return false;
-    }
     if(txtNombre.value.length==0)
     {
         return false;
-    }
+    } else if(txtNombre.value.length<3)
+    {
+        return false;
+    } else if(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]/.test(txtNombre.value))
+    {    
     return true;
-
+    }
 }
 
 function ValidarPhone()
@@ -24,21 +24,20 @@ function ValidarPhone()
     if(Phone.value.length==0)
     {
         return false;
-    }
-    if(isNaN(Phone.value))
+    } else if(isNaN(Phone.value))
     {
         return false;
-    }
-    if(Phone.value.length<10 || Phone.value.length>10)
+    } else if(Phone.value.length<10 || Phone.value.length>10)
     {
         return false;
-    }
+    } else if(/^[0-9]+$/.test(Phone.value)) /*CONDICION QUE SOLO ACEPTA NÚMEROS DE 0 AL 9 DE INICIO A FINAL, TIENE QUE SER UNO O MÁS*/
+    {    
     return true;
+}
 }
 
 function ValidarCorreo()
 {
-    
     if(/^[a-zA-Z_0-9._%+-]+@(?:[a-zA-Z_0-9.-]+\.)[a-zA-Z]{2,6}/.test(Correo.value))
     {
         return true;
@@ -55,6 +54,9 @@ function ValidarAsunto()
     if(txtAsunto.value.length==0)
     {
         return false;
+    } else if(txtAsunto.value.length<3)
+    {
+        return false; 
     }
     return true;
 }
@@ -64,6 +66,9 @@ function ValidarMessage()
     if(Message.value.length==0)
     {
         return false;
+    } else if(Message.value.length<3)
+    {
+        return false; 
     }
     return true;
 }
@@ -127,7 +132,13 @@ Enviar.addEventListener("click", (event)=>
     	From : Correo,
     	Subject : Asunto,
     	Body : txtMessage+"<br/>"+txtNombre+"<br/>"+Phone
-		}).then(message => alert("Gracias por contactarnos.")
+		}).then(message => 
+            Swal.fire({
+                icon: 'success',
+                title: 'Gracias por contactarnos.',
+                showConfirmButton: false,
+                timer: 2000
+              })
 		);
     
     txtNombre.value="";

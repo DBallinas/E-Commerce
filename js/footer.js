@@ -8,7 +8,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
         <div class="footer-contenido">
             <div class="box">
               <h4>General</h4>
-              <a href="#">
+              <a href="/colecciones/todoslosproductos1.html">
                 <p>Tienda</p>
               </a>
               <a href="#">
@@ -23,7 +23,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="#">
                 <p>Iniciar sesión</p>
               </a>
-              <a href="#">
+              <a href="/REGISTROUSUARIOS/RegistroUsuarios.html">
                 <p>Registrarse</p>
               </a>
               <a href="#">
@@ -44,7 +44,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="#">
                 <p>Política de privacidad</p>
               </a>
-              <a href="#">
+              <a href="/preguntasfrecuentes.html">
                 <p>Preguntas frecuentes</p>
               </a>
             </div>

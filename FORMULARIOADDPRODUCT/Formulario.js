@@ -10,9 +10,82 @@ let precioProducto=document.getElementById("Precio");
 let cantProducto=document.getElementById("Cantidad");
 let skuProducto=document.getElementById("sku");
 
+let catAccesorios=document.getElementById('flexCheckAccesorios');
+let catAparatos=document.getElementById("flexCheckAparatos");
+let catCalzado=document.getElementById("flexCheckCalzado");
+let catRopa=document.getElementById("flexCheckRopa");
+let catSuplementos=document.getElementById("flexCheckSuplementos");
+
 let datos=[];
 let contador=0;
 let costoTotal=0;
+let Categoria;
+
+let bodyProducto=document.getElementById("list-items");
+
+function validarCategoria()
+{
+    if(catAccesorios.checked&&catAparatos.checked){return false;}
+    if(catAccesorios.checked&&catCalzado.checked){return false;}
+    if(catAccesorios.checked&&catRopa.checked){return false;}
+    if(catAccesorios.checked&&catSuplementos.checked){return false;}
+    if(catAparatos.checked&&catCalzado.checked){return false;}
+    if(catAparatos.checked&&catRopa.checked){return false;}
+    if(catAparatos.checked&&catSuplementos.checked){return false;}
+    if(catCalzado.checked&&catRopa.checked){return false;}
+    if(catCalzado.checked&&catSuplementos.checked){return false;}
+    if(catRopa.checked&&catSuplementos.checked){return false;}
+
+    if(catAccesorios.checked){
+        Categoria="Accesorios";
+        console.log(Categoria);
+    }
+    if(catAparatos.checked){
+        Categoria="Aparatos";
+        console.log(Categoria);
+    }
+    if(catCalzado.checked){
+        Categoria="Calzado";
+        console.log(Categoria);
+    }
+    if(catRopa.checked){
+        Categoria="Ropa";
+        console.log(Categoria);
+    }
+    if(catSuplementos.checked){
+        Categoria="Suplementos";
+        console.log(Categoria);
+    }
+    
+    if(catAccesorios.checked&&catAparatos.checked&&catCalzado.checked&&catRopa.checked&&catSuplementos.checked)
+     {
+        console.log("Todo lleno");
+         return false
+     }
+     if(!catAccesorios.checked&&!catAparatos.checked&&!catCalzado.checked&&!catRopa.checked&&!catSuplementos.checked)
+     {
+        console.log("Todo vacio");
+         return false
+     }
+
+    return true;
+}
+function validarSku()
+{
+    if(skuProducto.value.length==0)
+    {
+        return false;
+    }
+    if(skuProducto.value.length>10)
+    {
+        return false;
+    }
+    if(skuProducto.value.length<3)
+    {
+        return false;
+    }
+    return true;
+}
 
 function validarNombre()
 {
@@ -21,6 +94,10 @@ if(nombreProducto.value.length<3)
     return false;
 }
 if(nombreProducto.value.length==0)
+{
+    return false;
+}
+if(nombreProducto.value.length>15)
 {
     return false;
 }
@@ -61,11 +138,15 @@ if(isNaN(cantProducto.value))
 {
     return false;
 }
-if(parseFloat(cantProducto.value)<=0)
+// if(parseFloat(cantProducto.value)<=0)
+// {
+//     return false;
+// }
+if(/^[0-9]+$/.test(cantProducto.value))
 {
-    return false;
+    return true;
 }
-return true;
+//return true;
 }
 
 
@@ -76,7 +157,7 @@ let agregar=document.getElementById("Agregar");
 agregar.addEventListener("click",(event)=>{
 event.preventDefault();
 
-if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCantidad))
+if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCantidad())||(!validarSku())||(!validarCategoria()))
 {
     let lista="";
     if(!validarNombre())
@@ -103,6 +184,17 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
         lista+="<li>Se debe escribir una cantidad válida</li>"
     }else{cantProducto.style.border="";}
 
+    if(!validarSku())
+    {
+        skuProducto.style.border="red thin solid";
+        lista+="<li>Se debe escribir un SKU válido</li>"
+    }else{skuProducto.style.border="";}
+
+    if(!validarCategoria())
+    {
+        lista+="<li>Se debe escribir una categoria válida</li>"
+    }
+
 
     document.getElementById("alertValidText").innerHTML=`
     Los campos deben ser llenados correctamente. <ul>${lista}</ul>`;
@@ -115,18 +207,16 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
     }, 5000);
 
     return false;
-
-
-
 }
 
 document.getElementById("alertValidacion").style.display="none";
+
 
 contador++;
 localStorage.setItem ("contadorProductos", contador);
 
 totalEnProductos += parseInt(cantProducto.value);
-
+localStorage.setItem("Categoría",Categoria)
 localStorage.setItem ("productosTotal", totalEnProductos);
 localStorage.setItem ("SKU", skuProducto);
 
@@ -136,7 +226,9 @@ let elemento=`{"id":${contador},
     "nombre": "${nombreProducto.value}", 
     "cantidad": ${cantProducto.value}, 
     "precio":${precioProducto.value},
-    "sku":"${skuProducto.value}"
+    "sku":"${skuProducto.value}",
+    "Categoría":"${Categoria}",
+    "Descripcion":"${descProducto.value}"
 }`;
 
 datos.push(JSON.parse(elemento));
@@ -144,6 +236,30 @@ datos.push(JSON.parse(elemento));
 localStorage.setItem("elementosTabla",  JSON.stringify(datos) );
 
 console.log(datos);
+
+let tmp=`<div class="col" id="tamañocarrusel">
+<div class="card h-100">
+<img src="${item.img}" class="d-block w-100" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">${nombreProducto.value}</h5>
+    <p class="card-text">${descProducto.value}</p>
+    <p class="card-text">${skuProducto.value}</p>
+    <p class="card-text">${Categoria}</p>
+   </div>
+    <div class="card-footer">
+       <div class="d-flex justify-content-between align-items-center">
+       <div class="btn-group">
+         <button type="button" class="btn btn-sm btn-outline-szecondary">Agregar al carrito</button>
+       </div>
+       <small class="text-muted">$${precioProducto.value}</small>
+     </div>
+  </div>
+</div>
+</div>  
+`;
+
+    bodyProducto.innerHTML +=tmp;
 
 nombreProducto.value="";
 precioProducto.value="";
@@ -154,6 +270,7 @@ skuProducto.value="";
 nombreProducto.style.border="";
 precioProducto.style.border="";
 descProducto.style.border="";
+skuProducto.style.border="";
 nombreProducto.focus();
 }
 ); //Enviar
@@ -168,6 +285,39 @@ window.addEventListener('load', function(e){
         store = JSON.parse(localStorage.getItem("imgsData"));
     
     fillSelect();
+
+    if(localStorage.getItem("elementosTabla")!=null)
+      {
+          datos=JSON.parse(localStorage.getItem("elementosTabla"));
+          datos.forEach(element =>
+            {
+                bodyProducto.innerHTML += `<div class="col" id="tamañocarrusel">
+                <div class="card h-100">
+                <img src="${item.img}" class="d-block w-100" alt="...">
+                
+                  <div class="card-body">
+                    <h5 class="card-title">${element.nombre}</h5>
+                    <p class="card-text">${element.Descripcion}</p>
+                    <p class="card-text">${element.sku}</p>
+                    <p class="card-text">${element.Categoría}</p>
+                   </div>
+                    <div class="card-footer">
+                       <div class="d-flex justify-content-between align-items-center">
+                       <div class="btn-group">
+                         <button type="button" class="btn btn-sm btn-outline-szecondary">Agregar al carrito</button>
+                       </div>
+                       <small class="text-muted">$${element.precio}</small>
+                     </div>
+                  </div>
+                </div>
+                </div>  `;
+            });
+      }
+      for(let i=0;i<localStorage.length;i++)
+      {
+          console.log(i+": "+localStorage.key(i)+":"+localStorage.getItem(localStorage.key(i)));
+      }
+      
 });
 
 function fillSelect(){

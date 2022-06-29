@@ -84,31 +84,31 @@ Enviar.addEventListener("click", (event)=>
         if(!validarNombre())
         {
             txtNombre.style.border="red thin solid";
-            lista+="<li>Se debe escribir un Nombre válido</li>"
+            lista+="<li>Se debe escribir un nombre válido</li>"
         }else {txtNombre.style.border="";}
 
         if(!ValidarPhone())
         {
             Phone.style.border="red thin solid"
-            lista+="<li>Se debe escribir un Número válido</li>"
+            lista+="<li>Se debe escribir un número válido</li>"
         }else{Phone.style.border="";}
 
         if(!ValidarCorreo())
         {
             Correo.style.border="red thin solid"
-            lista+="<li>Se debe escribir un Correo válido</li>"
+            lista+="<li>Se debe escribir un correo válido</li>"
         }else{Correo.style.border="";}
 
         if(!ValidarAsunto())
         {
             txtAsunto.style.border="red thin solid"
-            lista+="<li>Se debe escribir un Asunto valido</li>"
+            lista+="<li>Se debe escribir un asunto válido</li>"
         }else{txtAsunto.style.border="";}
 
         if(!ValidarMessage())
         {
             txtMessage.style.border="red thin solid"
-            lista+="<li>Se debe escribir un Mensaje válido</li>"
+            lista+="<li>Se debe escribir un mensaje válido</li>"
         }else{txtMessage.style.border="";}
 
         document.getElementById("alertValidText").innerHTML=`

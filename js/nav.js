@@ -48,7 +48,7 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                   <li><a class="dropdown-item" href="../../about-us.html">Nosotros</a></li>
                   <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
                   <li><a class="dropdown-item" href="../../preguntasfrecuentes.html">Preguntas frecuentes</a></li>
-                  <li><a class="dropdown-item" href="../REGISTROUSUARIOS/RegistroUsuarios.html">Registrate</a></li>
+                  <li><a class="dropdown-item" href="../REGISTROUSUARIOS/RegistroUsuarios.html">Regístrate</a></li>
                   </ul>
               </li>
             </ul>

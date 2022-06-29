@@ -32,7 +32,6 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
             </div>
             <div class="box">
               <h4>Términos y Condiciones</h4>
-<<<<<<< HEAD
               <a href="/terminosdeservicio.html">
                 <p>Términos de uso</p>
               </a>
@@ -47,19 +46,6 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               </a>
               <a href="/politicadereembolso.html">
                 <p>Política de reembolsos</p>
-=======
-              <a href="/politicadedevolucion.html">
-                <p>Política de devolución</p>
-              </a>
-              <a href="/politicadeenvios.html">
-                <p>Política de envíos</p>
-              </a>
-              <a href="#">
-                <p>Política de privacidad</p>
-              </a>
-              <a href="/politicadereembolso.html">
-                <p>Política de reembolso</p>
->>>>>>> francisco
               </a>
               <a href="/preguntasfrecuentes.html">
                 <p>Preguntas frecuentes</p>

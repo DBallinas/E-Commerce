@@ -82,7 +82,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <p>Somos una tienda de artículos deportivos donde encontrarás los mejores productos al mejor precio.</p>
               <h5>¡La nueva Generación en deportes!</h5></br>
                 <div>
-                  <img src="../../img/metodos-pago.png" class="img-pago" width="180%px">
+                  <img src="../../img/metodos-pago.png" class="img-pago" width="150%">
                 </div>
             </div>   
             <img src="../../img/G-SPORTS-LOGO.png" width="100px">

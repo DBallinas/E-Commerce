@@ -115,6 +115,13 @@ h6 {
 	box-shadow: 0px 5px 10px gainsboro;
 }
 
+#Agregar{
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+
 .btn {
 	margin-top: 1rem;
 	display: inline-block;
@@ -222,7 +229,7 @@ h6 {
 		font-size: 15px;
 	}
 }
-<<<<<<< HEAD #politicasacepto {
+#politicasacepto {
 	outline: none;
 
 	color: black;
@@ -232,7 +239,7 @@ h6 {
 	color: black;
 }
 
-=======>>>>>>>francisco /*SLIDER CARRUSEL CARDS PRODUCTOS*/ #tamañocarrusel .carousel-inner {
+/*SLIDER CARRUSEL CARDS PRODUCTOS*/ #tamañocarrusel .carousel-inner {
 	height: 400px;
 }
 /*Fin*/

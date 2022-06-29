@@ -226,7 +226,7 @@ let elemento=`{"id":${contador},
     "precio":${precioProducto.value},
     "sku":"${skuProducto.value}",
     "Categoría":"${Categoria}",
-    "Descripcion":"${descProducto.value}",
+    "Descripcion":"${descProducto.value}"
 }`;
 
 datos.push(JSON.parse(elemento));
@@ -303,6 +303,10 @@ nombreProducto.focus();
 				document.getElementById(input).value = reader.result;
 		  		preview.src = reader.result;
 				localStorage.setItem("imgsData", JSON.stringify(store));
+                store.push(JSON.parse(elemento));
+
+                localStorage.setItem("elementosTabla",  JSON.stringify(store) );
+
 				fillSelect();
 		  	}, false);
 			

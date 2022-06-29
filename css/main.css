@@ -40,6 +40,29 @@ h6 {
 	padding: 5%;
 	color: white;
 }
+#fotosinicio{
+	border-radius: 50px;
+	transition: transform 0.2s;
+	padding: 1%;
+	transform: scale(1);
+}
+#fotosinicio2{
+	border-radius: 50px;
+	transition: transform 0.2s;
+	padding: 1%;
+	transform: scale(1);
+}
+#texto1 {
+	text-align: center;
+	display: grid;
+	margin: auto;
+}
+#texto2 {
+	text-align: center;
+	display: grid;
+	margin: auto;
+}
+
 
 #textoacerca {
 	padding: 5%;
@@ -166,10 +189,11 @@ text-align: justify;
 .carousel-caption a {
 	/*Botón Tienda*/
 	text-decoration: none;
+	border-radius: 300px;
 	background: #66d701;
 	padding: 10px 30px;
 	display: inline-block;
-	color: #000;
+	color: white;
 	margin-top: 15px;
 }
 

@@ -22,7 +22,7 @@ function addItem(item){
     </div>
   </div>
  </div>
-`
+`;
 
 
   const itemsContainer = document.getElementById("list-items");

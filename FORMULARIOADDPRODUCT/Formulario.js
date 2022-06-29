@@ -21,8 +21,6 @@ let contador=0;
 let costoTotal=0;
 let Categoria;
 
-let bodyProducto=document.getElementById("list-items");
-
 function validarCategoria()
 {
     if(catAccesorios.checked&&catAparatos.checked){return false;}
@@ -228,7 +226,7 @@ let elemento=`{"id":${contador},
     "precio":${precioProducto.value},
     "sku":"${skuProducto.value}",
     "Categoría":"${Categoria}",
-    "Descripcion":"${descProducto.value}"
+    "Descripcion":"${descProducto.value}",
 }`;
 
 datos.push(JSON.parse(elemento));
@@ -236,30 +234,6 @@ datos.push(JSON.parse(elemento));
 localStorage.setItem("elementosTabla",  JSON.stringify(datos) );
 
 console.log(datos);
-
-let tmp=`<div class="col" id="tamañocarrusel">
-<div class="card h-100">
-<img src="${item.img}" class="d-block w-100" alt="...">
-
-  <div class="card-body">
-    <h5 class="card-title">${nombreProducto.value}</h5>
-    <p class="card-text">${descProducto.value}</p>
-    <p class="card-text">${skuProducto.value}</p>
-    <p class="card-text">${Categoria}</p>
-   </div>
-    <div class="card-footer">
-       <div class="d-flex justify-content-between align-items-center">
-       <div class="btn-group">
-         <button type="button" class="btn btn-sm btn-outline-szecondary">Agregar al carrito</button>
-       </div>
-       <small class="text-muted">$${precioProducto.value}</small>
-     </div>
-  </div>
-</div>
-</div>  
-`;
-
-    bodyProducto.innerHTML +=tmp;
 
 nombreProducto.value="";
 precioProducto.value="";
@@ -278,97 +252,66 @@ nombreProducto.focus();
 
 
 
-window.addEventListener('load', function(e){
-    console.log("store.data:" + store.data);
-    console.log(localStorage.getItem("imgsData"));
-    if ( JSON.parse(localStorage.getItem("imgsData"))!=null)
-        store = JSON.parse(localStorage.getItem("imgsData"));
-    
-    fillSelect();
-
-    if(localStorage.getItem("elementosTabla")!=null)
-      {
-          datos=JSON.parse(localStorage.getItem("elementosTabla"));
-          datos.forEach(element =>
-            {
-                bodyProducto.innerHTML += `<div class="col" id="tamañocarrusel">
-                <div class="card h-100">
-                <img src="${item.img}" class="d-block w-100" alt="...">
-                
-                  <div class="card-body">
-                    <h5 class="card-title">${element.nombre}</h5>
-                    <p class="card-text">${element.Descripcion}</p>
-                    <p class="card-text">${element.sku}</p>
-                    <p class="card-text">${element.Categoría}</p>
-                   </div>
-                    <div class="card-footer">
-                       <div class="d-flex justify-content-between align-items-center">
-                       <div class="btn-group">
-                         <button type="button" class="btn btn-sm btn-outline-szecondary">Agregar al carrito</button>
-                       </div>
-                       <small class="text-muted">$${element.precio}</small>
-                     </div>
-                  </div>
-                </div>
-                </div>  `;
-            });
-      }
-      for(let i=0;i<localStorage.length;i++)
-      {
-          console.log(i+": "+localStorage.key(i)+":"+localStorage.getItem(localStorage.key(i)));
-      }
-      
-});
-
-function fillSelect(){
-    if (store.data.length>0) {
-        selectImages.options.length = 0; // clear Select
-        let optiontmp = document.createElement("option");
-            optiontmp.text = "Selecciona una imagen para visualizar:"
-            optiontmp.value = -1;
-            selectImages.add(optiontmp); 
-        for (let i=0; i < store.data.length; i ++){
-            let option = document.createElement("option");
-            option.text = store.names[i];
-            option.value = i;
-            selectImages.add(option); 
-        }//for i
-    }//if store != null
-    console.log(store);
-}//fillSelect
 
 
-btnFake.addEventListener('click', function(){
-    fileImage.click();
-});
-fileImage.addEventListener('change', function(){
-    previewFile('imageFile', 'fileImage', 'inputFile' )
-    //previewFile(id imagen, input type file , textArea);
-});
+	window.addEventListener('load', function(e){
+		console.log("store.data:" + store.data);
+		console.log(localStorage.getItem("imgsData"));
+		if ( JSON.parse(localStorage.getItem("imgsData"))!=null)
+			store = JSON.parse(localStorage.getItem("imgsData"));
+		
+		fillSelect();
+	});
 
-    //previewFile(id imagen, input type file , textArea);
-    function previewFile(img, inputFile, input) {
-        var preview = document.getElementById(img);
-        var file    = document.getElementById(inputFile).files[0];
-        var reader  = new FileReader();
-
-        reader.addEventListener("load", function () {
-            console.log(store.data.length);
-            store.data[store.data.length] = reader.result;
-            store.names[store.names.length] =file.name;
-            console.table(store);
-            document.getElementById(input).value = reader.result;
-              preview.src = reader.result;
-            localStorage.setItem("imgsData", JSON.stringify(store));
-            fillSelect();
-          }, false);
-        
-          if (file) {
-            reader.readAsDataURL(file);
-          }// file
-    }// previewFile 
+	function fillSelect(){
+		if (store.data.length>0) {
+			selectImages.options.length = 0; // clear Select
+			let optiontmp = document.createElement("option");
+				optiontmp.text = "Selecciona una imagen para visualizar:"
+				optiontmp.value = -1;
+				selectImages.add(optiontmp); 
+			for (let i=0; i < store.data.length; i ++){
+				let option = document.createElement("option");
+				option.text = store.names[i];
+				option.value = i;
+				selectImages.add(option); 
+			}//for i
+		}//if store != null
+		console.log(store);
+	}//fillSelect
 
 
-    selectImages.addEventListener("change", function(){
-        imageFile.src = store.data[selectImages.options[selectImages.selectedIndex].value];
+	btnFake.addEventListener('click', function(){
+		fileImage.click();
     });
+    fileImage.addEventListener('change', function(){
+        previewFile('imageFile', 'fileImage', 'inputFile' )
+        //previewFile(id imagen, input type file , textArea);
+    });
+
+		//previewFile(id imagen, input type file , textArea);
+		function previewFile(img, inputFile, input) {
+			var preview = document.getElementById(img);
+			var file    = document.getElementById(inputFile).files[0];
+			var reader  = new FileReader();
+
+			reader.addEventListener("load", function () {
+				console.log(store.data.length);
+				store.data[store.data.length] = reader.result;
+				store.names[store.names.length] =file.name;
+				console.table(store);
+				document.getElementById(input).value = reader.result;
+		  		preview.src = reader.result;
+				localStorage.setItem("imgsData", JSON.stringify(store));
+				fillSelect();
+		  	}, false);
+			
+		  	if (file) {
+		    	reader.readAsDataURL(file);
+		  	}// file
+		}// previewFile 
+
+
+		selectImages.addEventListener("change", function(){
+			imageFile.src = store.data[selectImages.options[selectImages.selectedIndex].value];
+		});

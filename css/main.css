@@ -163,6 +163,15 @@ h6 {
 	font-size: 18px;
 	line-height: 1.9;
 }
+#politicasacepto {
+	outline: none;
+	
+	color: black;
+}
+#terminosacepto{
+	outline: none;
+	color: black;
+}
 
 /*SLIDER CARRUSEL CARDS PRODUCTOS*/
 #tamañocarrusel .carousel-inner{
@@ -230,7 +239,6 @@ footer a:hover {
 		max-width: 100%;
 	}
 }
-<<<<<<< HEAD
 @media only screen and (max-width: 767px) {
 	.carousel-caption {
 		bottom: 165px !important;
@@ -244,6 +252,3 @@ footer a:hover {
 	}
 }
 /*Fin*/
-=======
-/*Fin*/
->>>>>>> develop

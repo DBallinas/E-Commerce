@@ -1,12 +1,12 @@
 function addItem(item){
 
-  const itemHTML =     `  <div class="col">
+  const itemHTML =     `  <div class="col" id="tamañocarrusel">
   <div class="card h-100">
-   
-    <img src="${item.img1}" class="card-img-top" alt="..." width="100px" height="250px" >
-    <img src="${item.img2}" class="card-img-top" alt="..." width="100px" height="250px" >
-    <img src="${item.img3}" class="card-img-top" alt="..." width="100px" height="250px" >
-    
+  
+
+  
+  <img src="${item.img1}" class="d-block w-100" alt="...">
+
     <div class="card-body">
       <h5 class="card-title">${item.name}</h5>
       <p class="card-text">${item.description}</p>
@@ -14,7 +14,7 @@ function addItem(item){
       <div class="card-footer">
          <div class="d-flex justify-content-between align-items-center">
          <div class="btn-group">
-           <button type="button" class="btn btn-sm btn-outline-secondary">Agregar al carrito</button>
+           <button type="button" class="btn btn-sm btn-outline-szecondary">Agregar al carrito</button>
          </div>
          <small class="text-muted">$${item.precio}</small>
        </div>
@@ -25,19 +25,21 @@ function addItem(item){
 `
 
 
-
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.innerHTML += itemHTML;
+  
 }
 
-addItem({'name':'Polainas Wilson 4lbs Unisex',
+addItem({'id':'1',
+  'name':'Polainas Wilson 4lbs Unisex',
   'img1':'http://drive.google.com/uc?export=view&id=1k1HGhKaj_UyEg301AF0qwG7I9SQwFwrw',
   'img2':'http://drive.google.com/uc?export=view&id=1rdT09m9EKex0HPvMjnWYRJdc5jT8PNA0',
   'img3':'http://drive.google.com/uc?export=view&id=1cOic-_-Cu02DawVFREE9IHd-Djwqnifx',
   'description':'Las Polainas Wilson tienen el peso extra para seguir fortaleciendo tus piernas y justo en los momentos de mayor intensidad. Cuenta con un diseño espectacular para amoldarse encima de los tobillos con comodidad. Guarda el equilibrio en la postura del avión para trabajar la fuerza en tus piernas al elevarlas, se sujetan de manera perfecta por un sistema de velcro para hacer los movimientos de mayor agilidad en tus prácticas deportivas.',
   'precio':'459.00'});
   
-addItem({'name':'Ligas Larga de Tensión Wilson',
+addItem({'id':'2',
+  'name':'Ligas Larga de Tensión Wilson',
   'img1':'http://drive.google.com/uc?export=view&id=1T_TB0qYH9hEf5S5QaQHEE6dwdwO1C1jt',
   'img2':'http://drive.google.com/uc?export=view&id=1x0AAA3PFBOw-RyOqZjXGxF45_i0-4X9Y',
   'img3':'http://drive.google.com/uc?export=view&id=1HNpib-2FesLNWkjtGWe3x1RIpbc9WfyM',
@@ -49,7 +51,8 @@ addItem({'name':'Ligas Larga de Tensión Wilson',
 </ul>`,
   'precio':'235.00'});
 
-addItem({'name':'Xiaomi Mi Watch Negro',
+addItem({'id':'3',
+  'name':'Xiaomi Mi Watch Negro',
   'img1':'http://drive.google.com/uc?export=view&id=1A8F9dKmyTOjA-Un4juhaJaqTzCSYS8IO',
   'img2':'http://drive.google.com/uc?export=view&id=1YaAgm7hqKXMwW3u0wU-zj1cY8fx13s90',
   'img3':'http://drive.google.com/uc?export=view&id=1YbeP93PR42T64rTQJly3oMLrb-5-z-Tt',

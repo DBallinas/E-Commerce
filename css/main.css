@@ -8,11 +8,6 @@ h2 {
 	padding: 20px;
 	text-align: center;
 }
-.preguntas-faq {
-	padding: 10px;
-	text-align: center;
-	
-}
 
 h3 {
 	text-align: center;
@@ -45,13 +40,13 @@ h6 {
 	padding: 5%;
 	color: white;
 }
-#fotosinicio{
+#fotosinicio {
 	border-radius: 50px;
 	transition: transform 0.2s;
 	padding: 1%;
 	transform: scale(1);
 }
-#fotosinicio2{
+#fotosinicio2 {
 	border-radius: 50px;
 	transition: transform 0.2s;
 	padding: 1%;
@@ -67,7 +62,6 @@ h6 {
 	display: grid;
 	margin: auto;
 }
-
 
 #textoacerca {
 	padding: 5%;
@@ -96,29 +90,29 @@ h6 {
 	font-style: italic;
 }
 
-.lista-faq{
+.lista-faq {
 	text-align: justify;
 	padding-bottom: 50px;
-} 
+}
 
-#FAQ{
-padding: 40px 250px;
-margin: 0 auto;
-text-align: justify;
+#FAQ {
+	padding: 40px 250px;
+	margin: 0 auto;
+	text-align: justify;
 }
 
 #enviar-contacto {
 	color: white;
 	background-color: #66d701;
 	border-radius: 50px;
-	box-shadow: 0px 5px 10px  gainsboro
+	box-shadow: 0px 5px 10px gainsboro;
 }
 
 #enviar-registro {
 	color: white;
 	background-color: #66d701;
 	border-radius: 50px;
-	box-shadow: 0px 5px 10px  gainsboro
+	box-shadow: 0px 5px 10px gainsboro;
 }
 
 .btn {
@@ -173,7 +167,7 @@ text-align: justify;
 	margin: 6rem;
 }
 /*Diseño Slider Inicio*/
-.carousel-inner h5{
+.carousel-inner h5 {
 	text-align: center;
 }
 
@@ -183,7 +177,7 @@ text-align: justify;
 	min-height: 100px;
 }
 
-#caption{
+#caption {
 	bottom: 250px;
 }
 
@@ -195,7 +189,7 @@ text-align: justify;
 	margin-top: 20px;
 }
 
-#caption p{
+#caption p {
 	width: 60%;
 	margin: auto;
 	font-size: 18px;
@@ -213,7 +207,7 @@ text-align: justify;
 	margin-top: 15px;
 }
 
-.w100{
+.w100 {
 	height: 100vh;
 }
 @media only screen and (max-width: 1200px) {
@@ -228,23 +222,19 @@ text-align: justify;
 		font-size: 15px;
 	}
 }
-<<<<<<< HEAD
-#politicasacepto {
+<<<<<<< HEAD #politicasacepto {
 	outline: none;
-	
+
 	color: black;
 }
-#terminosacepto{
+#terminosacepto {
 	outline: none;
 	color: black;
 }
 
-=======
->>>>>>> francisco
-/*SLIDER CARRUSEL CARDS PRODUCTOS*/
-#tamañocarrusel .carousel-inner{
+=======>>>>>>>francisco /*SLIDER CARRUSEL CARDS PRODUCTOS*/ #tamañocarrusel .carousel-inner {
 	height: 400px;
-   }
+}
 /*Fin*/
 
 .reembolso .center {
@@ -306,10 +296,8 @@ footer a:hover {
 	.img-pago {
 		max-width: 100%;
 	}
-
 }
-<<<<<<< HEAD
-@media only screen and (max-width: 767px) {
+@media only screen and(max-width: 767px) {
 	.carousel-caption {
 		bottom: 165px !important;
 	}
@@ -321,7 +309,5 @@ footer a:hover {
 		font-size: 15px !important;
 	}
 }
-=======
 
->>>>>>> francisco
 /*Fin*/

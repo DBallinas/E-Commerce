@@ -13,7 +13,7 @@ h3 {
 	text-align: center;
 }
 
-h5 {
+.mision-vision {
 	text-align: justify;
 	padding-bottom: 50px;
 }
@@ -61,6 +61,17 @@ h6 {
 	text-align: justify;
 	padding: 1.5%;
 	font-style: italic;
+}
+
+.lista-faq{
+	text-align: justify;
+	padding-bottom: 50px;
+} 
+
+#FAQ{
+padding: 40px 250px;
+margin: 0 auto;
+text-align: justify;
 }
 
 #enviar-contacto {

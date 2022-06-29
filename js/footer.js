@@ -11,8 +11,8 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="/colecciones/todoslosproductos1.html">
                 <p>Tienda</p>
               </a>
-              <a href="#">
-                <p>Promociones</p>
+              <a href="/colecciones/rebajas.html">
+                <p>Rebajas</p>
               </a>
               <a href="../../contact.html">
                 <p>Contacto</p>
@@ -20,14 +20,11 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
             </div>
             <div class="box">
               <h4>Inicio de sesión</h4>
-              <a href="#">
+              <a href="/iniciodesesion.html">
                 <p>Iniciar sesión</p>
               </a>
               <a href="/REGISTROUSUARIOS/RegistroUsuarios.html">
                 <p>Registrarse</p>
-              </a>
-              <a href="#">
-                <p>Mi cuenta</p>
               </a>
               <a href="#">
                 <p>¿Olvidaste tu contraseña?</p>
@@ -35,14 +32,20 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
             </div>
             <div class="box">
               <h4>Términos y Condiciones</h4>
-              <a href="#">
+              <a href="/terminosdeservicio.html">
                 <p>Términos de uso</p>
               </a>
-              <a href="#">
-                <p>Términos de compra</p>
-              </a>
-              <a href="#">
+              <a href="/politicaprivacidad.html">
                 <p>Política de privacidad</p>
+              </a>
+              <a href="/politicadeenvios.html">
+                <p>Política de envío</p>
+              </a>
+              <a href="/politicadedevolucion.html">
+                <p>Política de devolución</p>
+              </a>
+              <a href="/politicadereembolso.html">
+                <p>Política de reembolsos</p>
               </a>
               <a href="/preguntasfrecuentes.html">
                 <p>Preguntas frecuentes</p>

@@ -226,7 +226,7 @@ let elemento=`{"id":${contador},
     "precio":${precioProducto.value},
     "sku":"${skuProducto.value}",
     "Categoría":"${Categoria}",
-    "Descripcion":"${descProducto.value}",
+    "Descripcion":"${descProducto.value}"
 }`;
 
 datos.push(JSON.parse(elemento));

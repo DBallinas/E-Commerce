@@ -8,6 +8,11 @@ h2 {
 	padding: 20px;
 	text-align: center;
 }
+.preguntas-faq {
+	padding: 10px;
+	text-align: center;
+	
+}
 
 h3 {
 	text-align: center;
@@ -167,26 +172,37 @@ text-align: justify;
 	text-align: justify;
 	margin: 6rem;
 }
-/*Diseño Slider*/
-.carousel-caption {
-	bottom: 250px !important;
+/*Diseño Slider Inicio*/
+.carousel-inner h5{
+	text-align: center;
 }
 
 .carousel-item {
 	/*Imagenes del slider tamaño*/
 	height: 100vh;
-	min-height: 150px;
+	min-height: 100px;
 }
 
-.carousel-caption h5 {
+#caption{
+	bottom: 250px;
+}
+
+#caption h5 {
 	/*Texto del Slider*/
 	font-size: 45px;
 	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-top: 25px;
+	letter-spacing: 1px;
+	margin-top: 20px;
 }
 
-.carousel-caption a {
+#caption p{
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+
+#caption a {
 	/*Botón Tienda*/
 	text-decoration: none;
 	border-radius: 300px;
@@ -197,12 +213,22 @@ text-align: justify;
 	margin-top: 15px;
 }
 
-.carousel-caption p{
-	width: 60%;
-	margin: auto;
-	font-size: 18px;
-	line-height: 1.9;
+.w100{
+	height: 100vh;
 }
+@media only screen and (max-width: 1200px) {
+	#caption {
+		bottom: 165px;
+	}
+	#caption h5 {
+		font-size: 17px;
+	}
+	#caption- a {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+}
+<<<<<<< HEAD
 #politicasacepto {
 	outline: none;
 	
@@ -213,6 +239,8 @@ text-align: justify;
 	color: black;
 }
 
+=======
+>>>>>>> francisco
 /*SLIDER CARRUSEL CARDS PRODUCTOS*/
 #tamañocarrusel .carousel-inner{
 	height: 400px;
@@ -278,7 +306,9 @@ footer a:hover {
 	.img-pago {
 		max-width: 100%;
 	}
+
 }
+<<<<<<< HEAD
 @media only screen and (max-width: 767px) {
 	.carousel-caption {
 		bottom: 165px !important;
@@ -291,4 +321,7 @@ footer a:hover {
 		font-size: 15px !important;
 	}
 }
+=======
+
+>>>>>>> francisco
 /*Fin*/

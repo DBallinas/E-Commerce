@@ -23,7 +23,32 @@
 <header id="cabezera"> <h1>INICIO DE SESIÓN</h1> </header></BR> 
 <!--FIN DE BARRA DEGRADADO TITULO DE PAGINA-->
   
-    </BR></BR><h1>PRÓXIMAMENTE</h1></BR></BR> 
+<br/><br/>
+<form style="width: 80%; margin: auto;">
+
+  <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidacionregistro" style="text-align:center ;">
+    <p id="alertValidTextregistro"></p>
+  </div>
+
+    <div class="row justify-content-around">
+        <div class="col-4">
+			<div class="form-group">
+				<i class="bi bi-person d-flex justify-content-around"></i>
+			</div><br/>
+          <div class="form-group">
+            <label for="">Correo electrónico:</label>
+            <input type="email" class="form-control" rows="5" placeholder="Ingresa tu correo" id="Emailregistro"></input>
+          </div><br/>
+          <div class="form-group">
+            <label for="">Contraseña:</label>
+            <input type="password" class="form-control" rows="5" placeholder="8 a 16 caracteres" id="Contrasena" minlength="8" maxlength="16"></input>
+          </div><br/>
+            <div class="d-grid gap-2 col-4 mx-auto">
+               <button  type="submit" class="btn" id="enviar-registro">Entrar</button><br/><br/><br/><br/>
+           </div>
+        </div>
+    </div>
+</form>
 
 <!--PIE DE PAGINA-->
 	<footer-component></footer-component>

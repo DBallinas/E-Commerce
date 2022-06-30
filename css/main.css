@@ -115,6 +115,13 @@ h6 {
 	box-shadow: 0px 5px 10px gainsboro;
 }
 
+#Agregar{
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+
 .btn {
 	margin-top: 1rem;
 	display: inline-block;
@@ -222,7 +229,11 @@ h6 {
 		font-size: 15px;
 	}
 }
+<<<<<<< HEAD
  #politicasacepto {
+=======
+#politicasacepto {
+>>>>>>> 04053e310a8931b5f3445f92535e591a08c195fc
 	outline: none;
 
 	color: black;

@@ -54,7 +54,7 @@ let totalEnProductos=0;
                   bodyTabla.innerHTML += `<div class="col" id="tamañocarrusel">
                   <div class="card h-100">
                       
-                  <img id="imageFile" src="${reader.readAsDataURL(file)}" class="d-block w-100" alt="...">
+                  <img id="imageFile" src="${store.data.value}" class="d-block w-100" alt="...">
                 
                     <div class="card-body">
                       <h5 class="card-title">${element.nombre}</h5>

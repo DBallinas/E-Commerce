@@ -208,8 +208,12 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
 }
 
 document.getElementById("alertValidacion").style.display="none";
-
-
+Swal.fire({
+    icon: 'success',
+    title: '¡REGISTRO COMPLETADO!',
+    showConfirmButton: false,
+    timer: 2000
+  })
 contador++;
 localStorage.setItem ("contadorProductos", contador);
 
@@ -303,6 +307,10 @@ nombreProducto.focus();
 				document.getElementById(input).value = reader.result;
 		  		preview.src = reader.result;
 				localStorage.setItem("imgsData", JSON.stringify(store));
+                store.push(JSON.parse(elemento));
+
+                localStorage.setItem("elementosTabla",  JSON.stringify(store) );
+
 				fillSelect();
 		  	}, false);
 			

@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: "Arvo", serif;
+}
+
+h1{
+    margin: 3rem 0 2rem;
+    text-align: center;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq{
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgb(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.faq.active{
+    background-color: #FA9C23;
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.1), 0 3px 6px rgb(0, 0, 0, 0.1);
+}
+
+.faq.active::before{
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    color: #0010f7fb;
+    font-size: 7rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.faq-pregunta{
+    margin: 0 35px 0 0;
+}
+
+.faq-respuesta{
+    display: none;
+    margin: 2rem 0 0;
+    text-align: center;
+}
+
+.faq.active .faq-respuesta{
+    display: block;
+}
+
+.faq-boton{
+    background-color: #FA9C23;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+.faq-boton:focus{
+    outline: none;
+}
+
+.faq.active .faq-boton{
+    background-color: #fff;
+}
+
+.faq-boton .fa-times{
+    display: none;
+}
+
+.faq.active .faq-boton .fa-times{
+    display: block;
+    color: #333;
+}
+
+.faq.active .faq-boton .fa-chevron-down{
+    display: none;
+}

@@ -10,7 +10,7 @@ let Politicajs=document.getElementById("Politicas");
 let Terminosjs=document.getElementById("Terminos");
 
 let datos = [];
-
+let contador=0;
 
 function validarNombre ()
 {
@@ -118,17 +118,17 @@ function validarConfirmContrasenajs ()
 }
  function validarTerminosjs ()
 {
-    if(Terminosjs.checked==true)
+    if(Terminosjs.checked)
     {
         return true;}
 }
 
 function validarPoliticajs ()
 {
-    if(Politicajs.checked==false)
+    if(Politicajs.checked)
     {
-        return false;
-    } else return true;
+        return true;
+    }
 } 
 
 let Registro=document.getElementById("enviar-registro");
@@ -136,7 +136,7 @@ Registro.addEventListener("click", (event)=>
 {
     event.preventDefault();
 
-    if((!validarNombre())||(!validarAPaterno())||(!validarAMaterno())||(!validarCorreo())||(!validarCorreoconfirm())||(!validarTelefono())||(!validarContrasenajs())||(Terminosjs.checked) && (Politicajs.checked))
+    if((!validarNombre())||(!validarAPaterno())||(!validarAMaterno())||(!validarCorreo())||(!validarCorreoconfirm())||(!validarTelefono())||(!validarContrasenajs())||(!validarTerminosjs())||(!validarPoliticajs()))
     {
         let listaregistro="";
         if(!validarNombre())
@@ -178,7 +178,7 @@ Registro.addEventListener("click", (event)=>
         if(!validarContrasenajs())
         {
             Contrasenajs.style.border="red thin solid"
-            listaregistro+="<li>Se debe escribir una contraseña con al menos una letra mayuscula, una minuscula y una letra</li>"
+            listaregistro+="<li>Se debe escribir una contraseña con al menos una letra mayúscula, una minúscula y una letra</li>"
         }else{Contrasenajs.style.border="";}
 
         if(!validarConfirmContrasenajs())
@@ -190,13 +190,13 @@ Registro.addEventListener("click", (event)=>
         if(!validarPoliticajs())
         {
             Politicajs.style.border="red thin solid"
-            listaregistro+="<li>Debes aceptar las Politicas para poder continuar</li>"
+            listaregistro+="<li>Debes aceptar las Políticas para poder continuar</li>"
         }else{Politicajs.style.border="";}
 
         if(!validarTerminosjs())
         {
             Terminosjs.style.border="red thin solid"
-            listaregistro+="<li>Debes aceptar los terminos para poder continuar</li>"
+            listaregistro+="<li>Debes aceptar los Términos para poder continuar</li>"
         }else{Terminosjs.style.border="";}
 
         document.getElementById("alertValidTextregistro").innerHTML=`
@@ -213,26 +213,34 @@ Registro.addEventListener("click", (event)=>
     }
 
     document.getElementById("alertValidacionregistro").style.display="none";
+        Swal.fire({
+            icon: 'success',
+            title: '¡REGISTRO EXITOSO!',
+            showConfirmButton: false,
+            timer: 2000
+          })
 
-   contador++;
-    localStorage.setItem ("Numero de usuarios", contador);
-
-
+    contador++;
+  /*localStorage.setItem("Numerodeusuarios", contador);
+    localStorage.setItem("Nombre",Nombre);
+    localStorage.setItem("Apellido Materno",AMaterno);
+    localStorage.setItem("Apellido Paterno",APaterno);
+    localStorage.setItem("Correo",Correo);
+    localStorage.setItem("Telefono",Telefono);
+    localStorage.setItem("Contraseña",Contrasenajs);
+*/
     //JSON
-   let elemento=`{"id":${contador}, 
-        "Nombre":${Nombre.value}, 
-        "Apellido paterno":${APaterno.value},
-        "Apellido Materno":${AMaterno.value},
-        "Correo":${Correo.value},
-        "Telefono":${Telefono.value},
-        "Contraseña":${Contrasenajs.value}
+   let elemento=`{"id":"${contador}", 
+        "Nombre":"${Nombre.value}", 
+        "Apellido paterno":"${APaterno.value}",
+        "Apellido Materno":"${AMaterno.value}",
+        "Correo":"${Correo.value}",
+        "Telefono":"${Telefono.value}",
+        "Contraseña":"${Contrasenajs.value}"
     }`; 
-
     datos.push(JSON.parse(elemento));
-
-    localStorage.setItem("UsuariosRegistrados",  JSON.stringify(datos) );
-
-    console.log(datos);
+   localStorage.setItem("elementosTabla", JSON.stringify(datos));
+   console.log(datos);
 //Registro
 
 Nombre.value="";
@@ -300,3 +308,34 @@ Politicajs.addEventListener("blur", (event)=>{
 Terminosjs.addEventListener("blur", (event)=>{
     event.target.checked=event.target.checked.trim();
 });*/
+/*
+window.addEventListener("load", function() {
+    if (localStorage.getItem("Numerodeusuarios")!=null) {
+       contador = parseInt(localStorage.getItem("Numerodeusuarios"));
+    } //if Numerodeusuarios
+ 
+    if (localStorage.getItem ("productosTotal")) {
+       totalEnProductos = parseInt(localStorage.getItem("productosTotal"));
+       document.getElementById("productosTotal").innerHTML = totalEnProductos;
+    } //if productosTotal
+ 
+    if (localStorage.getItem ("precioTotal")) {
+       costoTotal = parseFloat (localStorage.getItem("precioTotal"));
+       total.innerHTML = costoTotal;
+    } // if precioTotal
+    if (localStorage.getItem("elementosTabla")!=null) {
+         datos =JSON.parse(localStorage.getItem("elementosTabla"));
+       datos.forEach(element => {
+          cuerpoTabla[0].innerHTML +=         
+          `    <tr>
+         <th scope="row">${element.id}</th>
+         <td> ${element.nombre} </td>
+         <td> ${element.cantidad} </td>
+         <td> ${element.precio} </td>
+         </tr> 
+      `;
+       });
+    } // if elementosTabla
+ 
+    }
+ );*/

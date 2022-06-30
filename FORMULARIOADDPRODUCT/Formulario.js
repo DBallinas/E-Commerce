@@ -208,8 +208,12 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
 }
 
 document.getElementById("alertValidacion").style.display="none";
-
-
+Swal.fire({
+    icon: 'success',
+    title: '¡REGISTRO COMPLETADO!',
+    showConfirmButton: false,
+    timer: 2000
+  })
 contador++;
 localStorage.setItem ("contadorProductos", contador);
 

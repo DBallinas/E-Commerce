@@ -230,11 +230,7 @@ h6 {
 		font-size: 15px;
 	}
 }
-<<<<<<< HEAD
- #politicasacepto {
-=======
 #politicasacepto {
->>>>>>> 04053e310a8931b5f3445f92535e591a08c195fc
 	outline: none;
 
 	color: black;
@@ -249,6 +245,12 @@ h6 {
 
 #terminosacepto {
 	outline: none;
+	color: black;
+}
+
+#yatengocuenta {
+	outline: none;
+	text-decoration: none;
 	color: black;
 }
 

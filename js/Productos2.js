@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function addItem(item){
 
     const itemHTML =     `  <div class="col" id="tamañocarrusel">
@@ -33,16 +34,15 @@ addItem({'name':'Polainas Wilson 4lbs Unisex',
 
 
 
+=======
+>>>>>>> 36510b3151935d6835f33de7c32997c597dd9711
 
 let datos=[];
 
-let imageFile = document.getElementById('imageFile');
-let store = {'names':[], 'data': []};
 
-let totalEnProductos=0;
+
     let bodyTabla=document.getElementById("list-items");
    
-
 
     window.addEventListener("load", function() {
         
@@ -54,7 +54,7 @@ let totalEnProductos=0;
                   bodyTabla.innerHTML += `<div class="col" id="tamañocarrusel">
                   <div class="card h-100">
                       
-                  <img id="imageFile" src="${imgsData.data.value}" class="d-block w-100" alt="...">
+                  <img  src="${element.Img}" class="d-block w-100" alt="...">
                 
                     <div class="card-body">
                       <h5 class="card-title">${element.nombre}</h5>
@@ -75,37 +75,8 @@ let totalEnProductos=0;
               });
         }
   
-        for(let i=0;i<localStorage.length;i++)
-        {
-            console.log(i+": "+localStorage.key(i)+":"+localStorage.getItem(localStorage.key(i)));
-        }
-      }
-  );
+      });//window
 
-  //previewFile(id imagen, input type file , textArea);
-  function previewFile(img, inputFile, input) {
-    let preview = document.getElementById(img);
-    let file    = document.getElementById(inputFile).files[0];
-    let reader  = new FileReader();
 
-    reader.addEventListener("load", function () {
-      console.log(store.data.length);
-      store.data[store.data.length] = reader.result;
-      store.names[store.names.length] =file.name;
-      console.table(store);
-      document.getElementById(input).value = reader.result;
-        preview.src = reader.result;
-      localStorage.setItem("imgsData", JSON.stringify(store));
-      fillSelect();
-      }, false);
-    
-      if (file) {
-        reader.readAsDataURL(file);
-      }// file
-  }// previewFile 
-
-  selectImages.addEventListener("change", function(){
-    imageFile.src = store.data[selectImages.options[selectImages.selectedIndex].value];
-  });
 
       

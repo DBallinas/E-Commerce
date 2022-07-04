@@ -10,11 +10,11 @@ let precioProducto=document.getElementById("Precio");
 let cantProducto=document.getElementById("Cantidad");
 let skuProducto=document.getElementById("sku");
 
-let catAccesorios=document.getElementById('flexCheckAccesorios');
-let catAparatos=document.getElementById("flexCheckAparatos");
-let catCalzado=document.getElementById("flexCheckCalzado");
-let catRopa=document.getElementById("flexCheckRopa");
-let catSuplementos=document.getElementById("flexCheckSuplementos");
+let catAccesorios=document.getElementById('flexRadioAccesorios');
+let catAparatos=document.getElementById("flexRadioAparatos");
+let catCalzado=document.getElementById("flexRadioCalzado");
+let catRopa=document.getElementById("flexRadioRopa");
+let catSuplementos=document.getElementById("flexRadioSuplementos");
 
 let datos=[];
 let contador=0;
@@ -23,50 +23,18 @@ let Categoria;
 
 function validarCategoria()
 {
-    if(catAccesorios.checked&&catAparatos.checked){return false;}
-    if(catAccesorios.checked&&catCalzado.checked){return false;}
-    if(catAccesorios.checked&&catRopa.checked){return false;}
-    if(catAccesorios.checked&&catSuplementos.checked){return false;}
-    if(catAparatos.checked&&catCalzado.checked){return false;}
-    if(catAparatos.checked&&catRopa.checked){return false;}
-    if(catAparatos.checked&&catSuplementos.checked){return false;}
-    if(catCalzado.checked&&catRopa.checked){return false;}
-    if(catCalzado.checked&&catSuplementos.checked){return false;}
-    if(catRopa.checked&&catSuplementos.checked){return false;}
-
-    if(catAccesorios.checked){
-        Categoria="Accesorios";
-        console.log(Categoria);
-    }
-    if(catAparatos.checked){
-        Categoria="Aparatos";
-        console.log(Categoria);
-    }
-    if(catCalzado.checked){
-        Categoria="Calzado";
-        console.log(Categoria);
-    }
-    if(catRopa.checked){
-        Categoria="Ropa";
-        console.log(Categoria);
-    }
-    if(catSuplementos.checked){
-        Categoria="Suplementos";
-        console.log(Categoria);
-    }
-    
-    if(catAccesorios.checked&&catAparatos.checked&&catCalzado.checked&&catRopa.checked&&catSuplementos.checked)
-     {
-        console.log("Todo lleno");
-         return false
-     }
+   
      if(!catAccesorios.checked&&!catAparatos.checked&&!catCalzado.checked&&!catRopa.checked&&!catSuplementos.checked)
      {
         console.log("Todo vacio");
-         return false
+         return false;
      }
-
-    return true;
+    //  if(catAccesorios.checked||catAparatos.checked||catCalzado.checked||catRopa.checked||catSuplementos.checked)
+    //  {
+    //     console.log("Todo vacio");
+    //      return true;
+    //  }
+     return true;
 }
 function validarSku()
 {
@@ -132,6 +100,10 @@ if(cantProducto.value.length==0)
 {
     return false;
 }
+if(cantProducto.value==0)
+{
+    return false;
+}
 if(isNaN(cantProducto.value))
 {
     return false;
@@ -188,8 +160,23 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
 
     if(!validarCategoria())
     {
+<<<<<<< HEAD
         lista+="<li>Se debe seleccionar una categoria válida</li>"
     }
+=======
+        catAccesorios.style.border="red thin solid";
+        catAparatos.style.border="red thin solid";
+        catCalzado.style.border="red thin solid";
+        catRopa.style.border="red thin solid";
+        catSuplementos.style.border="red thin solid";
+        lista+="<li>Se debe escribir una categoria válida</li>"
+        
+    }else {catAccesorios.style.border="";
+    catAparatos.style.border="";
+    catCalzado.style.border="";
+    catRopa.style.border="";
+    catSuplementos.style.border="";}
+>>>>>>> 36510b3151935d6835f33de7c32997c597dd9711
 
 
     document.getElementById("alertValidText").innerHTML=`
@@ -204,6 +191,26 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
 
     return false;
 }
+if(catAccesorios.checked){
+    Categoria="Accesorios";
+    console.log(Categoria);
+}
+if(catAparatos.checked){
+    Categoria="Aparatos";
+    console.log(Categoria);
+}
+if(catCalzado.checked){
+    Categoria="Calzado";
+    console.log(Categoria);
+}
+if(catRopa.checked){
+    Categoria="Ropa";
+    console.log(Categoria);
+}
+if(catSuplementos.checked){
+    Categoria="Suplementos";
+    console.log(Categoria);
+}
 
 document.getElementById("alertValidacion").style.display="none";
 Swal.fire({
@@ -212,13 +219,14 @@ Swal.fire({
     showConfirmButton: false,
     timer: 2000
   })
+
 contador++;
 localStorage.setItem ("contadorProductos", contador);
 
 totalEnProductos += parseInt(cantProducto.value);
 localStorage.setItem("Categoría",Categoria)
 localStorage.setItem ("productosTotal", totalEnProductos);
-localStorage.setItem ("SKU", skuProducto);
+
 
 
 //JSON
@@ -229,6 +237,7 @@ let elemento=`{"id":${contador},
     "precio":${precioProducto.value},
     "sku":"${skuProducto.value}",
     "Categoría":"${Categoria}",
+    "Img":"${store.data}",
     "Descripcion":"${descProducto.value}"
 }`;
 
@@ -248,14 +257,29 @@ nombreProducto.style.border="";
 precioProducto.style.border="";
 descProducto.style.border="";
 skuProducto.style.border="";
+cantProducto.style.border="";
+catAccesorios.style.border="";
+catAparatos.style.border="";
+catCalzado.style.border="";
+catRopa.style.border="";
+catSuplementos.style.border="";
 nombreProducto.focus();
-}
-); //Enviar
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+}); //Enviar
 
 	window.addEventListener('load', function(e){
 		console.log("store.data:" + store.data);

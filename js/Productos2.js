@@ -3,11 +3,11 @@ function addItem(item){
     const itemHTML =     `  <div class="col" id="tamañocarrusel">
     <div class="card h-100">
         
-    <img src="${item.img1}" class="d-block w-100" alt="...">
+    <img src="${item.imgsData}" class="d-block w-100" alt="...">
   
       <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-        <p class="card-text">${item.description}</p>
+        <h5 class="card-title">${item.nombre}</h5>
+        <p class="card-text">${item.Descripcion}</p>
        </div>
         <div class="card-footer">
            <div class="d-flex justify-content-between align-items-center">
@@ -46,9 +46,9 @@ let totalEnProductos=0;
 
     window.addEventListener("load", function() {
         
-        if(localStorage.getItem("elementosTabla")!=null)
+        if(localStorage.getItem("Productoscargados")!=null)
         {
-            datos=JSON.parse(localStorage.getItem("elementosTabla"));
+            datos=JSON.parse(localStorage.getItem("Productoscargados"));
             datos.forEach(element =>
               {
                   bodyTabla.innerHTML += `<div class="col" id="tamañocarrusel">

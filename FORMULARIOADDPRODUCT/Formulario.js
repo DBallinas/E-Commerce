@@ -74,7 +74,7 @@ function validarSku()
     {
         return false;
     }
-    if(skuProducto.value.length>10)
+    if(skuProducto.value.length>12)
     {
         return false;
     }
@@ -95,7 +95,7 @@ if(nombreProducto.value.length==0)
 {
     return false;
 }
-if(nombreProducto.value.length>15)
+if(nombreProducto.value.length>30)
 {
     return false;
 }
@@ -147,8 +147,6 @@ if(/^[0-9]+$/.test(cantProducto.value))
 //return true;
 }
 
-
-let total=document.getElementById("totalPagar");
 let totalEnProductos=0;
 
 let agregar=document.getElementById("Agregar");
@@ -173,7 +171,7 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
     if(!ValidarDescripcion())
     {
         descProducto.style.border="red thin solid"
-        lista+="<li>Por favor escriba un Mensaje válido</li>"
+        lista+="<li>Por favor escriba una descripción válida</li>"
     }else{descProducto.style.border="";}
 
     if(!validarCantidad())
@@ -190,7 +188,7 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
 
     if(!validarCategoria())
     {
-        lista+="<li>Se debe escribir una categoria válida</li>"
+        lista+="<li>Se debe seleccionar una categoria válida</li>"
     }
 
 
@@ -225,6 +223,7 @@ localStorage.setItem ("SKU", skuProducto);
 
 //JSON
 let elemento=`{"id":${contador}, 
+    "imagenproducto": "",
     "nombre": "${nombreProducto.value}", 
     "cantidad": ${cantProducto.value}, 
     "precio":${precioProducto.value},
@@ -235,7 +234,7 @@ let elemento=`{"id":${contador},
 
 datos.push(JSON.parse(elemento));
 
-localStorage.setItem("elementosTabla",  JSON.stringify(datos) );
+localStorage.setItem("Productoscargados",  JSON.stringify(datos) );
 
 console.log(datos);
 
@@ -309,7 +308,7 @@ nombreProducto.focus();
 				localStorage.setItem("imgsData", JSON.stringify(store));
                 store.push(JSON.parse(elemento));
 
-                localStorage.setItem("elementosTabla",  JSON.stringify(store) );
+                localStorage.setItem("Productoscargados",  JSON.stringify(store) );
 
 				fillSelect();
 		  	}, false);

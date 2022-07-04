@@ -55,11 +55,11 @@
   
             <div class="form-group">
               <label for="">Precio:</label>
-              <input type="tel" class="form-control" placeholder="Precio en pesos MXN" id="Precio" >
+              <input type="number" min="1" class="form-control" placeholder="Precio en pesos MXN" id="Precio" >
             </div></br>
             <div class="form-group">
               <label for="">SKU:</label>
-              <input type="tel" class="form-control" placeholder="Código del articulo" id="sku" >
+              <input type="text" class="form-control" placeholder="Código del articulo" id="sku" maxlength="12" required>
             </div></br>
             <div class="form-group">
               <label for="">Cantidad:</label>
@@ -69,31 +69,31 @@
             <div class="form-group">
               <label for="">Categoria(s)</label>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckAccesorios">
+                <input class="form-check-input" type="radio" name="eligecat" value="Accesorios" id="flexCheckAccesorios">
                 <label class="form-check-label" for="flexCheckAccesorios">
                   Accesorios
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckAparatos">
+                <input class="form-check-input" type="radio" name="eligecat" value="Aparatos" id="flexCheckAparatos">
                 <label class="form-check-label" for="flexCheckAparatos">
                   Aparatos
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckCalzado">
+                <input class="form-check-input" type="radio" name="eligecat" value="Calzado" id="flexCheckCalzado">
                 <label class="form-check-label" for="flexCheckCalzado">
                   Calzado
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckRopa">
+                <input class="form-check-input" type="radio" name="eligecat" value="Ropa" id="flexCheckRopa">
                 <label class="form-check-label" for="flexCheckRopa">
                   Ropa
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckSuplementos">
+                <input class="form-check-input" type="radio" name="eligecat" value="Suplementos" id="flexCheckSuplementos">
                 <label class="form-check-label" for="flexCheckSuplementos">
                   Suplementos
                 </label>

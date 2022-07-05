@@ -265,16 +265,6 @@ nombreProducto.focus();
 
 
 
-
-
-
-
-
-
-
-
-
-
 }); //Enviar
 
 	window.addEventListener('load', function(e){
@@ -314,9 +304,9 @@ nombreProducto.focus();
 
 		//previewFile(id imagen, input type file , textArea);
 		function previewFile(img, inputFile, input) {
-			var preview = document.getElementById(img);
-			var file    = document.getElementById(inputFile).files[0];
-			var reader  = new FileReader();
+			let preview = document.getElementById(img);
+			let file    = document.getElementById(inputFile).files[0];
+			let reader  = new FileReader();
 
 			reader.addEventListener("load", function () {
 				console.log(store.data.length);

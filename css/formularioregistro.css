@@ -1,0 +1,80 @@
+/*DISEÑO DE LA CAJA DEL FORM*/
+#formregistro{
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    max-width: 600px;
+    padding: 5%;
+    border-radius: 40px;
+	box-shadow: 0px 8px 10px -4px gainsboro;
+    text-align: center;
+}
+/*FONDO DE LA PAGINA LOGIN*/
+#fondo{
+    height: 100%;
+    background-image: url(/img/g-sportsimg11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right;
+    background-position: top;
+}
+/*BOTON CREAR CUENTA*/
+#enviar-registro{
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*BOTON LOGIN*/
+#login{
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*CAMPO DONDE VA EL NOMBRE*/
+#Nombreperson {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL APELLIDO PATERNO*/
+#Apellidopaterno {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL APELLIDO MATERNO*/
+#Apellidomaterno {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL TELEFONO*/
+#Phoneregistro {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL EMAIL*/
+#Emailregistro {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA EL EMAIL CONFIRM*/
+#Emailconfirm {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CONTRASEÑA*/
+#Contrasena {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CONTRASEÑA CONFIRM*/
+#Contrasenaconfirm {
+    border-radius: 20px;
+}
+/*TAMAÑO DE LETRA DE TITULO DE CORREO Y CONTRA*/
+label {
+    font-size: 20px;
+}
+/*TAMAÑO DE LETRA DE TITULO DE POLITICA*/
+#politicasacepto{
+    font-size: 15px;
+}
+/*TAMAÑO DE LETRA DE TITULO DE TERMINOS*/
+#terminosacepto{
+    font-size: 15px;
+}
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

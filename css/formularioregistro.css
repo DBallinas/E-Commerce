@@ -1,0 +1,68 @@
+/*DISEÑO DE LA CAJA DEL FORM*/
+#formregistro{
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    max-width: 600px;
+    padding: 3%;
+    border-radius: 40px;
+	box-shadow: 0px 8px 10px -4px gainsboro;
+}
+/*TAMAÑO DE LETRA DE TITULOS DE CAMPOS Y CENTRAR*/
+.form-group {
+    text-align: center;
+    font-size:x-large;
+}
+/*TAMAÑO DE LETRA DE ACEPTAR POLITICAS*/
+.form-check {
+    font-size: medium;
+}
+/*FONDO DE LA PAGINA LOGIN*/
+#fondoregistro{
+    background-image: url(/img/g-sportimg66.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right;
+    background-position: top;
+}
+/*BOTON ENVIAR REGISTRO*/
+#enviar-registro {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*CAMPO DONDE VA EL NOMBRE*/
+#Nombreperson {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL APELLIDO PATERNO */
+#Apellidopaterno {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL APELLITDO MATERNO */
+#Apellidomaterno {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL TELEFONO*/
+#Phoneregistro {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL CORREO*/
+#Emailregistro {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CONFIRMACION DE CORREO */
+#Emailconfirm {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CONTRASEÑA */
+#Contrasena {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CONFIRMACION DE LA CONTRASEÑA */
+#Contrasenaconfirm {
+    border-radius: 20px;
+}
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

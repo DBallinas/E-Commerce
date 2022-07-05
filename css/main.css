@@ -170,23 +170,7 @@ h6 {
 /*Diseño Slider Inicio*/
 
 
-<<<<<<< HEAD
-#caption {
-	bottom: 250px;
-}
-
-#entrar {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
-}
-
-#caption h5 {
-	/*Texto del Slider*/
-=======
 .carousel-caption h5 {
->>>>>>> francisco
 	font-size: 45px;
 	text-transform: uppercase;
 	letter-spacing: 1px;

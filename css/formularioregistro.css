@@ -4,7 +4,6 @@
     margin: auto;
     width: 75%;
     max-width: 600px;
-<<<<<<< HEAD
     padding: 3%;
     border-radius: 40px;
 	box-shadow: 0px 8px 10px -4px gainsboro;
@@ -21,37 +20,14 @@
 /*FONDO DE LA PAGINA LOGIN*/
 #fondoregistro{
     background-image: url(/img/g-sportimg66.jpg);
-=======
-    padding: 5%;
-    border-radius: 40px;
-	box-shadow: 0px 8px 10px -4px gainsboro;
-    text-align: center;
-}
-/*FONDO DE LA PAGINA LOGIN*/
-#fondo{
-    height: 100%;
-    background-image: url(/img/g-sportsimg11.jpg);
->>>>>>> 1b4941a235b4cce4048e950c4389812bd050dd02
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: right;
     background-position: top;
 }
-<<<<<<< HEAD
 /*BOTON ENVIAR REGISTRO*/
 #enviar-registro {
-=======
-/*BOTON CREAR CUENTA*/
-#enviar-registro{
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
-}
-/*BOTON LOGIN*/
-#login{
->>>>>>> 1b4941a235b4cce4048e950c4389812bd050dd02
 	color: white;
 	background-color: #66d701;
 	border-radius: 50px;
@@ -61,19 +37,11 @@
 #Nombreperson {
     border-radius: 20px;
 }
-<<<<<<< HEAD
 /*CAMPO DONDE VA EL APELLIDO PATERNO */
 #Apellidopaterno {
     border-radius: 20px;
 }
 /*CAMPO DONDE VA EL APELLITDO MATERNO */
-=======
-/*CAMPO DONDE VA EL APELLIDO PATERNO*/
-#Apellidopaterno {
-    border-radius: 20px;
-}
-/*CAMPO DONDE VA EL APELLIDO MATERNO*/
->>>>>>> 1b4941a235b4cce4048e950c4389812bd050dd02
 #Apellidomaterno {
     border-radius: 20px;
 }
@@ -81,7 +49,6 @@
 #Phoneregistro {
     border-radius: 20px;
 }
-<<<<<<< HEAD
 /*CAMPO DONDE VA EL CORREO*/
 #Emailregistro {
     border-radius: 20px;
@@ -98,34 +65,7 @@
 #Contrasenaconfirm {
     border-radius: 20px;
 }
-=======
-/*CAMPO DONDE VA EL EMAIL*/
-#Emailregistro {
-    border-radius: 20px;
+#yatengocuenta {
+    font-size: large;
 }
-/*CAMPO DONDE VA LA EL EMAIL CONFIRM*/
-#Emailconfirm {
-    border-radius: 20px;
-}
-/*CAMPO DONDE VA LA CONTRASEÑA*/
-#Contrasena {
-    border-radius: 20px;
-}
-/*CAMPO DONDE VA LA CONTRASEÑA CONFIRM*/
-#Contrasenaconfirm {
-    border-radius: 20px;
-}
-/*TAMAÑO DE LETRA DE TITULO DE CORREO Y CONTRA*/
-label {
-    font-size: 20px;
-}
-/*TAMAÑO DE LETRA DE TITULO DE POLITICA*/
-#politicasacepto{
-    font-size: 15px;
-}
-/*TAMAÑO DE LETRA DE TITULO DE TERMINOS*/
-#terminosacepto{
-    font-size: 15px;
-}
->>>>>>> 1b4941a235b4cce4048e950c4389812bd050dd02
 /*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

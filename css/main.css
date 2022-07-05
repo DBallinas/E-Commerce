@@ -63,11 +63,6 @@ h6 {
 	margin: auto;
 }
 
-#textoacerca {
-	padding: 5%;
-	text-align: justify;
-}
-
 .container img {
 	border-radius: 350px;
 	transition: transform 0.2s;
@@ -99,13 +94,6 @@ h6 {
 	padding: 40px 250px;
 	margin: 0 auto;
 	text-align: justify;
-}
-
-#enviar-contacto {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
 }
 
 #Agregar{

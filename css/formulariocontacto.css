@@ -1,9 +1,9 @@
 /*DISEÑO DE LA CAJA DEL FORM*/
-#formregistro{
+#formcontacto{
     background-color: white;
     margin: auto;
     width: 75%;
-    max-width: 600px;
+    max-width: 950px;
     padding: 3%;
     border-radius: 40px;
 	box-shadow: 0px 8px 10px -4px gainsboro;
@@ -13,55 +13,49 @@
     text-align: center;
     font-size:x-large;
 }
-/*FONDO DE LA PAGINA REGISTRO*/
-#fondoregistro{
-    background-image: url(/img/g-sportimg66.jpg);
+/*FONDO DE LA PAGINA LOGIN*/
+#fondocontacto{
+    background-image: url(/img/g-sportimg222.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: right;
-    background-position: top;
+    background-position: center;
 }
-/*BOTON ENVIAR REGISTRO*/
-#enviar-registro {
+/*DESCRIPCION DEL TEXTO ACERCA DE CONTACTO*/
+#textoacerca {
+    color: white;
+    padding: 5%;
+    text-align: justify;
+}
+/*BOTON ENVIAR CONTACTO*/
+#enviar-contacto {
 	color: white;
 	background-color: #66d701;
 	border-radius: 50px;
 	box-shadow: 0px 5px 10px gainsboro;
 }
 /*CAMPO DONDE VA EL NOMBRE*/
-#Nombreperson {
+#Name {
     border-radius: 20px;
 }
-/*CAMPO DONDE VA EL APELLIDO PATERNO */
-#Apellidopaterno {
+/*CAMPO DONDE VA EL ASUNTO*/
+#Asunto {
     border-radius: 20px;
 }
-/*CAMPO DONDE VA EL APELLITDO MATERNO */
-#Apellidomaterno {
+/*CAMPO DONDE VA EL MENSAJE*/
+#Message {
     border-radius: 20px;
 }
 /*CAMPO DONDE VA EL TELEFONO*/
-#Phoneregistro {
+#Phone {
     border-radius: 20px;
 }
 /*CAMPO DONDE VA EL CORREO*/
-#Emailregistro {
+#Email {
     border-radius: 20px;
 }
-/*CAMPO DONDE VA LA CONFIRMACION DE CORREO */
-#Emailconfirm {
-    border-radius: 20px;
-}
-/*CAMPO DONDE VA LA CONTRASEÑA */
-#Contrasena {
-    border-radius: 20px;
-}
-/*CAMPO DONDE VA LA CONFIRMACION DE LA CONTRASEÑA */
-#Contrasenaconfirm {
-    border-radius: 20px;
-}
-#yatengocuenta {
-    font-size: large;
+#visitanos{
+    text-align: center;
+    font-size:x-large;
 }
 /*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

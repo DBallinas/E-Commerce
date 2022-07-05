@@ -168,16 +168,9 @@ h6 {
 }
 
 /*Diseño Slider Inicio*/
-.carousel-inner h5 {
-	text-align: center;
-}
 
-.carousel-item {
-	/*Imagenes del slider tamaño*/
-	height: 100vh;
-	min-height: 100px;
-}
 
+<<<<<<< HEAD
 #caption {
 	bottom: 250px;
 }
@@ -191,26 +184,28 @@ h6 {
 
 #caption h5 {
 	/*Texto del Slider*/
+=======
+.carousel-caption h5 {
+>>>>>>> francisco
 	font-size: 45px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-top: 20px;
 }
-
-#caption p {
+.carousel-caption p {
 	width: 60%;
 	margin: auto;
 	font-size: 18px;
 	line-height: 1.9;
 }
 
-#caption a {
+.carousel-caption a {
 	/*Botón Tienda*/
 	text-decoration: none;
-	border-radius: 300px;
 	background: #66d701;
 	padding: 10px 30px;
 	display: inline-block;
+	border-radius: 300px;
 	color: white;
 	margin-top: 15px;
 }
@@ -218,18 +213,13 @@ h6 {
 .w100 {
 	height: 100vh;
 }
-@media only screen and (max-width: 1200px) {
-	#caption {
-		bottom: 165px;
-	}
-	#caption h5 {
-		font-size: 17px;
-	}
-	#caption- a {
-		padding: 10px 15px;
-		font-size: 15px;
-	}
-}
+
+
+
+
+
+
+
 #politicasacepto {
 	outline: none;
 
@@ -315,21 +305,14 @@ footer a:hover {
 }
 @media screen and (max-width: 1400px) {
 	/*Se ajusta la imagen de pago desde los 1400px hacia abajo a un width de 100%*/
-	.img-pago {
+	#img-pago {
 		max-width: 100%;
 	}
 }
-@media only screen and(max-width: 767px) {
-	.carousel-caption {
-		bottom: 165px !important;
-	}
-	.carousel-caption h5 {
-		font-size: 17px !important;
-	}
-	.carousel-caption a {
-		padding: 10px 15px !important;
-		font-size: 15px !important;
+
+@media(min-width: 1183px) {
+	#caption {
+		bottom: 400px;
 	}
 }
-
 /*Fin*/

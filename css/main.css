@@ -137,11 +137,6 @@ h6 {
 	letter-spacing: .1rem;
 }
 
-.bi-person{
-	font-size: 150px;
-	color: #50CCFF;
-}
-
 .btn {
 	margin-top: 1rem;
 	display: inline-block;
@@ -198,23 +193,10 @@ h6 {
 	height: 100vh;
 }
 
-
-
-
-
-
-
 #politicasacepto {
 	outline: none;
 
 	color: black;
-}
-
-#crearcuenta {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
 }
 
 #terminosacepto {

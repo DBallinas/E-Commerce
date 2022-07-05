@@ -1,0 +1,53 @@
+/*DISEÑO DE LA CAJA DEL FORM*/
+#forminicio{
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    max-width: 600px;
+    padding: 5%;
+    border-radius: 40px;
+	box-shadow: 0px 8px 10px -4px gainsboro;
+    text-align: center;
+}
+/*FONDO DE LA PAGINA LOGIN*/
+#fondo{
+    height: 100%;
+    background-image: url(/img/g-sportsimg11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right;
+    background-position: top;
+}
+/*ICONO LOGIN COLOR Y TAMAÑO*/
+.bi-person{
+	font-size: 180px;
+	color: #50CCFF;
+}
+/*BOTON CREAR CUENTA*/
+#crearcuenta {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*BOTON ENTRAR*/
+#entrar {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*CAMPO DONDE VA EL CORREO*/
+#Emailinicio {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CONTRASEÑA*/
+#Contrasenainicio {
+    border-radius: 20px;
+}
+/*TAMAÑO DE LETRA DE TITULO DE CORREO Y CONTRA*/
+label {
+    font-size:x-large;
+}
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

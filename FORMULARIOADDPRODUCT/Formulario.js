@@ -1,41 +1,37 @@
+// CARGA DE IMAGEN
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
 let imageFile = document.getElementById('imageFile');
-let selectImages = document.getElementById('selectImages');
-let store = {'names':[], 'data': []};
-
+// AQUI GUARDA LOS DATOS DE LA IMAGEN
+//let store = {'names':[], 'data': []};
+// ALTA LET DE NUESTRO HTML, PARA LEER LOS DATOS INGRESADOS
 let nombreProducto=document.getElementById("Producto");
 let descProducto=document.getElementById("Descripcion");
 let precioProducto=document.getElementById("Precio");
 let cantProducto=document.getElementById("Cantidad");
 let skuProducto=document.getElementById("sku");
-
+// ALTA LET DE NUESTRO HTML, PARA LEER LOS DATOS INGRESADOS EN CATEGORIAS TYPO RADIO
 let catAccesorios=document.getElementById('flexRadioAccesorios');
 let catAparatos=document.getElementById("flexRadioAparatos");
 let catCalzado=document.getElementById("flexRadioCalzado");
 let catRopa=document.getElementById("flexRadioRopa");
 let catSuplementos=document.getElementById("flexRadioSuplementos");
-
+// INICIALIZAMOS NUESTROS VALORES EN 0
 let datos=[];
 let contador=0;
-let costoTotal=0;
 let Categoria;
-
+let imagen= "";
+// VALIDACIONES DE EXPRESIONES REGULARES, COMPLETADOS O SELECCIONADOS
 function validarCategoria()
 {
-   
      if(!catAccesorios.checked&&!catAparatos.checked&&!catCalzado.checked&&!catRopa.checked&&!catSuplementos.checked)
      {
         console.log("Todo vacio");
          return false;
      }
-    //  if(catAccesorios.checked||catAparatos.checked||catCalzado.checked||catRopa.checked||catSuplementos.checked)
-    //  {
-    //     console.log("Todo vacio");
-    //      return true;
-    //  }
      return true;
 }
+
 function validarSku()
 {
     if(skuProducto.value.length==0)
@@ -68,17 +64,19 @@ if(nombreProducto.value.length>30)
     return false;
 }
 return true;
-
 }
 
 function ValidarPrecio()
 {
-
 if(precioProducto.value.length==0)
 {
     return false;
 }
 if(isNaN(precioProducto.value))
+{
+    return false;
+}
+if(precioProducto.value<0)
 {
     return false;
 }
@@ -119,8 +117,7 @@ if(/^[0-9]+$/.test(cantProducto.value))
 //return true;
 }
 
-let totalEnProductos=0;
-
+// COMPROBACION DE CAMPOS LLENADOS CORRECTAMENTE Y ALERTAS EN CASO INCORRECTO
 let agregar=document.getElementById("Agregar");
 agregar.addEventListener("click",(event)=>{
 event.preventDefault();
@@ -160,10 +157,6 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
 
     if(!validarCategoria())
     {
-<<<<<<< HEAD
-        lista+="<li>Se debe seleccionar una categoria válida</li>"
-    }
-=======
         catAccesorios.style.border="red thin solid";
         catAparatos.style.border="red thin solid";
         catCalzado.style.border="red thin solid";
@@ -176,9 +169,8 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
     catCalzado.style.border="";
     catRopa.style.border="";
     catSuplementos.style.border="";}
->>>>>>> 36510b3151935d6835f33de7c32997c597dd9711
-
-
+    
+    // MUESTRA EL CUADRO EN PANTALLA EN DONDE SE INSERTAN LOS ELEMENTOS FALTANTES
     document.getElementById("alertValidText").innerHTML=`
     Los campos deben ser llenados correctamente. <ul>${lista}</ul>`;
     
@@ -188,9 +180,10 @@ if((!validarNombre())||(!ValidarPrecio())||(!ValidarDescripcion())||(!validarCan
     {
         document.getElementById("alertValidacion").style.display="none";
     }, 5000);
-
     return false;
 }
+
+// ASIGNACION DE CATEGORIA SELECCIONADA CHECK RADIUS
 if(catAccesorios.checked){
     Categoria="Accesorios";
     console.log(Categoria);
@@ -211,7 +204,7 @@ if(catSuplementos.checked){
     Categoria="Suplementos";
     console.log(Categoria);
 }
-
+// ALERTA ANIMADA DE REGISTRO EXITOSO
 document.getElementById("alertValidacion").style.display="none";
 Swal.fire({
     icon: 'success',
@@ -219,39 +212,31 @@ Swal.fire({
     showConfirmButton: false,
     timer: 2000
   })
-
+// CONTADOR DE PRODUCTOS REGISTRADOS Y ALMACENADOS EN LOCAL STORAGE
 contador++;
-localStorage.setItem ("contadorProductos", contador);
 
-totalEnProductos += parseInt(cantProducto.value);
-localStorage.setItem("Categoría",Categoria)
-localStorage.setItem ("productosTotal", totalEnProductos);
-
-
-
-//JSON
+//JSON PRODUCTOS
 let elemento=`{"id":${contador}, 
-    "imagenproducto": "",
     "nombre": "${nombreProducto.value}", 
     "cantidad": ${cantProducto.value}, 
     "precio":${precioProducto.value},
     "sku":"${skuProducto.value}",
     "Categoría":"${Categoria}",
-    "Img":"${store.data}",
+    "Img":"${imagen}",
     "Descripcion":"${descProducto.value}"
 }`;
-
+// GUARDAMOS EN LOCAL STORAGE EL JSON Y EN CONSOLA IMPRIME LOS DATOS
+datos = JSON.parse(localStorage.getItem("Productoscargados")||"[]");
 datos.push(JSON.parse(elemento));
-
-localStorage.setItem("Productoscargados",  JSON.stringify(datos) );
-
+localStorage.setItem("Productoscargados", JSON.stringify(datos));
 console.log(datos);
-
+// REGRESAMOS LOS CAMPOS EN BLANCO Y QUITAMOS LAS ADVERTENCIAS DE CAMPOS INCORRECTOS
 nombreProducto.value="";
 precioProducto.value="";
 descProducto.value="";
 cantProducto.value="";
 skuProducto.value="";
+imageFile.src="/img/buscar.png";
 
 nombreProducto.style.border="";
 precioProducto.style.border="";
@@ -264,50 +249,9 @@ catCalzado.style.border="";
 catRopa.style.border="";
 catSuplementos.style.border="";
 nombreProducto.focus();
+}); // FIN DE EJECUCION DEL CUANDO SE PULSA EL BOTON AGREGAR
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}); //Enviar
-
-	window.addEventListener('load', function(e){
-		console.log("store.data:" + store.data);
-		console.log(localStorage.getItem("imgsData"));
-		if ( JSON.parse(localStorage.getItem("imgsData"))!=null)
-			store = JSON.parse(localStorage.getItem("imgsData"));
-		
-		fillSelect();
-	});
-
-	function fillSelect(){
-		if (store.data.length>0) {
-			selectImages.options.length = 0; // clear Select
-			let optiontmp = document.createElement("option");
-				optiontmp.text = "Selecciona una imagen para visualizar:"
-				optiontmp.value = -1;
-				selectImages.add(optiontmp); 
-			for (let i=0; i < store.data.length; i ++){
-				let option = document.createElement("option");
-				option.text = store.names[i];
-				option.value = i;
-				selectImages.add(option); 
-			}//for i
-		}//if store != null
-		console.log(store);
-	}//fillSelect
-
-
+// LINEAS DE CARGAR IMAGEN Y PREVIEW
 	btnFake.addEventListener('click', function(){
 		fileImage.click();
     });
@@ -315,34 +259,17 @@ nombreProducto.focus();
         previewFile('imageFile', 'fileImage', 'inputFile' )
         //previewFile(id imagen, input type file , textArea);
     });
-
 		//previewFile(id imagen, input type file , textArea);
-		function previewFile(img, inputFile, input) {
+		function previewFile(img, inputFile) {
 			var preview = document.getElementById(img);
 			var file    = document.getElementById(inputFile).files[0];
 			var reader  = new FileReader();
 
 			reader.addEventListener("load", function () {
-				console.log(store.data.length);
-				store.data[store.data.length] = reader.result;
-				store.names[store.names.length] =file.name;
-				console.table(store);
-				document.getElementById(input).value = reader.result;
 		  		preview.src = reader.result;
-				localStorage.setItem("imgsData", JSON.stringify(store));
-                store.push(JSON.parse(elemento));
-
-                localStorage.setItem("Productoscargados",  JSON.stringify(store) );
-
-				fillSelect();
+                imagen = reader.result;			
 		  	}, false);
-			
 		  	if (file) {
 		    	reader.readAsDataURL(file);
 		  	}// file
 		}// previewFile 
-
-
-		selectImages.addEventListener("change", function(){
-			imageFile.src = store.data[selectImages.options[selectImages.selectedIndex].value];
-		});

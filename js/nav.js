@@ -56,7 +56,7 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
               <input class="form-control form-control-sm me-2 mt-1 mb-0" type="search" placeholder="Buscar productos" aria-label="Search">
               <a><i id="btn1" class="bi bi-search mt-5 mb-0 ms-1 text-white"></i></a>
               <a href="../iniciodesesion.html"><i id="btn2" class="bi bi-person mt-5 mb-0 ms-5 text-white h2"></i></a>
-              <a><i id="btn3" class="bi bi-cart2 mt-5 mb-0 ms-3 h3 text-white"></i></a>
+              <a href="../carrito.html"><i id="btn3" class="bi bi-cart2 mt-5 mb-0 ms-3 me-5 h3 text-white"></i></a>
               </form>
           </div>
         </div>

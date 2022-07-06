@@ -1,5 +1,6 @@
 function addItem(item){
 
+<<<<<<< HEAD
   const itemHTML =     `  <div class="col" id="tamañocarrusel">
   <div class="card h-100">
   
@@ -17,6 +18,27 @@ function addItem(item){
          <small class="text-muted">$${item.precio}</small>
        </div>
      
+=======
+    const itemHTML =     `  <div class="col" id="tamañocarrusel">
+    <div class="card h-100">
+    <div class="carreaux_presentation_light">
+    <img src="${item.img1}" class="d-block w-100" alt="...">
+    <div class="deroul_titre">${item.name}</div>
+    </div>
+    
+      <div class="card-body">
+        <h5 class="card-title">${item.name}</h5>
+        <p class="card-text">${item.description}</p>
+       </div>
+        <div class="card-footer">
+           <div class="d-flex justify-content-between align-items-center">
+           <div class="btn-group">
+             <button type="button" class="btn btn-sm btn-outline-szecondary">Agregar al carrito</button>
+           </div>
+           <small class="text-muted">$${item.precio}</small>
+         </div>
+      </div>
+>>>>>>> 47dcdf1c741486d68d683be106ed6f9701b83c45
     </div>
   </div>
  </div>

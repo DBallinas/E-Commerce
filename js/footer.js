@@ -8,10 +8,10 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
         <div class="footer-contenido">
             <div class="box">
               <h4>General</h4>
-              <a href="/colecciones/todoslosproductos1.html">
+              <a href="/categorias/todoslosproductos.html">
                 <p>Tienda</p>
               </a>
-              <a href="/colecciones/rebajas.html">
+              <a href="/categorias/rebajas.html">
                 <p>Rebajas</p>
               </a>
               <a href="../../contact.html">
@@ -23,7 +23,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="/iniciodesesion.html">
                 <p>Iniciar sesión</p>
               </a>
-              <a href="/REGISTROUSUARIOS/RegistroUsuarios.html">
+              <a href="/RegistroUsuarios/RegistroUsuarios.html">
                 <p>Registrarse</p>
               </a>
               <a href="#">
@@ -82,7 +82,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <p>Somos una tienda de artículos deportivos donde encontrarás los mejores productos al mejor precio.</p>
               <h5>¡La nueva Generación en deportes!</h5></br>
                 <div>
-                  <img src="../../img/metodos-pago.png" class="img-pago" width="150%">
+                  <img src="../../img/metodos-pago.png" id="img-pago" width="150%">
                 </div>
             </div>   
             <img src="../../img/G-SPORTS-LOGO.png" width="100px">

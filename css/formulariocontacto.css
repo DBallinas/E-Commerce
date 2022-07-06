@@ -1,0 +1,61 @@
+/*DISEÑO DE LA CAJA DEL FORM*/
+#formcontacto{
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    max-width: 950px;
+    padding: 3%;
+    border-radius: 40px;
+	box-shadow: 0px 8px 10px -4px gainsboro;
+}
+/*TAMAÑO DE LETRA DE TITULOS DE CAMPOS Y CENTRAR*/
+.form-group {
+    text-align: center;
+    font-size:x-large;
+}
+/*FONDO DE LA PAGINA LOGIN*/
+#fondocontacto{
+    background-image: url(/img/g-sportimg222.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+}
+/*DESCRIPCION DEL TEXTO ACERCA DE CONTACTO*/
+#textoacerca {
+    color: white;
+    padding: 5%;
+    text-align: justify;
+}
+/*BOTON ENVIAR CONTACTO*/
+#enviar-contacto {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*CAMPO DONDE VA EL NOMBRE*/
+#Name {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL ASUNTO*/
+#Asunto {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL MENSAJE*/
+#Message {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL TELEFONO*/
+#Phone {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL CORREO*/
+#Email {
+    border-radius: 20px;
+}
+#visitanos{
+    text-align: center;
+    font-size:x-large;
+}
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

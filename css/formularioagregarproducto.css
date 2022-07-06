@@ -1,0 +1,58 @@
+/*DISEÑO DE LA CAJA DEL FORM*/
+#formagregar{
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    max-width: 600px;
+    padding: 3%;
+    border-radius: 40px;
+	box-shadow: 0px 8px 10px -4px gainsboro;
+}
+/*TAMAÑO DE LETRA DE TITULOS DE CAMPOS Y CENTRAR*/
+.form-group {
+    text-align: center;
+    font-size:x-large;
+}
+/*FONDO DE LA PAGINA LOGIN*/
+#fondoproductos{
+    background-image: url(/img/iconos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+}
+/*BOTON ENVIAR CONTACTO*/
+#agregar {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*BOTON SUBIR IMAGEN*/
+#btnFake {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*CAMPO DONDE VA EL PRODUCTO*/
+#Producto {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA DESCRIPCION*/
+#Descripcion {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL PRECIO*/
+#Precio {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA EL SKU*/
+#sku {
+    border-radius: 20px;
+}
+/*CAMPO DONDE VA LA CANTIDAD*/
+#Cantidad {
+    border-radius: 20px;
+}
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

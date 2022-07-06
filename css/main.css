@@ -1,6 +1,7 @@
 * {
 	font-family: Arial, Helvetica, sans-serif;
 }
+
 h1 {
 	text-align: center;
 }
@@ -30,11 +31,6 @@ h6 {
 	line-height: 150%;
 }
 
-.icon-trabajos {
-	/*Configuracion para iconos de GitHub y LinkedIn*/
-	width: 90px;
-}
-
 #cabezera {
 	background-image: linear-gradient(130deg, #3262a8, #50ccff 50%, #3262a8);
 	padding: 5%;
@@ -61,11 +57,6 @@ h6 {
 	text-align: center;
 	display: grid;
 	margin: auto;
-}
-
-#textoacerca {
-	padding: 5%;
-	text-align: justify;
 }
 
 .container img {
@@ -101,21 +92,7 @@ h6 {
 	text-align: justify;
 }
 
-#enviar-contacto {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
-}
-
-#enviar-registro {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
-}
-
-#Agregar{
+#Agregar {
 	color: white;
 	background-color: #66d701;
 	border-radius: 50px;
@@ -135,11 +112,6 @@ h6 {
 
 .btn:hover {
 	letter-spacing: .1rem;
-}
-
-.bi-person{
-	font-size: 150px;
-	color: #50CCFF;
 }
 
 .btn {
@@ -168,49 +140,27 @@ h6 {
 }
 
 /*Diseño Slider Inicio*/
-.carousel-inner h5 {
-	text-align: center;
-}
 
-.carousel-item {
-	/*Imagenes del slider tamaño*/
-	height: 100vh;
-	min-height: 100px;
-}
-
-#caption {
-	bottom: 250px;
-}
-
-#entrar {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
-}
-
-#caption h5 {
-	/*Texto del Slider*/
+.carousel-caption h5 {
 	font-size: 45px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-top: 20px;
 }
-
-#caption p {
+.carousel-caption p {
 	width: 60%;
 	margin: auto;
 	font-size: 18px;
 	line-height: 1.9;
 }
 
-#caption a {
+.carousel-caption a {
 	/*Botón Tienda*/
 	text-decoration: none;
-	border-radius: 300px;
 	background: #66d701;
 	padding: 10px 30px;
 	display: inline-block;
+	border-radius: 300px;
 	color: white;
 	margin-top: 15px;
 }
@@ -218,29 +168,11 @@ h6 {
 .w100 {
 	height: 100vh;
 }
-@media only screen and (max-width: 1200px) {
-	#caption {
-		bottom: 165px;
-	}
-	#caption h5 {
-		font-size: 17px;
-	}
-	#caption- a {
-		padding: 10px 15px;
-		font-size: 15px;
-	}
-}
+
 #politicasacepto {
 	outline: none;
 
 	color: black;
-}
-
-#crearcuenta {
-	color: white;
-	background-color: #66d701;
-	border-radius: 50px;
-	box-shadow: 0px 5px 10px gainsboro;
 }
 
 #terminosacepto {
@@ -254,7 +186,8 @@ h6 {
 	color: black;
 }
 
-/*SLIDER CARRUSEL CARDS PRODUCTOS*/ #tamañocarrusel .carousel-inner {
+/*SLIDER CARRUSEL CARDS PRODUCTOS*/
+#tamañocarrusel .carousel-inner {
 	height: 400px;
 }
 /*Fin*/
@@ -315,21 +248,14 @@ footer a:hover {
 }
 @media screen and (max-width: 1400px) {
 	/*Se ajusta la imagen de pago desde los 1400px hacia abajo a un width de 100%*/
-	.img-pago {
+	#img-pago {
 		max-width: 100%;
 	}
 }
-@media only screen and(max-width: 767px) {
-	.carousel-caption {
-		bottom: 165px !important;
-	}
-	.carousel-caption h5 {
-		font-size: 17px !important;
-	}
-	.carousel-caption a {
-		padding: 10px 15px !important;
-		font-size: 15px !important;
+
+@media (min-width: 1183px) {
+	#caption {
+		bottom: 400px;
 	}
 }
-
 /*Fin*/

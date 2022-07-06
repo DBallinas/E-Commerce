@@ -25,7 +25,7 @@ Juárez García Francisco
 
 Muñoz Almaguer Roberto Carlos
 * https://www.linkedin.com/in/robertocarlosma/
-* https://www.linkedin.com/in/robertocarlosma/
+* https://github.com/RobertoCarlosMA
 
 Vázquez Rosales José de Jesús
 * https://www.linkedin.com/in/josedejesusvazquezrosales/

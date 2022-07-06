@@ -17,15 +17,6 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                 <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link text-white" href="../../categorias/lanzamientos.html">Lanzamientos</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link text-white" href="../../categorias/todoslosproductos.html">Productos</a>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../../categorias/rebajas.html">Rebajas</a>
-=======
                 <a class="nav-link" href="../../colecciones/lanzamientos.html">Lanzamientos</a>
               </li>
               <li class="nav-item">
@@ -33,7 +24,6 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
             </li>
               <li class="nav-item">
                 <a class="nav-link" href="../../colecciones/rebajas.html">Rebajas</a>
->>>>>>> francisco
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

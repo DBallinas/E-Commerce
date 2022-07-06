@@ -2,9 +2,11 @@ function addItem(item){
 
     const itemHTML =     `  <div class="col" id="tamañocarrusel">
     <div class="card h-100">
-        
+    <div class="carreaux_presentation_light">
     <img src="${item.img1}" class="d-block w-100" alt="...">
-  
+    <div class="deroul_titre">${item.name}</div>
+    </div>
+    
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.description}</p>
@@ -16,7 +18,6 @@ function addItem(item){
            </div>
            <small class="text-muted">$${item.precio}</small>
          </div>
-       
       </div>
     </div>
    </div>

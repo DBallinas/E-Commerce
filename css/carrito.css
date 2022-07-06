@@ -1,0 +1,33 @@
+/*DISEÑO DE LA CAJA DEL CARRITO*/
+#inicio{
+    background-color: white;
+    margin: auto;
+    width: 75%;
+    max-width: 600px;
+    padding: 5%;
+    border-radius: 40px;
+	box-shadow: 0px 8px 10px -4px gainsboro;
+    text-align: center;
+}
+/*FONDO DEL CARRITO*/
+#fondo{
+    height: 100%;
+    background-image: url(/img/g-sportsimg11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right;
+    background-position: top;
+}
+/*BOTON COMPRAR*/
+#comprar {
+	color: white;
+	background-color: #66d701;
+	border-radius: 50px;
+	box-shadow: 0px 5px 10px gainsboro;
+}
+/*TAMAÑO DE LETRA DE TITULO DE CORREO Y CONTRA*/
+p {
+    font-size: 15px;
+}
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

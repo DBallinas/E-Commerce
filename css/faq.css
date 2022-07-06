@@ -10,10 +10,18 @@ body {
 	/* background: #f8fafb; */
 	font-family: 'Roboto', sans-serif;
 }
-
+/*FONDO DE LA PAGINA ABOUT-US*/
+#fondoabout{
+    background-image: url(/img/iconos-g-sports-azul.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
 :root {
 	--primario: #50ccff;
-	--gris-claro: pink;
+	--gris-claro: #FFB40D;
 	--sombra: 0 0 13px 0 rgba(185, 185, 185, .25);
 }
 

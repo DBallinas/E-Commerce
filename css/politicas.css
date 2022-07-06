@@ -3,6 +3,15 @@
 	margin: 0;
 	padding: 0;
 }
+/*FONDO DE LA PAGINA ABOUT-US*/
+#fondoabout{
+    background-image: url(/img/iconos-g-sports-azul.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
 
 body {
 	margin: 0;
@@ -12,7 +21,7 @@ body {
 }
 
 :root {
-	--primario: blue;
+	--primario: #50ccff;
 	--gris-claro: #b8b8b8;
 	--sombra: 0 0 13px 0 rgba(185, 185, 185, .25);
 }
@@ -46,7 +55,7 @@ main {
 	background: #fff;
 	font-weight: 700;
 	color: var(--gris-claro);
-	border: 2px blue solid transparent;
+	border: 2px #50ccff solid transparent;
 	transition: .3s ease all;
 }
 
@@ -92,7 +101,7 @@ main {
 .contenedor-pregunta {
 	background: #fff;
 	padding: 40px;
-	border: 2px solid blue transparent;
+	border: 2px solid #50ccff transparent;
 	border-radius: 10px;
 	overflow: hidden;
 	transition: .3s ease all;

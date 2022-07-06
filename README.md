@@ -32,4 +32,5 @@ Vázquez Rosales José de Jesús
 * https://github.com/josevazquezrmx
 
 ### Notas
-Este proyecto es nuestro Proyecto Integrador realizado para Generation México​ CH13. Es completamente ficticio y  cualquier semejanza con algún nombre o imagen registrado es coincidencia.
+*Este proyecto es nuestro Proyecto Integrador realizado para Generation México​ CH13. Es completamente ficticio y  cualquier semejanza con algún nombre o imagen registrado es total coincidencia. Queda totalmente prohibido su uso con fines políticos o lucrativos.
+GenerationnMX™ 2022

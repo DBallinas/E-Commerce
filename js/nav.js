@@ -17,13 +17,13 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                 <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../colecciones/lanzamientos.html">Lanzamientos</a>
+                <a class="nav-link text-white" href="../../categorias/lanzamientos.html">Lanzamientos</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link text-white" href="../../colecciones/todoslosproductos">Productos</a>
+              <a class="nav-link text-white" href="../../categorias/todoslosproductos.html">Productos</a>
             </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../colecciones/rebajas.html">Rebajas</a>
+                <a class="nav-link text-white" href="../../categorias/rebajas.html">Rebajas</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
@@ -34,7 +34,7 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                   <li><a class="dropdown-item" href="../../about-us.html">Nosotros</a></li>
                   <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
                   <li><a class="dropdown-item" href="../../preguntasfrecuentes.html">Preguntas frecuentes</a></li>
-                  <li><a class="dropdown-item" href="../REGISTROUSUARIOS/RegistroUsuarios.html">Regístrate</a></li>
+                  <li><a class="dropdown-item" href="../RegistroUsuarios/RegistroUsuarios.html">Regístrate</a></li>
                   </ul>
               </li>
             </ul>

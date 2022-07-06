@@ -59,7 +59,7 @@ a:hover {
 }
 
 .section-products #product-1 .part-1::before {
-    background: url("/js/Productos2.js") no-repeat center;
+    background: url("/js/inicio-productos.js") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }

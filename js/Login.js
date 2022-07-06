@@ -1,4 +1,4 @@
-let UCorreo=document.getElementById("Email");
+/*let UCorreo=document.getElementById("Email");
 let Pass=document.getElementById("Contrasena")
 let Datos=[];
 
@@ -79,4 +79,4 @@ Entrar.addEventListener("click", (event)=>
 UCorreo.addEventListener("blur", (event)=>{
  event.target.value=event.target.value.trim();
 });
-
+*/

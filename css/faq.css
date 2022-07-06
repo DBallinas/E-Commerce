@@ -12,7 +12,7 @@ body {
 }
 
 :root {
-	--primario: blue;
+	--primario: #50CCFF;
 	--gris-claro: pink;
 	--sombra: 0 0 13px 0 rgba(185, 185, 185, .25);
 }
@@ -24,14 +24,14 @@ main {
 }
 
 .titulo {
-	color: blue;
+	color: #50CCFF;
 	font-weight: 700;
 	text-align: center;
 	margin: 60px 0;
 }
 
 i {
-	color: blue;
+	color: #50CCFF;
 }
 
 .contenedor-preguntas {
@@ -47,7 +47,7 @@ i {
 .contenedor-pregunta {
 	background: #fff;
 	padding: 40px;
-	border-top: 2px solid blue;
+	border-top: 2px solid #50CCFF;
 	border-radius: 10px;
 	overflow: hidden;
 	transition: .3s ease all;

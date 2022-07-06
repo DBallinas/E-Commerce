@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas</title>
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="./css/politicas.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Faq collapse CSS-->
+    <link href="./css/faq.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/anima-nav.css">
+</head>
+
+<body>
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav-component></nav-component>
+    <!--FIN DE BARRA DE NAVEGACIÓN-->
+    <main>
+        <h1 class="titulo">Políticas</h1>
+        <div class="categorias" id="categorias">
+            <div class="categoria activa" data-categoria="metodos-pago">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2"
+                    viewBox="0 0 16 16">
+                    <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                    <path
+                        d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z" />
+                </svg>
+                <p>Términos de uso</p>
+            </div>
+
+            <div class="categoria" data-categoria="entregas">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2"
+                    viewBox="0 0 16 16">
+                    <path d="M7 6a1 1 0 0 1 2 0v1H7V6z" />
+                    <path
+                        d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-2 6v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V8.3c0-.627.46-1.058 1-1.224V6a2 2 0 1 1 4 0z" />
+                </svg>
+                <p>Política de privacidad</p>
+            </div>
+
+            <div class="categoria" data-categoria="seguridad">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                </svg>
+                <p>Política de envío</p>
+            </div>
+
+            <div class="categoria" data-categoria="cuenta">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                </svg>
+                <p>Política de devolución</p>
+            </div>
+
+            <div class="categoria" data-categoria="cuenta">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-video2"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                </svg>
+                <p>Política de reembolsos</p>
+            </div>
+        </div>
+
+        <div class="preguntas">
+            <!-- info Términos de uso-->
+            <div class="contenedor-preguntas activo" data-categoria="metodos-pago">
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Generalidades <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Gsports gestiona este sitio web. En todo el sitio, los términos "nosotros",
+                        "nos" y "nuestro" se refieren en lo sucesivo a Gsports. Gsports ofrece esta página web, incluida
+                        toda la información, las herramientas y los servicios que se ponen en este sitio a disposición
+                        suya, el usuario, siempre y cuando acepte la totalidad de los términos, condiciones, políticas y
+                        avisos contemplados aquí. <br>
+
+                        Al visitar nuestro sitio y/o comprarnos algo, usted interactúa con nuestro "Servicio" y reconoce
+                        como vinculantes los siguientes términos y condiciones (denominados en lo sucesivo "Términos del
+                        servicio", "Términos"), incluidos aquellos términos y condiciones adicionales y las políticas
+                        que se mencionan aquí y/o disponibles por medio de hipervínculo. Estos Términos del servicio se
+                        aplican a todos los usuarios del sitio, incluyendo de manera enunciativa mas no limitativa los
+                        usuarios que son navegadores, proveedores, clientes, comerciantes y/o que aporten contenido. Lea
+                        estos Términos del servicio detenidamente antes de acceder o utilizar nuestra página web. Al
+                        acceder o utilizar cualquier parte del sitio, usted acepta estos Términos del servicio. Si no
+                        acepta la totalidad de los términos y condiciones de este acuerdo, no podrá acceder al sitio web
+                        ni utilizar ningún servicio. Si estos Términos del servicio se considerasen una oferta, la
+                        aceptación se limita expresamente a los presentes Términos del servicio. <br>
+
+                        Las nuevas funciones o herramientas que se agreguen a la tienda actual también estarán sujetas a
+                        los Términos del servicio. Puede revisar la versión más reciente de los Términos del servicio en
+                        cualquier momento en esta página. Nos reservamos el derecho de actualizar, cambiar o reemplazar
+                        cualquier parte de los presentes Términos del servicio mediante la publicación de
+                        actualizaciones o cambios en nuestra página web. Es su responsabilidad revisar esta página
+                        periódicamente para ver los cambios. Su uso de la página web o el acceso a ella de forma
+                        continuada después de la publicación de cualquier cambio constituye la aceptación de dichos
+                        cambios.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 1: TÉRMINOS DE LA TIENDA ONLINE<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Al aceptar los presentes Términos del servicio, usted declara que tiene la
+                        mayoría de edad en su estado o provincia de residencia, o que es mayor de edad en su estado o
+                        provincia de residencia y que nos ha dado su consentimiento para permitir que cualquiera de las
+                        personas menores que dependen de usted utilice este sitio.
+
+                        No puede utilizar nuestros productos para ningún fin ilegal o no autorizado ni puede, al hacer
+                        uso del Servicio, infringir las leyes de su jurisdicción (incluyendo de manera enunciativa más
+                        no limitativa, las leyes de derechos de autor).
+
+                        El incumplimiento o violación de cualquiera de los Términos dará como resultado la rescisión
+                        inmediata de sus Servicios.
+                    </p>
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 2: CONDICIONES GENERALES<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Nos reservamos el derecho de rechazar el servicio a cualquier persona, por
+                        cualquier motivo, en cualquier momento.
+
+                        Usted comprende que su contenido (sin incluir la información de la tarjeta de crédito) puede
+                        transferirse sin cifrar e implicar (a) transmisiones en varias redes; y (b) cambios para
+                        adaptarse a los requisitos técnicos de conexión de redes o dispositivos y cumplir con ellos. La
+                        información de la tarjeta de crédito siempre se cifra durante la transferencia a través de las
+                        redes.
+
+                        Usted acepta no reproducir, duplicar, copiar, vender, revender ni aprovechar ninguna parte del
+                        Servicio, uso del Servicio o acceso al Servicio o cualquier contacto en el sitio web a través de
+                        la cual se presta el servicio, sin nuestro permiso expreso por escrito.
+
+                        Los encabezados utilizados en este acuerdo se incluyen solo para facilitar la lectura y no
+                        limitarán ni afectarán los presentes Términos.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 3: EXACTITUD, TOTALIDAD Y CRONOLOGÍA DE LA INFORMACIÓN<i
+                            class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">No nos responsabilizamos si la información disponible en este sitio no es
+                        precisa, completa o actualizada. El material presentado en este sitio se proporciona solo para
+                        información general y no se debe confiar en él ni utilizarlo como la única base para tomar
+                        decisiones sin consultar fuentes de información principales, más precisas, más completas o más
+                        recientes. Al confiar en cualquier material de este sitio lo hace por su cuenta y riesgo.
+
+                        Este sitio puede contener cierta información histórica. La información histórica,
+                        inevitablemente, no es actual y se proporciona únicamente como referencia. Nos reservamos el
+                        derecho de modificar el contenido de este sitio en cualquier momento, pero no tenemos la
+                        obligación de actualizar ninguna información en nuestro sitio. Usted acepta que es su
+                        responsabilidad controlar los cambios en nuestro sitio.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 4: MODIFICACIONES AL SERVICIO Y PRECIOS<i
+                            class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Los precios de nuestros productos están sujetos a cambios sin previo aviso. Nos
+                        reservamos el derecho de modificar o discontinuar el Servicio (o cualquier parte o contenido del
+                        mismo) sin previo aviso en cualquier momento.
+
+                        No seremos responsables ante usted ni ante ningún tercero por ninguna modificación, cambio de
+                        precio, suspensión o interrupción del Servicio.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 5: PRODUCTOS O SERVICIOS<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Ciertos productos o servicios pueden estar disponibles exclusivamente online a
+                        través del sitio web. Estos productos o servicios pueden tener cantidades limitadas y están
+                        sujetos a devolución o cambio solo de acuerdo con nuestra Política de devolución.
+
+                        Hemos hecho todo lo viable para mostrar con la mayor precisión posible los colores y las
+                        imágenes de nuestros productos que aparecen en la tienda. No podemos garantizar que la
+                        visualización de cualquier color en el monitor de su computadora sea precisa.
+
+                        Nos reservamos el derecho, pero no estamos obligados, de limitar las ventas de nuestros
+                        productos o servicios a cualquier persona, región geográfica o jurisdicción. Podemos ejercer
+                        este derecho caso por caso. Nos reservamos el derecho de limitar las cantidades de cualquier
+                        producto o servicio que ofrecemos. Todas las descripciones de los productos o los precios de los
+                        productos están sujetos a cambios en cualquier momento y sin previo aviso, a nuestra entera
+                        discreción. Nos reservamos el derecho de discontinuar cualquier producto en cualquier momento.
+                        Cualquier oferta de cualquier producto o servicio que se realice en este sitio no tiene validez
+                        donde dicho producto o servicio esté prohibido.
+
+                        No garantizamos que la calidad de cualquier producto, servicio, información u otro material que
+                        usted haya comprado u obtenido cumplirá con sus expectativas, o que cualquier error en el
+                        Servicio se corregirá.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 6: EXACTITUD DE LA FACTURACIÓN Y DE LA INFORMACIÓN DE LA CUENTA<i
+                            class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Nos reservamos el derecho de rechazar cualquier pedido que realice en nuestra
+                        tienda. Podemos, a nuestro exclusivo criterio, limitar o cancelar las cantidades compradas por
+                        persona, por hogar o por pedido. Estas restricciones pueden incluir pedidos realizados con la
+                        misma cuenta de cliente, la misma tarjeta de crédito o pedidos que usen la misma dirección de
+                        facturación o de envío. En el caso de que realicemos un cambio o cancelemos un pedido,
+                        intentaremos notificarle vía correo electrónico o la dirección de facturación / número de
+                        teléfono proporcionados en el momento en que se realizó el pedido. Nos reservamos el derecho de
+                        limitar o prohibir los pedidos que, a nuestra entera discreción, parezcan haber sido realizados
+                        por comerciantes, revendedores o distribuidores.
+
+                        Usted acepta suministrar información completa y precisa de la compra y cuenta actual, para todas
+                        las compras realizadas en nuestra tienda. Usted acepta actualizar rápidamente su cuenta y demás
+                        informaciones, entre ellas, su dirección de correo electrónico, los números de tarjeta de
+                        crédito y las fechas de vencimiento, para que podamos completar sus transacciones y contactarlo
+                        según sea necesario.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 7: COMENTARIOS DE LOS USUARIOS, OPINIONES Y OTRAS COMUNICACIONES<i
+                            class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Si, a petición nuestra, usted envía ciertas comunicaciones específicas (por
+                        ejemplo, participaciones en un concurso) o, sin una solicitud nuestra, envía ideas creativas,
+                        sugerencias, propuestas, planes u otros materiales, ya sea online, por correo electrónico, por
+                        correo postal, o de otro modo (denominado en lo sucesivo y de manera colectiva, 'comentarios'),
+                        usted acepta que podemos, en cualquier momento, sin restricción: editar, copiar, publicar,
+                        distribuir, traducir y usar en cualquier medio cualquier comentario que usted nos envíe. No
+                        tenemos ni tendremos ninguna obligación (1) de mantener ningún comentario de manera
+                        confidencial; (2) pagar alguna compensación por cualquier comentario; o (3) responder a
+                        cualquier comentario.
+
+                        Podemos, pero no tenemos la obligación de monitorear, editar o eliminar contenido que a nuestra
+                        entera discreción determinemos que es ilegal, ofensivo, amenazante, calumnioso, difamatorio,
+                        pornográfico, obsceno u objetable, o que infrinja la propiedad intelectual de cualquiera de las
+                        partes o de los presentes Términos del servicio.
+
+                        Usted acepta que sus comentarios no infringirán ningún derecho de terceros, incluidos los
+                        derechos de autor, marca registrada, privacidad, personalidad u otro derecho personal o de
+                        propiedad. Además, acepta que sus comentarios no contendrán material difamatorio, ilegítimo,
+                        abusivo u obsceno, ni contendrán ningún virus informático ni otro software dañino que pueda
+                        afectar de cualquier manera el funcionamiento del Servicio o de cualquier sitio web relacionado.
+                        No puede utilizar una dirección de correo electrónico falsa, simular ser otra persona o
+                        engañarnos o engañar a terceros sobre el origen de los comentarios. Usted es el único
+                        responsable de los comentarios que realice y de su exactitud. No asumimos ninguna
+                        responsabilidad ni ninguna obligación por los comentarios publicados por usted o por un tercero.
+
+
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 8: INFORMACIÓN PERSONAL<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">El envío de la información personal que haga a través de la tienda se rige por
+                        nuestra Política de privacidad.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 9: ERRORES, INEXACTITUDES Y OMISIONES<i
+                            class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Puede haber información en nuestro sitio o en el Servicio que, ocasionalmente,
+                        contenga errores tipográficos, inexactitudes u omisiones que puedan relacionarse con
+                        descripciones de productos, precios, promociones, ofertas, cargos por envío de productos,
+                        tiempos de tránsito y disponibilidad. Nos reservamos el derecho de corregir cualquier error,
+                        inexactitud u omisión, de cambiar o actualizar información, o cancelar pedidos si alguna
+                        información en el Servicio o en cualquier página web relacionada es inexacta en cualquier
+                        momento sin previo aviso (incluso después de haber enviado su pedido).
+
+                        No asumimos ninguna obligación de actualizar, modificar o aclarar la información en el Servicio
+                        o en cualquier sitio web relacionado, incluyendo de manera enunciativa pero no limitativa, la
+                        información de precios, excepto cuando lo exija la ley. Ninguna actualización especificada o
+                        fecha de actualización aplicada en el Servicio o en cualquier sitio web relacionado debe tomarse
+                        para indicar que toda la información en el Servicio o en cualquier sitio web relacionado se
+                        modificó o actualizó.
+
+
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 10: USOS PROHIBIDOS<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Además de las prohibiciones establecidas en los Términos del servicio, se le
+                        prohíbe utilizar el sitio o su contenido (a) para cualquier propósito ilegal; (b) para solicitar
+                        a otros que realicen o participen en cualquier acto ilegal; (c) para infringir cualquier
+                        reglamento, norma, ley u ordenanza local internacional, federal, provincial o estatal; (d) para
+                        infringir o violar nuestros derechos de propiedad intelectual o los derechos de propiedad
+                        intelectual de otros; (e) acosar, abusar, insultar, dañar, difamar, calumniar, denigrar,
+                        intimidar o discriminar por motivos de género, orientación sexual, religión, etnia, raza, edad,
+                        nacionalidad o discapacidad; (f) enviar información falsa o engañosa; (g) cargar o transmitir
+                        virus o cualquier otro tipo de código dañino que afecte o pueda afectar a la funcionalidad o el
+                        funcionamiento del Servicio o de cualquier sitio web relacionado, de otros sitios web o de
+                        Internet; (h) recopilar o rastrear la información personal de otros; (i) enviar correo no
+                        deseado, phishing, pharm, pretexto, spider, rastrear o extraer; (j) para cualquier propósito
+                        obsceno o inmoral; o (k) para interferir o eludir las funciones de seguridad del Servicio o de
+                        cualquier sitio web relacionado, o de otros sitios web o de Internet.
+
+                        Nos reservamos el derecho de dar por terminado su uso del Servicio o de cualquier sitio web
+                        relacionado por infringir cualquiera de los usos prohibidos.
+
+
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 11: DESCARGO DE RESPONSABILIDAD DE GARANTÍAS; LIMITACIÓN DE
+                        RESPONSABILIDAD<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">No garantizamos, representamos ni aseguramos que el uso que haga de nuestro
+                        servicio será sin interrupciones, oportuno, seguro o sin errores.
+
+                        No garantizamos que los resultados que se puedan obtener del uso del servicio sean exactos o
+                        confiables.
+
+                        Usted acepta que periódicamente, podamos eliminar el servicio por lapsos de tiempo indefinidos o
+                        cancelar el servicio en cualquier momento, sin notificarle.
+
+                        Usted acepta expresamente que su uso del servicio o la imposibilidad de utilizarlo corre por su
+                        riesgo. El servicio y todos los productos y servicios que se le entregan a través del servicio
+                        (salvo que así lo especifiquemos nosotros) se ofrecen "tal como están" y "según disponibilidad"
+                        para su uso, sin ninguna representación, garantía o condición de ningún tipo, ya sea expresa o
+                        implícita, entre las que se incluyen todas las garantías implícitas o condiciones de
+                        comerciabilidad, calidad comercial, idoneidad para un propósito particular, durabilidad, título
+                        y no violación.
+
+                        En ningún caso Gsports, nuestros directores, funcionarios, empleados, afiliados, agentes,
+                        contratistas, pasantes, proveedores, proveedores de servicios o licenciantes serán responsables
+                        de cualquier lesión, pérdida, reclamo o cualquier daño directo, indirecto, incidental, punitivo,
+                        especial o consecuente de cualquier tipo, incluyendo de manera enunciativa más no limitativa; la
+                        pérdida de beneficios, pérdida de ingresos, pérdida de ahorros, pérdida de datos, costos de
+                        reemplazo o daños similares, ya sea por contrato, perjuicio (incluida la negligencia),
+                        responsabilidad estricta o de otro tipo, que surjan del uso que haga de cualquiera de los
+                        servicios o de cualquier producto adquirido por medio del servicio, o para cualquier otro
+                        reclamo relacionado de alguna manera con su uso del servicio o de cualquier producto, incluidos,
+                        entre otros, cualquier error u omisión en cualquier contenido, o cualquier pérdida o daño de
+                        cualquier tipo en el que se haya incurrido como resultado del uso del servicio o de cualquier
+                        contenido (o producto) publicado, transmitido o puesto a disposición a través del servicio,
+                        incluso si se informa de su posibilidad.
+
+                        Debido a que algunos estados o jurisdicciones no permiten la exclusión o la limitación de la
+                        responsabilidad por daños consecuentes o incidentales, en dichos estados o jurisdicciones,
+                        nuestra responsabilidad se limitará a la extensión máxima de lo permitido por la ley.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 12: INDEMNIZACIÓN<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Usted acepta indemnizar, defender y mantener indemne a Gsports y a nuestra
+                        empresa matriz, subsidiarias, afiliadas, asociados, funcionarios, directores, agentes,
+                        contratistas, licenciantes, proveedores de servicios, subcontratistas, proveedores, pasantes y
+                        empleados, de cualquier reclamo o demanda, incluidos los honorarios razonables de abogados, en
+                        los que un tercero haya incurrido debido a su incumplimiento de los presentes Términos del
+                        servicio o de los documentos que incorporan como referencia o que surjan por su incumplimiento
+                        de los mismos, o por la violación de cualquier ley o derechos de un tercero que haga.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 13: RESCISIÓN<i class="bi bi-plus-square-fill"></i>
+                    </p>Las obligaciones y responsabilidades de las partes incurridas antes de la fecha de rescisión
+                    seguirán vigentes después de la rescisión de este contrato a todos los efectos.
+
+                    Estos Términos del servicio se encuentran vigentes a menos que usted o nosotros los rescindamos.
+                    Puede rescindir los presentes Términos del servicio en cualquier momento al notificarnos que ya no
+                    desea utilizar nuestros Servicios o cuando cese de utilizar nuestro sitio.
+
+                    Si a nuestro juicio usted incumple, o sospechamos que ha incumplido con cualquier término o
+                    disposición de los presentes Términos del servicio, podemos rescindir igualmente este acuerdo en
+                    cualquier momento sin previo aviso y usted seguirá siendo responsable de todos los importes
+                    adeudados, hasta la fecha de rescisión inclusive; y/o en consecuencia podemos denegarle el acceso a
+                    nuestros Servicios (o a parte de ellos).
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 14: ACUERDO COMPLETO<i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">El hecho de que no ejerzamos o hagamos valer algún derecho o disposición de los
+                        presentes Términos del Servicio no constituirá una renuncia a dicho derecho o disposición.
+
+                        Estos Términos de servicio y cualquier política o regla de funcionamiento que hayamos publicado
+                        en este sitio o con respecto al Servicio constituye el acuerdo y el entendimiento completo entre
+                        usted y nosotros, y rigen su uso del Servicio, sustituyendo a cualquier acuerdo, comunicación o
+                        propuesta anterior o contemporánea, ya sea oral o escrita, entre usted y nosotros (incluyendo de
+                        manera enunciativa más no limitativa, las versiones anteriores de los Términos del servicio).
+
+                        Cualquier ambigüedad en la interpretación de los presentes Términos del servicio no se
+                        interpretará en contra de la parte redactora.
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">SECCIÓN 15: CAMBIOS EN LOS TÉRMINOS DEL SERVICIO<i
+                            class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Puede revisar la versión más reciente de los Términos del servicio en cualquier
+                        momento en esta página.
+
+                        Nos reservamos el derecho, a nuestra entera discreción, de actualizar, cambiar o sustituir
+                        cualquier parte de los presentes Términos del servicio mediante la publicación de
+                        actualizaciones y cambios en nuestro sitio web. Es su responsabilidad consultar nuestro sitio
+                        web periódicamente para ver los cambios. El uso que haga de nuestra página web o del Servicio o
+                        su acceso a cualquiera de estos de forma continua después de la publicación de cualquier cambio
+                        en los presentes Términos del servicio, constituye la aceptación de dichos cambios.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Política de privacidad -->
+            <div class="contenedor-preguntas" data-categoria="entregas">
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Interpretación <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Las palabras cuya letra inicial está en mayúscula tienen significados definidos
+                        bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado
+                        independientemente de que aparezcan en singular o en plural.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Definiciones <i class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">A los efectos de esta Política de Privacidad:
+
+                    <ul>
+                        <li>
+                            <p><strong>Cuenta</strong> significa una cuenta única creada para que Usted acceda a nuestro
+                                Servicio o partes de nuestro Servicio.</p>
+                        </li>
+                        <li>
+                            <p><strong>Empresa</strong> (referida como "la Empresa", "Nosotros", "Nos" o "Nuestro" en
+                                este Acuerdo) se refiere a G-sport.</p>
+                        </li>
+                        <li>
+                            <p><strong>Las Cookies</strong> son pequeños archivos que un sitio web coloca en su
+                                computadora, dispositivo móvil o cualquier otro dispositivo, y que contienen los
+                                detalles de su historial de navegación en ese sitio web entre sus muchos usos.</p>
+                        </li>
+                        <li>
+                            <p><strong>Paía</strong> se refiere a: Mexico</p>
+                        </li>
+                        <li>
+                            <p><strong>Dispositivo</strong> significa cualquier dispositivo que pueda acceder al
+                                Servicio, como una computadora, un teléfono celular o una tableta digital.</p>
+                        </li>
+                        <li>
+                            <p><strong>Datos personales</strong> son cualquier información que se relaciona con un
+                                individuo identificado o identificable.</p>
+                        </li>
+                        <li>
+                            <p><strong>Servicio</strong> se refiere al sitio web.</p>
+                        </li>
+                        <li>
+                            <p><strong>Proveedor de servicios</strong> significa cualquier persona física o jurídica que
+                                procesa los datos en nombre de la compañía. Se refiere a empresas de terceros o personas
+                                empleadas por la Empresa para facilitar el servicio, proporcionar el servicio en nombre
+                                de la empresa, realizar servicios relacionados con el nuestro servicio o ayudar a la
+                                empresa a analizar cómo se utiliza el servicio.</p>
+                        </li>
+                        <li>
+                            <p><strong>Los datos de uso</strong> se refieren a los datos recopilados automáticamente, ya
+                                sea generados por el uso del servicio o por la propia infraestructura del servicio (por
+                                ejemplo, la duración de una visita a la página).</p>
+                        </li>
+                        <li>
+                            <p><strong>El sitio web</strong> se refiere a G-sport, accesible desde <a
+                                    href="https://www.G-SPORT.com/">https://www.G-SPORT.com/</a></p>
+                        </li>
+                        <li>
+                            <p><strong>Usuario</strong> se refiere a la persona que accede o utiliza el servicio, o la
+                                empresa u otra entidad legal en nombre de la cual dicha persona accede o utiliza el
+                                servicio, según corresponda.</p>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Información personal <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">
+                    <p>Mientras usa nuestro servicio, podemos pedirle que nos proporcione cierta información de
+                        identificación personal que se puede usar para contactarlo o identificarlo. La información de
+                        identificación personal puede incluir, entre otros:</p>
+                    <ul>
+                        <li>
+                            <p>Dirección de correo electrónico.</p>
+                        </li>
+                        <li>
+                            <p>First name and last name</p>
+                        </li>
+                        <li>
+                            <p>Nombre y apellido.</p>
+                        </li>
+                        <li>
+                            <p>Número de teléfono</p>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Datos de uso <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Los Datos de uso se recopilan automáticamente cuando se utiliza el servicio.
+
+                        Los datos de uso pueden incluir información como la dirección del protocolo de Internet de su
+                        dispositivo (por ejemplo, la dirección IP), el tipo de navegador, la versión del navegador, las
+                        páginas de nuestro servicio que visita, la hora y la fecha de su visita, el tiempo que pasa en
+                        esas páginas, dispositivo único identificadores y otros datos de diagnóstico.
+
+                        Cuando accede al servicio a través de un dispositivo móvil, podemos recopilar cierta información
+                        automáticamente, que incluye, entre otros, el tipo de dispositivo móvil que utiliza, la
+                        identificación única de su dispositivo móvil, la dirección IP de su dispositivo móvil, su
+                        sistema operativo, el tipo de navegador de Internet móvil que utiliza, identificadores únicos de
+                        dispositivos y otros datos de diagnóstico.
+
+                        También podemos recopilar información que su navegador envía cada vez que visita nuestro
+                        servicio o cuando accede al servicio a través de un dispositivo móvil.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Tecnologías de seguimiento y cookies <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">
+                    <p>Usamos Cookies y tecnologías de seguimiento similares para rastrear la actividad en Nuestro
+                        servicio y almacenar cierta información. Las tecnologías de seguimiento utilizadas son etiquetas
+                        y scripts para recopilar y rastrear información y para mejorar y analizar Nuestro servicio. Las
+                        tecnologías que utilizamos pueden incluir:</p>
+                    <ul>
+                        <li><strong>Cookies o Cookies del Navegador.</strong> Puede indicar a su navegador que rechace
+                            todas las cookies o que indique cuándo se envía una cookie. Sin embargo, si no acepta las
+                            Cookies, es posible que no pueda utilizar algunas partes de nuestro servicio. A menos que
+                            haya ajustado la configuración de su navegador para que rechace las Cookies, nuestro
+                            servicio puede usar Cookies.</li>
+                        <li><strong>Web Beacons.</strong> Ciertas secciones de nuestro servicio y nuestros correos
+                            electrónicos pueden contener pequeños archivos electrónicos conocidos como web beacons
+                            (también conocidos como gifs transparentes, etiquetas de píxeles y gifs de un solo píxel)
+                            que permiten a la Compañía, por ejemplo, contar los usuarios que han visitado esas páginas o
+                            abrió un correo electrónico y para otras estadísticas relacionadas con el sitio web (por
+                            ejemplo, registrar la popularidad de una determinada sección y verificar la integridad del
+                            sistema y del servidor).</li>
+                    </ul>
+                    <p>Las cookies pueden ser cookies "persistentes" o de "sesión". Las cookies persistentes permanecen
+                        en su computadora personal o dispositivo móvil cuando se desconecta, mientras que las cookies de
+                        sesión se eliminan tan pronto como cierra su navegador web. Puede obtener más información sobre
+                        las cookies en el artículo del sitio web <a
+                            href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank">TermsFeed
+                            website</a></p>
+                    <p>Utilizamos cookies de sesión y persistentes para los fines establecidos a continuación:</p>
+                    <ul>
+                        <li>
+                            <p><strong>Cookies necesarias/esenciales</strong></p>
+                            <p>Tipo: Cookies de sesión</p>
+                            <p>Administrado por nosotros</p>
+                            <p>Propósito: estas cookies son esenciales para brindarle los servicios disponibles a través
+                                del sitio web y permitirle usar algunas de sus funciones. Ayudan a autenticar a los
+                                usuarios y previenen el uso fraudulento de las cuentas de usuario. Sin estas Cookies, no
+                                se pueden proporcionar los servicios que ha solicitado, y solo utilizamos estas Cookies
+                                para proporcionarle esos servicios.</p>
+                        </li>
+                        <li>
+                            <p><strong>Política de Cookies / Aviso de Aceptación de Cookies</strong></p>
+                            <p>Tipo: Cookies persistentes</p>
+                            <p>Administrado por: Nosotros</p>
+                            <p>Finalidad: Estas Cookies identifican si los usuarios han aceptado el uso de cookies en el
+                                Sitio Web.</p>
+                        </li>
+                        <li>
+                            <p><strong>Cookies de funcionalidad</strong></p>
+                            <p>Tipo: Cookies persistentes</p>
+                            <p>Administrado por: Nosotros</p>
+                            <p>Propósito: Estas cookies nos permiten recordar las elecciones que hace cuando usa el
+                                sitio web, como recordar sus datos de inicio de sesión o su preferencia de idioma. El
+                                propósito de estas Cookies es brindarle una experiencia más personal y evitar que tenga
+                                que volver a ingresar sus preferencias cada vez que use el sitio web.</p>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Uso de sus datos personales <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">
+                    <p>La Compañía puede utilizar los Datos Personales para los siguientes propósitos:</p>
+                    <ul>
+                        <li>
+                            <p><strong>Para proporcionar y mantener nuestro servicio</strong>, ncluso para monitorear el
+                                uso de nuestro servicio.</p>
+                        </li>
+                        <li>
+                            <p><strong>Para gestionar Su Cuenta:</strong> Para gestionar Su registro como usuario del
+                                servicio. Los Datos Personales que proporcione pueden darle acceso a diferentes
+                                funcionalidades del servicio que están disponibles para Usted como usuario registrado.
+                            </p>
+                        </li>
+                        <li>
+                            <p><strong>Para la ejecución de un contrato:</strong> El desarrollo, cumplimiento y
+                                realización del contrato de compra de los productos, artículos o servicios que haya
+                                adquirido o de cualquier otro contrato con Nosotros a través del servicio.</p>
+                        </li>
+                        <li>
+                            <p><strong>Para contactarlo: </strong> Para contactarlo por correo electrónico, llamadas
+                                telefónicas, SMS u otras formas equivalentes de comunicación electrónica, tales como
+                                notificaciones automáticas de una aplicación móvil sobre actualizaciones o
+                                comunicaciones informativas relacionadas con las funcionalidades, productos o servicios
+                                contratados, incluidas las actualizaciones de seguridad, cuando sea necesario o
+                                razonable para su implementación.</p>
+                        </li>
+                        <li>
+                            <p><strong>Para brindarle noticias:</strong> Ofertas especiales e información general sobre
+                                otros bienes, servicios y eventos que ofrecemos que son similares a los que ya compró o
+                                preguntó, a menos que haya optado por no recibir dicha información.</p>
+                        </li>
+                        <li>
+                            <p><strong>Para gestionar sus solicitudes: </strong> Para atender y gestionar sus
+                                solicitudes hacia nosotros.</p>
+                        </li>
+                        <li>
+                            <p><strong>Para transferencias de negocios:</strong> Podemos usar su información para
+                                evaluar o realizar una fusión, desinversión, reestructuración, reorganización,
+                                disolución u otra venta o transferencia de algunos o todos nuestros activos, ya sea como
+                                una empresa en marcha o como parte de una quiebra, liquidación, o procedimiento similar,
+                                en el que los datos personales que tenemos sobre los usuarios de nuestro servicio se
+                                encuentran entre los activos transferidos.</p>
+                        </li>
+                        <li>
+                            <p><strong>Para otros fines:</strong> Podemos utilizar su información para otros fines, como
+                                el análisis de datos, la identificación de tendencias de uso, la determinación de la
+                                eficacia de nuestras campañas promocionales y para evaluar y mejorar nuestro servicio,
+                                productos, servicios, marketing y su experiencia.</p>
+                        </li>
+                    </ul>
+                    <p>Podemos compartir su información personal en las siguientes situaciones:</p>
+                    <ul>
+                        <li><strong>Con proveedores de servicios:</strong> Podemos compartir su información personal con
+                            proveedores de servicios para monitorear y analizar el uso de nuestro servicio, para
+                            contactarlo.</li>
+                        <li><strong>Para transferencias comerciales:</strong> Podemos compartir o transferir su
+                            información personal en relación con, o durante las negociaciones de, cualquier fusión,
+                            venta de activos de la compañía, financiamiento o adquisición de todo o una parte de nuestro
+                            negocio a otra compañía.</li>
+                        <li><strong>Con afiliados:</strong> Podemos compartir su información con nuestros afiliados, en
+                            cuyo caso exigiremos a esos afiliados que respeten esta Política de privacidad. Los
+                            afiliados incluyen nuestra empresa matriz y cualquier otra subsidiaria, socios de empresas
+                            conjuntas u otras empresas que controlamos o que están bajo control común con nosotros.</li>
+                        <li><strong>Con socios comerciales:</strong> Podemos compartir su información con nuestros
+                            socios comerciales para ofrecerle ciertos productos, servicios o promociones.
+                        </li>
+                        <li><strong>Con su consentimiento:</strong> Podemos divulgar su información personal para
+                            cualquier otro propósito con su consentimiento.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Retención de sus datos personales <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">La compañía conservará sus datos personales solo durante el tiempo que sea
+                        necesario para los fines establecidos en esta Política de privacidad. Conservaremos y
+                        utilizaremos sus datos personales en la medida necesaria para cumplir con nuestras obligaciones
+                        legales (por ejemplo, si estamos obligados a conservar sus datos para cumplir con las leyes
+                        aplicables), resolver disputas y hacer cumplir nuestras políticas y acuerdos legales.
+
+                        a compañía también conservará los datos de uso para fines de análisis interno. Los datos de uso
+                        generalmente se retienen por un período de tiempo más corto, excepto cuando estos datos se usan
+                        para fortalecer la seguridad o mejorar la funcionalidad de nuestro servicio, o cuando estamos
+                        legalmente obligados a retener estos datos por períodos de tiempo más largos.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Transferencia de sus datos personales <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Su información, incluidos los datos personales, se procesa en las oficinas
+                        operativas de la compañía y en cualquier otro lugar donde se encuentren las partes involucradas
+                        en el procesamiento. Significa que esta información puede transferirse y mantenerse en
+                        computadoras ubicadas fuera de su estado, provincia, país u otra jurisdicción gubernamental
+                        donde las leyes de protección de datos pueden diferir de las de su jurisdicción.
+
+                        Su consentimiento a esta Política de privacidad seguido de Su envío de dicha información
+                        representa su acuerdo con esa transferencia.
+
+                        La compañía tomará todas las medidas razonablemente necesarias para garantizar que sus datos se
+                        traten de forma segura y de acuerdo con esta Política de privacidad y no se realizará ninguna
+                        transferencia de sus datos personales a una organización o país a menos que existan controles
+                        adecuados establecidos, incluida la seguridad de sus datos y otra información personal.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Transacciones de negocios <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Si la compañía está involucrada en una fusión, adquisición o venta de activos,
+                        dus datos personales pueden transferirse. Le enviaremos un aviso antes de que sus datos
+                        personales se transfieran y queden sujetos a una Política de privacidad diferente.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Cumplimiento de la ley <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">En determinadas circunstancias, es posible que se le solicite a la Compañía que
+                        divulgue sus Datos personales si así lo requiere la ley o en respuesta a solicitudes válidas de
+                        las autoridades públicas (por ejemplo, un tribunal o una agencia gubernamental)..</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Otros requisitos legales <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">
+                    <p>La compañía puede divulgar sus datos personales de buena fe cuando considere que esta acción es
+                        necesaria para lo siguiente:</p>
+                    <ul>
+                        <li>Cumplir con una obligación legal.</li>
+                        <li>Proteger y defender los derechos o propiedad de la compañía.</li>
+                        <li>Prevenir o investigar posibles irregularidades en relación con el servicio.</li>
+                        <li>Proteger la seguridad personal de los usuarios del servicio o del público.</li>
+                        <li>Protegerse contra la responsabilidad legal.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Seguridad de sus datos personales. <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">La seguridad de sus datos personales es importante para nosotros, pero recuerde
+                        que ningún método de transmisión por Internet o método de almacenamiento electrónico es 100 %
+                        seguro. Si bien nos esforzamos por utilizar medios comercialmente aceptables para proteger sus
+                        datos personales, no podemos garantizar su seguridad absoluta.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Privacidad de los niños <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Nuestro servicio no se dirige a ninguna persona menor de 18 años. No
+                        recopilamos a sabiendas información de identificación personal de ninguna persona menor de 18
+                        años. Si usted es padre o tutor y sabe que su hijo nos ha proporcionado datos personales, por
+                        favor contáctenos. Si nos damos cuenta de que hemos recopilado datos personales de cualquier
+                        persona menor de 18 años sin verificación del consentimiento de los padres, tomamos medidas para
+                        eliminar esa información de nuestros servidores.
+
+                        Si necesitamos basarnos en el consentimiento como base legal para procesar su información y su
+                        país requiere el consentimiento de uno de sus padres, podemos solicitar el consentimiento de su
+                        padre antes de recopilar y usar esa información.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Enlaces a otros sitios web <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Nuestro servicio puede contener enlaces a otros sitios web que no son operados
+                        por nosotros. Si hace clic en el enlace de un tercero, será dirigido al sitio de ese tercero. Le
+                        recomendamos encarecidamente que revise la Política de privacidad de cada sitio que visite.
+
+                        No tenemos control ni asumimos ninguna responsabilidad por el contenido, las políticas de
+                        privacidad o las prácticas de los sitios o servicios de terceros.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Cambios a esta Política de Privacidad <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Es posible que actualicemos nuestra Política de privacidad de vez en cuando. Le
+                        notificaremos cualquier cambio publicando la nueva Política de privacidad en esta página.
+
+                        Le informaremos por correo electrónico y/o un aviso destacado en Nuestro servicio, antes de que
+                        el cambio entre en vigencia y actualizaremos la fecha de "Última actualización" en la parte
+                        superior de esta Política de privacidad.
+
+                        Se le recomienda revisar esta Política de Privacidad periódicamente para cualquier cambio. Los
+                        cambios a esta Política de privacidad son efectivos cuando se publican en esta página.</p>
+                </div>
+            </div>
+
+            <!-- Política de envío -->
+            <div class="contenedor-preguntas" data-categoria="seguridad">
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Envíos <i class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">
+                    <ul>
+                        <li>Nuestro servicio de envíos se encuentra disponible únicamente en México. Por ningún motivo
+                            se realizan
+                            envíos internacionales.</li>
+                        <li>El precio estándar de envío a todo México es de $190 MXN siempre y cuando no exceda los 5
+                            kilogramos.
+                        </li>
+                        <li>Todas las órdenes de compra realizadas a través del sitio de internet será entregadas por
+                            empresas de
+                            paquetería y mensajería ajenas a <b>G-SPORTS</b>.</li>
+                        <li>La entrega del producto se realizará en el domicilio señalado por el usuario en el portal de
+                            la cuenta o
+                            en una dirección diferente proporcionada por el usuario, que deberá realizarse al momento de
+                            confirmar
+                            el pedido.</li>
+                        <li>El tiempo de entrega será de 5 a 10 días hábiles, contados a partir de que se ha recibido el
+                            importe
+                            completo de la compra.</li>
+                        <li>En caso de que la paquetería no llegue hasta la localidad que se solicita, el paquete será
+                            depositado en
+                            la sucursal de la paquetería más cercana.</li>
+                        <li>Los pedidos que se hagan después de la 1:00 p.m. saldrán hasta el día siguiente.</li>
+                        <li>En caso de que no se encuentre nadie para recibir el paquete en la dirección proporcionada
+                            en la primera
+                            ni en la segunda visita, el paquete será depositado en la sucursal más cercana y se dejará
+                            ahí por tres
+                            días hábiles, en caso de no ser reclamada, será devuelta al almacén de <b>G-SPORTS</b> y el
+                            cliente
+                            deberá pagar el costo de la devolución.</li>
+                        <li>Las entregas de productos se realizarán únicamente en días hábiles y podrían demorarse en
+                            algunos casos
+                            hasta 10 días hábiles.</li>
+                        <li>En caso de existir alguna inconformidad deberá manifestarla en ese momento y deberá <a
+                                href="/contact.html">comunicarse</a> al
+                            servicio de atención a clientes de <b>G-SPORTS</b> para aclarar dicha circunstancia.</li>
+                        <li>Todos los productos serán empacados sin ningún costo extra.</li>
+                        <li>En un plazo máximo de 48 horas siguientes a tu compra en línea, recibirás un correo con el
+                            número de
+                            guía para que puedas rastrear el producto. Esta política no aplica para días de puente,
+                            asuetos, buen
+                            fin y demás días no laborables.</li>
+                        <li>Al momento de recibir el producto en el domicilio señalado, el usuario está obligado a
+                            revisar el
+                            producto. En caso de algún desperfecto, el usuario deberá notificarlo en un plazo de 5 días
+                            hábiles al
+                            correo g-sports@gmail.com.mx o a los teléfonos de <a href="/contact.html">contacto</a>
+                            proporcionados en
+                            la plataforma web o
+                            <a href="/terminosdeservicio.html">Términos y condiciones</a>.
+                        </li>
+                        <li>¿Tu pedido no estaba completo o te llegó algo incorrecto? Por favor visita nuestras <a
+                                href="/politicadedevolucion.html">Políticas de
+                                Devolución.</a></li>
+                        <li>Cualquier tipo de aclaración, reporte o duda respecto al servicio de envíos favor de
+                            escribir a:
+                            g-sports@gmail.com.mx</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Política de devolución -->
+            <div class="contenedor-preguntas" data-categoria="cuenta">
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Su completa satisfacción es importante para nosotros.
+                        <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Indique su número de pedido y el motivo de su devolución. Nuestro equipo de
+                        servicio al cliente revisará la solicitud de devolución y enviará más instrucciones si se
+                        aprueba la devolución.
+
+                        Solo se aceptarán artículos comprados directamente en este sitio web.
+
+                        En caso de no quedarle la talla seleccionada el proceso de cambio es gratis en nuestra sucursal
+                        ubicada en Calle Generation #13, CDMX, México, en caso de no poder acudir personalmente, el
+                        proceso de cambio tendrá un costo adicional de $139 pesos, no se reembolsara bajo este motivo.
+
+                        Los artículos devueltos deben estar en su embalaje original, incluidos los accesorios que pueda
+                        este incluir, además de manuales y/o documentación.
+
+                        Por higiene los artículos devueltos deben estar sin uso, en las mismas condiciones en que se los
+                        enviamos a usted y en su embalaje original. No se aceptarán manchas. Si la condición del
+                        producto que se nos devuelve no es aceptable, nos reservamos el derecho de no reembolsar ni
+                        cambiar.
+
+                        Los productos que han sido personalizados no pueden ser reembolsados ​​o intercambiados.
+
+                        Los artículos no retornables, productos incorrectos y productos dañados a través del mal manejo
+                        de los clientes. se reserva el derecho de rechazar cualquier devolución.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">¿QUÉ SUCEDE SI EL (S) ARTÍCULO (S) QUE RECIBIÓ ESTÁ DAÑADO, INCORRECTO
+                        DEFECTUOSO? <i class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">Póngase en contacto con nuestro equipo de atención al cliente en nuestra página
+                        de contacto para iniciar el proceso de devolución. Por favor, incluya la siguiente información:
+
+                        - Comprobante de compra- Dirección completa de entrega
+
+                        - Número telefónico de contacto
+
+                        - Video o foto del producto defectuoso (si corresponde)
+
+                        - Número de orden
+
+                        - En algunos casos, se le puede solicitar que incluya un vídeo o una foto del producto
+                        defectuoso como prueba para reembolsar o reemplazar el producto.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">¿CUÁNTO TIEMPO TIENE EL PROCESO DE DEVOLUCIÓN? <i
+                            class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">Para los artículos devueltos, se acreditará un reembolso completo por los
+                        productos defectuosos. Para artículos no defectuosos, el reembolso excluye todos los gastos de
+                        envío y manipulación.
+
+                        El procesamiento de las devoluciones puede demorar hasta 2 semanas a partir de la fecha en que
+                        recibamos su devolución. Le enviaremos un correo electrónico para confirmar una vez que se haya
+                        procesado su devolución.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">¿CUÁNDO RECIBIRÉ MI REEMBOLSO? <i class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">Póngase en contacto con el banco / compañía de tarjetas de crédito. Puede tomar
+                        algo de tiempo antes de que el reembolso se publique en su cuenta. Se vera reflejado en su
+                        estado de cuenta.
+                        Todos los reembolsos se acreditarán a su forma de pago original. Si pagó con tarjeta de crédito
+                        o débito, los reembolsos se enviarán al banco emisor de la tarjeta dentro de los 14 días hábiles
+                        posteriores a la recepción del artículo devuelto o la solicitud de cancelación. Comuníquese con
+                        el banco emisor de la tarjeta si tiene preguntas sobre cuándo se publicará el crédito en su
+                        cuenta.
+
+                        G-SPORTS no cubre el reenvío bajo ninguna circunstancia. Al realizar tu compra y pago estás
+                        aceptando la información, términos y condiciones de compra.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">¿CÓMO PUEDO CAMBIAR O CANCELAR MI PEDIDO? <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">Póngase en contacto con nosotros lo antes posible si necesita modificar o
+                        cancelar su pedido. Asegúrese de proporcionar su número de pedido y la modificación que desea
+                        realizar y lo confirmaremos una vez que se haya realizado la modificación. Tenga en cuenta que
+                        cualquier pedido que ya haya sido empaquetado o enviado no se puede modificar ni cancelar.</p>
+                </div>
+            </div>
+
+            <!-- Política de reembolsos -->
+            <div class="contenedor-preguntas" data-categoria="cuenta">
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">¿Cómo puedo solicitar un reembolso? <i class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">Cuando devuelves un producto, el reembolso y la forma en que este se emite
+                        pueden variar de acuerdo con la condición del producto, la cantidad de tiempo que lo tuviste y
+                        la forma en que se compró.Los reembolsos serán aplicados 7 días después de hacer la devolución
+                        (Léase las políticas de devoluciones). Reembolsaremos por medio de la forma de pago en que fue
+                        efectuado. Para ello puedes ir a la sección de contacto para hacer el proceso de reembolso.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">No podremos devolver el dinero íntegro en caso de cobro de envío. <i
+                            class="bi bi-plus-square-fill"></i></p>
+                    <p class="respuesta">Nosotros NO reembolsamos los costos de envío, el seguro de envío y la tasa de
+                        tramitación, pues son costos no reembolsables, si no pagó el costo del envío por cierta
+                        promoción, el reembolso será completo.</p>
+                </div>
+                <div class="contenedor-pregunta">
+                    <p class="pregunta">Mi reembolso no se efectúa. ¿Qué hago? <i class="bi bi-plus-square-fill"></i>
+                    </p>
+                    <p class="respuesta">A veces los reembolsos pueden tardar por el tipo de banco o medio de pago y el
+                        proceso. Te pedimos que te pongas en contacto con nosotros.
+
+                        NOTA: Si encuentras algún problema con tu reembolso, debes ponerte en contacto dentro de un
+                        periodo de 60 días desde que se realizó el pedido.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--PIE DE PAGINA-->
+    <footer-component></footer-component>
+    <!--FIN DE PIE DE PAGINA-->
+
+    <!--INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!--FIN INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
+    <!-- Inicio de Script Navcomponent y Footercomponent-->
+    <script src="./js/nav.js"></script>
+    <script src="./js/footer.js"></script>
+    <!-- Fin de Script Navcomponent y Footercomponent-->
+    <!--Faq Script-->
+    <script src="https://kit.fontawesome.com/b/bb820736.js" crossorigin="anonymous"></script>
+    <!--Fin-->
+    <!-------SCRIPTS--JS------------->
+    <script src=""></script>
+    <script src="/js/politicascategorias.js""></script>
+    <script src=" /js/politicasinfo.js"></script>
+    <!-------SCRIPTS--BOOTSTRAP------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

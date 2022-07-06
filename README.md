@@ -25,11 +25,12 @@ Juárez García Francisco
 
 Muñoz Almaguer Roberto Carlos
 * https://www.linkedin.com/in/robertocarlosma/
-* https://www.linkedin.com/in/robertocarlosma/
+* https://github.com/RobertoCarlosMA
 
 Vázquez Rosales José de Jesús
 * https://www.linkedin.com/in/josedejesusvazquezrosales/
 * https://github.com/josevazquezrmx
 
 ### Notas
-Este proyecto es nuestro Proyecto Integrador realizado para Generation México​ CH13. Es completamente ficticio y  cualquier semejanza con algún nombre o imagen registrado es coincidencia.
+*Este proyecto es nuestro Proyecto Integrador realizado para Generation México​ CH13. Es completamente ficticio y  cualquier semejanza con algún nombre o imagen registrado es total coincidencia. Queda totalmente prohibido su uso con fines políticos o lucrativos.
+GenerationnMX™ 2022

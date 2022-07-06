@@ -59,7 +59,7 @@ a:hover {
 }
 
 .section-products #product-1 .part-1::before {
-    background: url("https://m.media-amazon.com/images/I/61hWJZjZN6S._AC_SX522_.jpg") no-repeat center;
+    background: url("/js/Productos2.js") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }

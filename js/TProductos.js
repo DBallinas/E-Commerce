@@ -1,33 +1,39 @@
-function addItem(item){
 
-    const itemHTML =     `  <div class="col" id="tamañocarrusel">
-    <div class="card h-100"category="${item.categoria}">
-        
-    <img src="${item.img1}" class="d-block w-100" alt="...">
-  
-      <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-        <p class="card-text">${item.description}</p>
-       </div>
-        <div class="card-footer">
-           <div class="d-flex justify-content-between align-items-center">
-           <div class="btn-group">
-             <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button>
-           </div>
-           <small class="text-muted">$${item.precio}</small>
+let Todos=document.getElementById("success-outlined");
+
+Todos.addEventListener("click",(event)=>{
+  event.preventDefault();
+  document.getElementById("Productos").innerHTML="";
+           
+      function addItem(item){
+      
+      const itemHTML =     `  <div class="col" id="tamañocarrusel">
+      <div class="card h-100"category="${item.categoria}">
+          
+      <img src="${item.img1}" class="d-block w-100" alt="...">
+    
+        <div class="card-body">
+          <h5 class="card-title">${item.name}</h5>
+          <p class="card-text">${item.description}</p>
          </div>
-       
+          <div class="card-footer">
+             <div class="d-flex justify-content-between align-items-center">
+             <div class="btn-group">
+               <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button>
+             </div>
+             <small class="text-muted">$${item.precio}</small>
+           </div>
+         
+        </div>
       </div>
-    </div>
-   </div>
-`;
-
-
-  const itemsContainer = document.getElementById("Productos");
-  itemsContainer.innerHTML += itemHTML;
+     </div>
+  `;
   
-}
-
+      const itemsContainer = document.getElementById("Productos");
+      itemsContainer.innerHTML += itemHTML;
+     
+  }//add
+         
   addItem({'name':'Polainas Wilson 4lbs Unisex',
   'img1':'http://drive.google.com/uc?export=view&id=1k1HGhKaj_UyEg301AF0qwG7I9SQwFwrw',
   'img2':'http://drive.google.com/uc?export=view&id=1rdT09m9EKex0HPvMjnWYRJdc5jT8PNA0',
@@ -362,5 +368,5 @@ addItem({
   'id':'35'});
   
   
-
+      }); //Enviar
   

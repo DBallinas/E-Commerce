@@ -251,7 +251,43 @@ catSuplementos.style.border="";
 nombreProducto.focus();
 }); // FIN DE EJECUCION DEL CUANDO SE PULSA EL BOTON AGREGAR
 
+<<<<<<< HEAD:FORMULARIOADDPRODUCT/Formulario.js
+
+
+
+
+}); //Enviar
+
+	window.addEventListener('load', function(e){
+		console.log("store.data:" + store.data);
+		console.log(localStorage.getItem("imgsData"));
+		if ( JSON.parse(localStorage.getItem("imgsData"))!=null)
+			store = JSON.parse(localStorage.getItem("imgsData"));
+		
+		fillSelect();
+	});
+
+	function fillSelect(){
+		if (store.data.length>0) {
+			selectImages.options.length = 0; // clear Select
+			let optiontmp = document.createElement("option");
+				optiontmp.text = "Selecciona una imagen para visualizar:"
+				optiontmp.value = -1;
+				selectImages.add(optiontmp); 
+			for (let i=0; i < store.data.length; i ++){
+				let option = document.createElement("option");
+				option.text = store.names[i];
+				option.value = i;
+				selectImages.add(option); 
+			}//for i
+		}//if store != null
+		console.log(store);
+	}//fillSelect
+
+
+=======
 // LINEAS DE CARGAR IMAGEN Y PREVIEW
+>>>>>>> 47dcdf1c741486d68d683be106ed6f9701b83c45:FormularioAddProducts/Formulario.js
 	btnFake.addEventListener('click', function(){
 		fileImage.click();
     });
@@ -260,10 +296,17 @@ nombreProducto.focus();
         //previewFile(id imagen, input type file , textArea);
     });
 		//previewFile(id imagen, input type file , textArea);
+<<<<<<< HEAD:FORMULARIOADDPRODUCT/Formulario.js
+		function previewFile(img, inputFile, input) {
+			let preview = document.getElementById(img);
+			let file    = document.getElementById(inputFile).files[0];
+			let reader  = new FileReader();
+=======
 		function previewFile(img, inputFile) {
 			var preview = document.getElementById(img);
 			var file    = document.getElementById(inputFile).files[0];
 			var reader  = new FileReader();
+>>>>>>> 47dcdf1c741486d68d683be106ed6f9701b83c45:FormularioAddProducts/Formulario.js
 
 			reader.addEventListener("load", function () {
 		  		preview.src = reader.result;

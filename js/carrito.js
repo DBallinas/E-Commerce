@@ -33,10 +33,12 @@ addItem({'name':'Ligas Larga de Tensión Wilson',
 document.getElementById('comprar').addEventListener('click', (event) => {
     event.preventDefault();
     Swal.fire({
-        icon: 'success',
-        title: '¡COMPRA EXITOSA!',
-        showConfirmButton: false,
-        timer: 2000
-      })
+      imageUrl: 'https://drive.google.com/uc?export=view&id=13-aMfa2IqZ33nGEExl5e5gP6bw46TSeJ',
+      imageHeight: 400,
+      title: 'Vendido!',
+      imageAlt: 'A tall image'
+      
+      
+    })
 })
       

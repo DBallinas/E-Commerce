@@ -1,6 +1,3 @@
-body {
-	background: #8acdeb;
-}
 #cafe {
 	position: absolute;
 	left: 30%;
@@ -17,7 +14,7 @@ body {
   z-index: 1;
   opacity: 0;
 }
-
+/*Humito se divide en 4 id*/
 #steam1 {
   -webkit-animation: steam1 4s ease-out infinite;
   animation: steam1 4s ease-out infinite;

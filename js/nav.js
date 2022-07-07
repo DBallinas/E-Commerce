@@ -16,30 +16,7 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
               <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a>
               </li>
-              <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link text-white" href="../../colecciones/lanzamientos.html">Lanzamientos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorías
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="../../colecciones/calzado/calzado.html">Calzado</a></li>
-                  <li><a class="dropdown-item" href="../../colecciones/ropa/ropa.html">Ropa</a></li>
-                  <li><a class="dropdown-item" href="../../colecciones/aparatos/aparatos.html">Aparatos</a></li>
-                  <li><a class="dropdown-item" href="../../colecciones/accesorios/Accesorios.html">Accesorios</a></li>
-                  <li><a class="dropdown-item" href="../../colecciones/suplementos/suplementos.html">Suplementos</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="../../colecciones/todoslosproductos1.html">Ver todo</a></li>
-                </ul>
-=======
-                <a class="nav-link text-white" href="../../categorias/lanzamientos.html">Lanzamientos</a>
->>>>>>> 47dcdf1c741486d68d683be106ed6f9701b83c45
-              </li>
+            
               <li class="nav-item">
               <a class="nav-link text-white" href="../../categorias/todoslosproductos.html">Productos</a>
             </li>

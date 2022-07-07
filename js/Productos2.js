@@ -21,7 +21,7 @@ function agregaProducto(elemento){
                   </div>
                  </div>
                   `;
-                  const lista = document.getElementById("list-items");
+                  const lista = document.getElementById("Productos");
                   lista.innerHTML += itemHTML;
               }
 

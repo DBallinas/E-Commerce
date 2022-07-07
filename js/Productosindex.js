@@ -1,25 +1,31 @@
 function addItem(item){
 
-    const itemHTML =     `  <div class="col" id="tamañocarrusel">
-    <div class="card h-100"category="${item.categoria}">
+    const itemHTML =     ` <section class="section-products">
+    <div>
         
-    <img src="${item.img1}" class="d-block w-100" alt="...">
-  
-      <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-        <p class="card-text">${item.description}</p>
-       </div>
-        <div class="card-footer">
-           <div class="d-flex justify-content-between align-items-center">
-           <div class="btn-group">
-             <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button>
-           </div>
-           <small class="text-muted">$${item.precio}</small>
-         </div>
-       
-      </div>
+        <div class="row">
+
+            <div>
+                <div id="product-1" class="single-product">
+                    <div class="part-1">
+                    <img src="${item.img1}" class="d-block w-75" alt="...">
+                        <ul>
+                        <li><a><i>G-SPORTS</i></a></li>
+                        </ul>
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title">${item.name}</h3>
+                        <a href="#"><i>$${item.precio}</i></a>
+                        <br>
+                        <br>
+                        <a href="#" class="fas fa-shopping-cart"><i id="agregar-cart"> Agregar al carrito</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
+  </section>
+
 `;
 
 

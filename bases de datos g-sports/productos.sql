@@ -1,10 +1,9 @@
-ALTER table Productos
-ADD Descripcion varchar(300);
+SELECT * FROM `g-sports`.productos;
 
-ALTER table Productos
-ADD Marca varchar(300);
+select * from categorias where idCategorias='Cat1';
 
-DELETE FROM Productos WHERE idProducto ='PTenis1';
+select NombreContacto from proveedores where NombreContacto='Francisco';
+
 -- PRODUCTOS CALZADO --
 insert into Productos
 VALUES ('PTenis1','PAdidas','Cat3','Tenis Adidas Ultimashow Hombre Fx3624','1169','5','Tenis de running para velocidad y estabilidad.', 'Adidas');

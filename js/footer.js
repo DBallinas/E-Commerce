@@ -14,19 +14,19 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="/categorias/rebajas.html">
                 <p>Rebajas</p>
               </a>
-              <a href="../../contact.html">
+              <a href="/html/formulariocontacto.html">
                 <p>Contacto</p>
               </a>
             </div>
             <div class="box">
               <h4>Inicio de sesión</h4>
-              <a href="/iniciodesesion.html">
+              <a href="/html/iniciodesesion.html">
                 <p>Iniciar sesión</p>
               </a>
-              <a href="/RegistroUsuarios/RegistroUsuarios.html">
+              <a href="/html/formularioregistrousuarios.html">
                 <p>Registrarse</p>
               </a>
-              <a href="#">
+              <a href="/html/formulariocontacto.html">
                 <p>¿Olvidaste tu contraseña?</p>
               </a>
             </div>

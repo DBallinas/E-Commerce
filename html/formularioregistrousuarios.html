@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
-    <link href="/css/formularioregistro.css" rel="stylesheet" type="text/css">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/products.css">
-    <link rel="stylesheet" href="/css/anima-nav.css">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon"><!--FAVICON G-SPORTS-->
+    <link href="/css/formularioregistro.css" rel="stylesheet" type="text/css"><!--HOJA DE ESTILO PAGINA DE FORMULARIO REGISTRO USUARIOS-->
+    <link href="/css/main.css" rel="stylesheet" type="text/css"><!--HOJA DE ESTILO GENERAL-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"><!--ICONOS LOGIN Y CARRITO-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><!--HOJA DE ESTILO BOOTSTRAP 5.1-->
+    <link rel="stylesheet" href="/css/anima-nav.css"><!--Animación de nav-->
 </head>
 
 <body>
@@ -22,17 +21,19 @@
 <!--BARRA DEGRADADO TITULO DE PAGINA-->
 <header id="cabezera"> <h1>Crear cuenta</h1> </header>
 <!--FIN DE BARRA DEGRADADO TITULO DE PAGINA-->
-<div id="fondoregistro"><br/><br/>
-<!--INICIO FORMULARIO DE REGISTRO-->
-<form id="formregistro">
 
+<!--FONDO Y CONTENIDO DE PAGINA-->
+<div id="fondoregistro"><br/><br/>
+
+<!--CONTENEDOR PARA INGRESAR LOS DATOS--> 
+<form id="formregistro">
+  <!--ALERTAS DE VALIDACIONE CAMPOS ERRONEOS O FALTANTES-->
   <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidacionregistro" style="text-align:center ;">
     <p id="alertValidTextregistro"></p>
   </div>
+  <!--FIN ALERTAS DE VALIDACIONE CAMPOS ERRONEOS O FALTANTES-->
 
-    <div class="row justify-content-around">
-        <div class="col">
-
+     <div class="col">
           <div class="form-group" style="padding: 1.2%;">
             <label for="">Nombre:</label>
             <input type="text" class="form-control" placeholder="Ingresa tu Nombre" id="Nombreperson" >
@@ -76,26 +77,29 @@
             <div class="d-grid gap-2 col-4 mx-auto w-100">
                <button  type="submit" class="btn" id="enviar-registro">Enviar</button>
            </div></br>
-           <div class="d-grid" style='text-align:center' ><a href="/iniciodesesion.html" id="yatengocuenta">Ya tengo cuenta</a></div>
-        </div>
-    </div>
-</form><br/><br/>
+           <div class="d-grid" style='text-align:center' ><a href="/html/iniciodesesion.html" id="yatengocuenta">Ya tengo cuenta</a></div>
+      </div>
+  </form><br/><br/>
+  <!--FIN CONTENEDOR PARA INGRESAR LOS DATOS-->
 </div>
+<!--FIN FONDO Y CONTENIDO DE PAGINA-->
+
 <!--PIE DE PAGINA-->
   <footer-component></footer-component>
 <!--FIN DE PIE DE PAGINA-->
 
 <!-- Inicio de Script Navcomponent y Footercomponent-->
-<script src="../js/RegistroUsuarios.js"></script>
-<script src="../js/nav.js"></script>
-<script src="../js/footer.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/footer.js"></script>
+<!-- Fin de Script Navcomponent y Footercomponent-->
+
+<!--INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
+<script src="/js/formularioregistrousuarios.js"></script><!--JS REGISTRO DE USUARIOS, VALIDACIONES-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><!--INTEGRACION ANIMACION SWEET ALERT, REGISTRO COMPLETADO-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- Fin de Script Navcomponent y Footercomponent-->
+<!--FIN INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
 
 </body>
 </html>
+<!--G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022-->

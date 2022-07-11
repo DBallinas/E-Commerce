@@ -17,13 +17,13 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                 <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../categorias/lanzamientos.html">Lanzamientos</a>
+                <a class="nav-link text-white" href="/html/lanzamientos.html">Lanzamientos</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link text-white" href="../../categorias/todoslosproductos.html">Productos</a>
+              <a class="nav-link text-white" href="/html/todoslosproductos.html">Productos</a>
             </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../categorias/rebajas.html">Rebajas</a>
+                <a class="nav-link text-white" href="/html/rebajas.html">Rebajas</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"

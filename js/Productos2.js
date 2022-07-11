@@ -1,24 +1,15 @@
 function agregaProducto(elemento){
   const itemHTML =  
-                   `<div class="col" id="tamañocarrusel">
-                  <div class="card h-100">
-                      
-                  <img  src="${elemento.Img}" class="d-block w-100" alt="...">
-                
-                    <div class="card-body">
-                      <h5 class="card-title">${elemento.nombre}</h5>
-                      <p class="card-text">${elemento.Descripcion}</p>
+                   `
+                   <div class="col">
+                   <div class="card h-100"  id="card">
+                     <img src="${item.img1}" class="card-img-top" alt="..." id="cardproducto">
+                     <div class="card-body">
+                       <h5 class="card-title">${item.name}</h5>
+                       <p class="card-text" id="precio">$${item.precio}</p>
                      </div>
-                      <div class="card-footer">
-                         <div class="d-flex justify-content-between align-items-center">
-                         <div class="btn-group">
-                           <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button>
-                         </div>
-                         <small class="text-muted">$${elemento.precio}</small>
-                       </div>
-                     
-                    </div>
-                  </div>
+                     <a href="#" id="addcart"><i class="bi bi-cart-plus-fill"> Agregar al carrito</i></a>
+                   </div>
                  </div>
                   `;
                   const lista = document.getElementById("Productos");

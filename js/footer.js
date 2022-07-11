@@ -8,10 +8,10 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
         <div class="footer-contenido">
             <div class="box">
               <h4>General</h4>
-              <a href="/categorias/todoslosproductos.html">
+              <a href="/html/todoslosproductos.html">
                 <p>Tienda</p>
               </a>
-              <a href="/categorias/rebajas.html">
+              <a href="/html/rebajas.html">
                 <p>Rebajas</p>
               </a>
               <a href="/html/formulariocontacto.html">

@@ -31,9 +31,9 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                   Nosotros
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li class="nav"><a class="dropdown-item text-black" href="../../about-us.html">Nosotros</a></li>
+                  <li class="nav"><a class="dropdown-item text-black" href="/html/sobrenosotros.html">Nosotros</a></li>
                   <li><a class="dropdown-item text-black" href="/html/formulariocontacto.html">Contacto</a></li>
-                  <li><a class="dropdown-item text-black" href="/preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                  <li><a class="dropdown-item text-black" href="/html/preguntasfrecuentes.html">Preguntas frecuentes</a></li>
                   <li><a class="dropdown-item text-black" href="/html/formularioregistrousuarios.html">Regístrate</a></li>
                   </ul>
               </li>

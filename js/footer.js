@@ -32,11 +32,11 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
             </div>
             <div class="box">
               <h4>Políticas & FAQ</h4>
-              <a href="/politicas.html">
+              <a href="/html/politicas.html">
                 <p>Políticas de la empresa</p>
               </a>
             
-              <a href="/preguntasfrecuentes.html">
+              <a href="/html/preguntasfrecuentes.html">
                 <p>Preguntas frecuentes</p>
               </a>
             </div>
@@ -81,17 +81,6 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
       </footer>`;
     }
 }
-  // <a href="/politicaprivacidad.html">
-              //   <p>Política de privacidad</p>
-              // </a>
-              // <a href="/politicadeenvios.html">
-              //   <p>Política de envío</p>
-              // </a>
-              // <a href="/politicadedevolucion.html">
-              //   <p>Política de devolución</p>
-              // </a>
-              // <a href="/politicadereembolso.html">
-              //   <p>Política de reembolsos</p>
-              // </a>
+
 window.customElements.define("footer-component", footercomponent);
 //api customelement, se define el componente, entre paréntesis el nombre que queramos y después el nombre de la clase

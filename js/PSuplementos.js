@@ -1,5 +1,6 @@
+// VAMOS POR EL ELEMENTO QUE CONTIENE LA CATEGORIA DE SUPLEMENTOS EN EL HTML
 let catSuplementos=document.getElementById("secondary-outlined");
-
+// CUANDO ES SELECCIONADO SE MUESTRA EL SIGUIENTE EVENTO CON LA CATEGORIA DE SUPLEMENTOS
 catSuplementos.addEventListener("click",(event)=>{
   event.preventDefault();
   document.getElementById("Productos").innerHTML="";
@@ -8,37 +9,31 @@ catSuplementos.addEventListener("click",(event)=>{
        let Categoria="Suplementos";
         console.log(Categoria)
 
+// CREAMOS LA FUNCION AÑADIR PRODUCTOS QUE SERAN LLAMADOS EN EL HTML Y RELLENADOS AUTOMATICAMENTE
     function addItem(item){
     console.log(Categoria);
     if(Categoria==item.categoria)
     {
       console.log(item.categoria);
-    const itemHTML =     `  <div class="col" id="tamañocarrusel">
-    <div class="card h-100"category="${item.categoria}">
-        
-    <img src="${item.img1}" class="d-block w-100" alt="...">
-  
+    const itemHTML =     `
+    <div class="col">
+    <div class="card h-100"  id="card">
+      <img src="${item.img1}" class="card-img-top" alt="..." id="cardproducto">
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
-        <p class="card-text">${item.description}</p>
-       </div>
-        <div class="card-footer">
-           <div class="d-flex justify-content-between align-items-center">
-           <div class="btn-group">
-             <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button>
-           </div>
-           <small class="text-muted">$${item.precio}</small>
-         </div>
-       
+        <p class="card-text" id="precio">$${item.precio}</p>
       </div>
+      <a href="#" id="addcart"><i class="bi bi-cart-plus-fill"> Agregar al carrito</i></a>
     </div>
-   </div>
+  </div>
 `;
-
+// DEFINIMOS A QUE ID SE VAN A INSERTAR Y DECIMOS QUE HAGA UN + EN CADA TARJETA PARA QUE NO SE SOBREESCRIBAN
     const itemsContainer = document.getElementById("Productos");
     itemsContainer.innerHTML += itemHTML;
 }
 }//add
+
+// LISTA JSON DE DONDE CARGAMOS LOS PRODUCTOS Y SUS TAGS PARA SER LLAMADOS
 
 addItem({'name':'Proteína Sascha Fitness',
 'img1':'https://ss201.liverpool.com.mx/xl/1060748370.jpg',
@@ -121,3 +116,4 @@ addItem({
 'id':'35'});
 
 }); //Enviar
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

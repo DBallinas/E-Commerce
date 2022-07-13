@@ -1,127 +1,146 @@
 <!doctype html>
 <html lang="es">
-  <!-- Required meta tags Bootstrap CSS-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon"><!--FAVICON G-SPORTS-->
-    <link href="../css/main.css" rel="stylesheet" type="text/css"><!--HOJA DE ESTILO GENERAL-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"><!--ICONOS LOGIN Y CARRITO-->
-    <link href="../css/formularioagregarproducto.css" rel="stylesheet" type="text/css"><!--HOJA DE ESTILO PAGINA DE FORMULARIO-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><!--HOJA DE ESTILO BOOTSTRAP 5.1-->
-	  <link rel="stylesheet" href="/css/anima-nav.css"><!--Animación de nav-->
-    <title>Agregar producto</title><!--TITULO PAGINA-->
-  </head>
-  <!--FIN Required meta tags Bootstrap CSS -->
+<!-- Required meta tags Bootstrap CSS-->
 
-  <body>
-<!--BARRA DE NAVEGACIÓN-->
-    <nav-component></nav-component>
-<!--FIN DE BARRA DE NAVEGACIÓN--> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+  <!--FAVICON G-SPORTS-->
+  <link href="../css/main.css" rel="stylesheet" type="text/css">
+  <!--HOJA DE ESTILO GENERAL-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <!--ICONOS LOGIN Y CARRITO-->
+  <link href="../css/formularioagregarproducto.css" rel="stylesheet" type="text/css">
+  <!--HOJA DE ESTILO PAGINA DE FORMULARIO-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--HOJA DE ESTILO BOOTSTRAP 5.1-->
+  <link rel="stylesheet" href="/css/anima-nav.css">
+  <!--Animación de nav-->
+  <title>Agregar producto</title>
+  <!--TITULO PAGINA-->
+</head>
+<!--FIN Required meta tags Bootstrap CSS -->
 
-<!--BARRA DEGRADADO TITULO DE PAGINA-->
-<header id="cabezera">
-  <h1>Agregar producto</h1>
-</header>
-<!--FIN DE BARRA DEGRADADO TITULO DE PAGINA-->
+<body>
+  <!--BARRA DE NAVEGACIÓN-->
+  <nav-component></nav-component>
+  <!--FIN DE BARRA DE NAVEGACIÓN-->
 
-<!--FONDO Y CONTENIDO DE PAGINA-->
-<div id="fondoproductos"><br/><br/>
+  <!--BARRA DEGRADADO TITULO DE PAGINA-->
+  <header id="cabezera">
+    <h1>Agregar producto</h1>
+  </header>
+  <!--FIN DE BARRA DEGRADADO TITULO DE PAGINA-->
 
-  <!--CONTENEDOR PARA INGRESAR LOS DATOS-->  
-    <form id="formagregar" >
+  <!--FONDO Y CONTENIDO DE PAGINA-->
+  <div id="fondoproductos"><br /><br />
+
+    <!--CONTENEDOR PARA INGRESAR LOS DATOS-->
+    <form id="formagregar">
       <!--ALERTAS DE VALIDACIONE CAMPOS ERRONEOS O FALTANTES-->
-        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidacion" style="text-align:center ;">
-            <p id="alertValidText"></p>
-        </div>
+      <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidacion"
+        style="text-align:center ;">
+        <p id="alertValidText"></p>
+      </div>
       <!--FIN ALERTAS DE VALIDACIONE CAMPOS ERRONEOS O FALTANTES-->
 
-        <div class="col">
-            <div class="form-group" style="padding: 1.2%;"> 
-              <label for="" >Nombre del producto:</label>
-              <input type="text" class="form-control" placeholder="Nombre del producto" minlength="3" maxlength="30" id="Producto" >
-            </div>
-            <div class="form-group" style="padding: 1.2%;">
-              <label for="">Descripción:</label>
-              <textarea class="form-control" rows="5" placeholder="Descripcion del producto" minlength="3" id="Descripcion"></textarea>
-            </div>
-            <div class="form-group" style="padding: 1.2%;">
-              <label for="">SKU:</label>
-              <input type="text" class="form-control" placeholder="Código del articulo" id="sku" maxlength="13" required>
-            </div>
-            <div class="form-group" style="padding: 1.2%;">
-              <label for="">Precio:</label>
-              <input type="number" min="1" class="form-control" placeholder="Precio en pesos MXN" id="Precio" >
-            </div>
-            <div class="form-group" style="padding: 1.2%;">
-              <label for="">Cantidad:</label>
-              <input type="number" min="1" class="form-control" placeholder="Cantidad disponible" id="Cantidad" >
-            </div>
-            <div class="form-group" style="padding: 1.2%;"><label for="">Categoría:</label></div>
-            <div class="form-group" style="padding: 1.2%;" id="checks">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioAccesorios" >
-                <label class="form-check-label" for="flexRadioAccesorios">
-                  Accesorios
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioAparatos">
-                <label class="form-check-label" for="flexRadioAparatos">
-                  Aparatos
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioCalzado">
-                <label class="form-check-label" for="flexRadioCalzado">
-                  Calzado
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioRopa">
-                <label class="form-check-label" for="flexRadioRopa">
-                  Ropa
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioSuplementos">
-                <label class="form-check-label" for="flexRadioSuplementos">
-                  Suplementos
-                </label>
-              </div>
-            </div>
-              <div class="form-group" style="padding: 1.2%;">
-                <label for="fileImage">Selecciona una imagen:</label>
-                <input type="button" class="form-control" value="Subir imagen" id="btnFake"> 
-                <input type="file" class="form-control-file" id="fileImage" style="display:none">
-              </div>
-              <div class="col" id="previa" >
-                <img id="imageFile" name="imageFile" src="../img/buscar.png" alt="Vista previa de la imagen" title="Vista previa de la imagen" width="240px" height="240px"/>           
-                <button type="button" class="btn" id="Agregar">Publicar</button><br/>
-              </div>
+      <div class="col">
+        <div class="form-group" style="padding: 1.2%;">
+          <label for="">Nombre del producto:</label>
+          <input type="text" class="form-control" placeholder="Nombre del producto" minlength="3" maxlength="30"
+            id="Producto">
         </div>
-      </form><br/><br/>
-    <!--FIN CONTENEDOR PARA INGRESAR LOS DATOS--> 
-</div>
-<!--FIN FONDO Y CONTENIDO DE PAGINA-->
+        <div class="form-group" style="padding: 1.2%;">
+          <label for="">Descripción:</label>
+          <textarea class="form-control" rows="5" placeholder="Descripcion del producto" minlength="3"
+            id="Descripcion"></textarea>
+        </div>
+        <div class="form-group" style="padding: 1.2%;">
+          <label for="">SKU:</label>
+          <input type="text" class="form-control" placeholder="Código del articulo" id="sku" maxlength="13" required>
+        </div>
+        <div class="form-group" style="padding: 1.2%;">
+          <label for="">Precio:</label>
+          <input type="number" min="1" class="form-control" placeholder="Precio en pesos MXN" id="Precio">
+        </div>
+        <div class="form-group" style="padding: 1.2%;">
+          <label for="">Cantidad:</label>
+          <input type="number" min="1" class="form-control" placeholder="Cantidad disponible" id="Cantidad">
+        </div>
+        <div class="form-group" style="padding: 1.2%;"><label for="">Categoría:</label></div>
+        <div class="form-group" style="padding: 1.2%;" id="checks">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioAccesorios">
+            <label class="form-check-label" for="flexRadioAccesorios">
+              Accesorios
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioAparatos">
+            <label class="form-check-label" for="flexRadioAparatos">
+              Aparatos
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioCalzado">
+            <label class="form-check-label" for="flexRadioCalzado">
+              Calzado
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioRopa">
+            <label class="form-check-label" for="flexRadioRopa">
+              Ropa
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexRadioSuplementos">
+            <label class="form-check-label" for="flexRadioSuplementos">
+              Suplementos
+            </label>
+          </div>
+        </div>
+        <div class="form-group" style="padding: 1.2%;">
+          <label for="fileImage">Selecciona una imagen:</label>
+          <input type="button" class="form-control" value="Subir imagen" id="btnFake">
+          <input type="file" class="form-control-file" id="fileImage" style="display:none">
+        </div>
+        <div class="col" id="previa">
+          <img id="imageFile" name="imageFile" src="../img/buscar.png" alt="Vista previa de la imagen"
+            title="Vista previa de la imagen" width="240px" height="240px" />
+          <button type="button" class="btn" id="Agregar">Publicar</button><br />
+        </div>
+      </div>
+    </form><br /><br />
+    <!--FIN CONTENEDOR PARA INGRESAR LOS DATOS-->
+  </div>
+  <!--FIN FONDO Y CONTENIDO DE PAGINA-->
 
-<!--PIE DE PAGINA-->
-<footer-component></footer-component>
-<!--FIN DE PIE DE PAGINA-->
+  <!--PIE DE PAGINA-->
+  <footer-component></footer-component>
+  <!--FIN DE PIE DE PAGINA-->
 
-<!--INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
-   <script src="/js/Formularioagregarproducto.js"></script>
-   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<!--FIN INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
+  <!--INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
+  <script src="/js/Formularioagregarproducto.js"></script>
+  <script src="/js/productosbase.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <!--FIN INTEGRACIONES JS Y BOOTSTRAP VERSION 5.1-->
 
-<!-- Inicio de Script Navcomponent y Footercomponent-->
-<script src="../js/nav.js"></script>
-<script src="../js/footer.js"></script>
-<!-- Fin de Script Navcomponent y Footercomponent-->
+  <!-- Inicio de Script Navcomponent y Footercomponent-->
+  <script src="../js/nav.js"></script>
+  <script src="../js/footer.js"></script>
+  <!-- Fin de Script Navcomponent y Footercomponent-->
 
-  </body>
+</body>
+
 </html>
 
 <!--G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022-->

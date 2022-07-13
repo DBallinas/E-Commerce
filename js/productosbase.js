@@ -1,0 +1,78 @@
+let productos;
+const URL_MAIN ='http://localhost:8080/api/productos/';
+function addItems(div_Productos) {
+    fetch(URL_MAIN, {
+        method: 'get'
+    }).then(function(response) {
+        response.json().then(function (json) {
+            console.log(json);
+            console.log(json.length);
+            productos=json;
+            Array.from(json).forEach((p, index) => {
+                div_Productos.innerHTML +=
+                const itemHTML =     `  <div class="col" id="tamañocarrusel">
+                <div class="card h-100"category="${item.categoria}">
+                   
+                <img src="img/${p.url_Imagen}" class="d-block w-100" alt="...">
+             
+                  <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <p class="card-text">${item.description}</p>
+                   </div>
+                    <div class="card-footer">
+                       <div class="d-flex justify-content-between align-items-center">
+                       <div class="btn-group">
+                         <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button>
+                       </div>
+                       <small class="text-muted">$${item.precio}</small>
+                     </div>
+                   
+                  </div>
+                </div>
+               </div>
+            `;
+            }); // foreach
+        });//then
+    }).catch(function(err) {
+        console.log(err);
+    });
+    console.log(document.getElementById("div_Productos"));
+   
+}// addItems
+ 
+window.addEventListener("load", function (){
+    let div = document.getElementById("div_Productos");
+    addItems(div);
+   
+});
+ 
+function view(index) {
+    // console.log(index);
+    // console.table(productos[index]);
+    document.getElementById("productTitleModal").innerHTML=productos[index].nombre;
+    document.getElementById("productBodyModal").innerHTML=`${productos[index].descripcion}  <img class="bd-placeholder-img card-img-top" role="img" src="img/${productos[index].url_Imagen}" />
+    <strong>$ ${productos[index].price} MXN<strong>`;
+    $("#productModal").modal("show");
+}// view
+
+/////// El siguiente código agrega un nuevo producto mediante un POST
+// const data =     {nombre: "Cuaderno doble raya",
+//     descripcion: "Cuaderno doble raya Norma",
+//     price: 56.0,
+//     url_Imagen: "cuadernodobleraya.jpg"
+// };
+
+// fetch(URL_MAIN, {
+//   method: 'POST', // or 'PUT'
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// })
+// .then(response => response.json())
+// .then(data => {
+//   console.log('Success:', data);
+// })
+// .catch((error) => {
+//   console.error('Error:', error);
+// });

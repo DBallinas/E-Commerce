@@ -17,13 +17,13 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                 <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../categorias/lanzamientos.html">Lanzamientos</a>
+                <a class="nav-link text-white" href="/html/lanzamientos.html">Lanzamientos</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link text-white" href="../../categorias/todoslosproductos.html">Productos</a>
+              <a class="nav-link text-white" href="/html/todoslosproductos.html">Productos</a>
             </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../categorias/rebajas.html">Rebajas</a>
+                <a class="nav-link text-white" href="/html/rebajas.html">Rebajas</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
@@ -31,9 +31,9 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                   Nosotros
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li class="nav"><a class="dropdown-item text-black" href="../../about-us.html">Nosotros</a></li>
+                  <li class="nav"><a class="dropdown-item text-black" href="/html/sobrenosotros.html">Nosotros</a></li>
                   <li><a class="dropdown-item text-black" href="/html/formulariocontacto.html">Contacto</a></li>
-                  <li><a class="dropdown-item text-black" href="//preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                  <li><a class="dropdown-item text-black" href="/html/preguntasfrecuentes.html">Preguntas frecuentes</a></li>
                   <li><a class="dropdown-item text-black" href="/html/formularioregistrousuarios.html">Regístrate</a></li>
                   </ul>
               </li>

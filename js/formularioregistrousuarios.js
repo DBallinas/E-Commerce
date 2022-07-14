@@ -236,7 +236,7 @@ Registro.addEventListener("click", (event)=>
         "Telefono":"${Telefono.value}",
         "Contraseña":"${Contrasenajs.value}"
     }`; 
-
+    POSTUsr()
 // GUARDAMOS EN LOCAL STORAGE EL JSON Y EN CONSOLA IMPRIME LOS DATOS
     datos.push(JSON.parse(elemento));
    localStorage.setItem("elementosTabla", JSON.stringify(datos));
@@ -300,5 +300,42 @@ Contrasenajs.addEventListener("blur", (event)=>{
 ConfirmContrasenajs.addEventListener("blur", (event)=>{
     event.target.value=event.target.value.trim();
     });
+
+
+
+    function POSTUsr(){
+        let uNombre = document.getElementById("Nombreperson").value;
+        let uAMaterno = document.getElementById("Apellidomaterno").value;
+        let uAPaterno = document.getElementById("Apellidopaterno").value;
+        let uCorreo = document.getElementById("Emailregistro").value;
+        let uPassword = document.getElementById("Contrasena").value;
+    
+        
+        var url = 'http://localhost:8080/api/usuarios/';
+        var data = {nombre: uNombre ,
+            apaterno: uAPaterno,
+            amaterno: uAMaterno,
+            email: uCorreo, 
+            pasword: uPassword};
+        
+        fetch(url, {
+          method: 'POST', // or 'PUT'
+          body: JSON.stringify(data), // data can be `string` or {object}!
+          headers:{
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        })};
+    
+    
+
+
 
 /*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

@@ -9,7 +9,7 @@ function addItem(item){
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text" id="precio">$${item.precio}</p>
       </div>
-      <a href="#" id="addcart"><i class="bi bi-cart-plus-fill"> Agregar al carrito</i></a>
+      <a href="#" id="addcart"><i class="bi bi-cart-plus-fill" class="add-cart"> Agregar al carrito</i></a>
     </div>
   </div>
 `;

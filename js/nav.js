@@ -11,7 +11,7 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="nav" class="navbar-nav me-auto mt-4 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a>
@@ -35,11 +35,12 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                   </ul>
               </li>
             </ul>
+            <form class="mt-8 mb-2">
+            <a href="/html/iniciodesesion.html"><i id="btn2" class="bi bi-person-fill mt-5 mb-0 ms-5 text-white h2"></i></a>
+            <a href="../carrito.html"><i id="btn3" class="bi bi-cart-plus-fill mt-5 mb-0 ms-3 me-5 h3 text-white"></i></a>
+            </form>
           </div>
-          <form class="mt-8 mb-2">
-          <a href="/html/iniciodesesion.html"><i id="btn2" class="bi bi-person-fill mt-5 mb-0 ms-5 text-white h2"></i></a>
-          <a href="../carrito.html"><i id="btn3" class="bi bi-cart-plus-fill mt-5 mb-0 ms-3 me-5 h3 text-white"></i></a>
-          </form>
+
         </div>
       </nav>
       <!--FIN DE BARRA DE NAVEGACIÓN-->`;

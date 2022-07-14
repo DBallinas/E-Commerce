@@ -10,11 +10,16 @@ function onLoadcartNumbers(){
     }//if
 }//onLoadcartNumbers
 
+<<<<<<< HEAD
 function setItems(products){
+=======
+function setItems(product){
+>>>>>>> develop
     let cartItems = localStorage.getItem("productosEnCarrito");
     cartItems = JSON.parse(cartItems);
     //console.log("Mis productos en carrito son:" , cartItems);
     if(cartItems != null){
+<<<<<<< HEAD
         if(cartItems[item.img1] == undefined ){
             cartItems = { 
                 ...cartItems,
@@ -26,6 +31,19 @@ function setItems(products){
     product.inCart = 1;
     cartItems = {
         [item.img1]: product
+=======
+        if(cartItems[product.img] == undefined ){
+            cartItems = { 
+                ...cartItems,
+                [product.img]: product
+            }
+        }//if para contar un producto distinto
+        cartItems[product.img].inCart += 1;
+    }else{   
+    product.inCart = 1;
+    cartItems = {
+        [product.img]: product
+>>>>>>> develop
     }
     }//ifElse agrega un +1 al inCart del mismo producto
 
@@ -221,7 +239,11 @@ btn_enviar.addEventListener('click',() => {
     //     evento.preventDefault();
     new Swal({ //sweetAlert
     icon: 'success',
+<<<<<<< HEAD
     title: 'Vendido',
+=======
+    title: 'Round 1',
+>>>>>>> develop
     text: '¡Compra exitosa!',
     }) //sweetAlert    
 

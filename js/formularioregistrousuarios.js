@@ -1,3 +1,4 @@
+// ALTA LET DE NUESTRO HTML, PARA LEER LOS DATOS INGRESADOS
 let Nombre=document.getElementById("Nombreperson");
 let AMaterno=document.getElementById("Apellidomaterno");
 let APaterno=document.getElementById("Apellidopaterno");
@@ -8,10 +9,11 @@ let Contrasenajs=document.getElementById("Contrasena");
 let ConfirmContrasenajs=document.getElementById("Contrasenaconfirm");
 let Politicajs=document.getElementById("Politicas");
 let Terminosjs=document.getElementById("Terminos");
-
+// INICIALIZAMOS NUESTROS VALORES EN 0
 let datos = [];
 let contador=0;
 
+// VALIDACIONES DE EXPRESIONES REGULARES, COMPLETADOS O SELECCIONADOS
 function validarNombre ()
 {
     if(Nombre.value.length==0)
@@ -131,6 +133,7 @@ function validarPoliticajs ()
     }
 } 
 
+// COMPROBACION DE CAMPOS LLENADOS CORRECTAMENTE Y ALERTAS EN CASO INCORRECTO
 let Registro=document.getElementById("enviar-registro");
 Registro.addEventListener("click", (event)=>
 {
@@ -142,19 +145,19 @@ Registro.addEventListener("click", (event)=>
         if(!validarNombre())
         {
             Nombre.style.border="red thin solid";
-            listaregistro+="<li>Se debe escribir un Nombre válido con al menos 3 letras</li>"
+            listaregistro+="<li>Por favor escriba un Nombre con al menos 3 letras</li>"
         }else {Nombre.style.border="";}
 
         if(!validarAPaterno())
         {
             APaterno.style.border="red thin solid";
-            listaregistro+="<li>Se debe escribir un Apellido válido con al menos 3 letras</li>"
+            listaregistro+="<li>Por favor escriba un Apellido con al menos 3 letras</li>"
         }else {APaterno.style.border="";}
 
         if(!validarAMaterno())
         {
             AMaterno.style.border="red thin solid";
-            listaregistro+="<li>Se debe escribir un Apellido válido con al menos 3 letras</li>"
+            listaregistro+="<li>Por favor escriba un Apellido con al menos 3 letras</li>"
         }else {AMaterno.style.border="";}
 
         if(!validarTelefono())
@@ -166,19 +169,19 @@ Registro.addEventListener("click", (event)=>
         if(!validarCorreo())
         {
             Correo.style.border="red thin solid"
-            listaregistro+="<li>Se debe escribir un Correo válido</li>"
+            listaregistro+="<li>Por favor escriba un Correo válido</li>"
         }else{Correo.style.border="";}
 
         if(!validarCorreoconfirm())
         {
             Correoconfirm.style.border="red thin solid"
-            listaregistro+="<li>Se debe escribir un Correo válido y/o no coincide</li>"
+            listaregistro+="<li>Se debe escribir un Correo válido y/o no coinciden</li>"
         }else{Correoconfirm.style.border="";}
 
         if(!validarContrasenajs())
         {
             Contrasenajs.style.border="red thin solid"
-            listaregistro+="<li>Se debe escribir una contraseña con al menos una letra mayúscula, una minúscula y una letra</li>"
+            listaregistro+="<li>Se debe escribir una contraseña con al menos una letra mayúscula, una minúscula y un número</li>"
         }else{Contrasenajs.style.border="";}
 
         if(!validarConfirmContrasenajs())
@@ -199,6 +202,7 @@ Registro.addEventListener("click", (event)=>
             listaregistro+="<li>Debes aceptar los Términos para poder continuar</li>"
         }else{Terminosjs.style.border="";}
 
+// MUESTRA EL CUADRO EN PANTALLA EN DONDE SE INSERTAN LOS ELEMENTOS FALTANTES
         document.getElementById("alertValidTextregistro").innerHTML=`
         Los campos deben ser llenados correctamente. <ul>${listaregistro}</ul>`;
         
@@ -212,6 +216,7 @@ Registro.addEventListener("click", (event)=>
         return false;
     }
 
+// ALERTA ANIMADA DE REGISTRO EXITOSO
     document.getElementById("alertValidacionregistro").style.display="none";
         Swal.fire({
             icon: 'success',
@@ -219,17 +224,10 @@ Registro.addEventListener("click", (event)=>
             showConfirmButton: false,
             timer: 2000
           })
-
+// CONTADOR DE USUARIOS REGISTRADOS Y ALMACENADOS EN LOCAL STORAGE
     contador++;
-  /*localStorage.setItem("Numerodeusuarios", contador);
-    localStorage.setItem("Nombre",Nombre);
-    localStorage.setItem("Apellido Materno",AMaterno);
-    localStorage.setItem("Apellido Paterno",APaterno);
-    localStorage.setItem("Correo",Correo);
-    localStorage.setItem("Telefono",Telefono);
-    localStorage.setItem("Contraseña",Contrasenajs);
-*/
-    //JSON
+ 
+    //JSON USUARIOS
    let elemento=`{"id":"${contador}", 
         "Nombre":"${Nombre.value}", 
         "Apellido paterno":"${APaterno.value}",
@@ -238,11 +236,14 @@ Registro.addEventListener("click", (event)=>
         "Telefono":"${Telefono.value}",
         "Contraseña":"${Contrasenajs.value}"
     }`; 
+
+// GUARDAMOS EN LOCAL STORAGE EL JSON Y EN CONSOLA IMPRIME LOS DATOS
     datos.push(JSON.parse(elemento));
    localStorage.setItem("elementosTabla", JSON.stringify(datos));
    console.log(datos);
 //Registro
 
+// REGRESAMOS LOS CAMPOS EN BLANCO Y QUITAMOS LAS ADVERTENCIAS DE CAMPOS INCORRECTOS
 Nombre.value="";
 AMaterno.value="";
 APaterno.value="";
@@ -264,10 +265,9 @@ Contrasenajs.style.border="";
 ConfirmContrasenajs.style.border="";
 Politicajs.style.border="";
 Terminosjs.style.border="";
+}); //Enviar
 
-}
-); //Enviar
-
+// QUITAMOS LOS ESPACIOS EN BLANCO AL INICIO Y AL FINAL EN CASO DE CONTENER
 Nombre.addEventListener("blur", (event)=>
 {
 event.target.value=event.target.value.trim();
@@ -300,42 +300,5 @@ Contrasenajs.addEventListener("blur", (event)=>{
 ConfirmContrasenajs.addEventListener("blur", (event)=>{
     event.target.value=event.target.value.trim();
     });
-/*
-Politicajs.addEventListener("blur", (event)=>{
-    event.target.checked=event.target.checked.trim();
-});
 
-Terminosjs.addEventListener("blur", (event)=>{
-    event.target.checked=event.target.checked.trim();
-});*/
-/*
-window.addEventListener("load", function() {
-    if (localStorage.getItem("Numerodeusuarios")!=null) {
-       contador = parseInt(localStorage.getItem("Numerodeusuarios"));
-    } //if Numerodeusuarios
- 
-    if (localStorage.getItem ("productosTotal")) {
-       totalEnProductos = parseInt(localStorage.getItem("productosTotal"));
-       document.getElementById("productosTotal").innerHTML = totalEnProductos;
-    } //if productosTotal
- 
-    if (localStorage.getItem ("precioTotal")) {
-       costoTotal = parseFloat (localStorage.getItem("precioTotal"));
-       total.innerHTML = costoTotal;
-    } // if precioTotal
-    if (localStorage.getItem("elementosTabla")!=null) {
-         datos =JSON.parse(localStorage.getItem("elementosTabla"));
-       datos.forEach(element => {
-          cuerpoTabla[0].innerHTML +=         
-          `    <tr>
-         <th scope="row">${element.id}</th>
-         <td> ${element.nombre} </td>
-         <td> ${element.cantidad} </td>
-         <td> ${element.precio} </td>
-         </tr> 
-      `;
-       });
-    } // if elementosTabla
- 
-    }
- );*/
+/*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

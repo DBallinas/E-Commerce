@@ -12,26 +12,16 @@ function addItems(Productos) {
             Array.from(json).forEach((p, index) => {
                 Productos.innerHTML += `
 
-                <div class="col" id="tamañocarrusel">
-                  <div class="card h-100">
-                      
-                  <img  src="${p.url_imagen}" class="d-block w-100" alt="...">
-                
-                    <div class="card-body">
-                      <h5 class="card-title">${p.nombre}</h5>
-                      <p class="card-text">${p.descripcion}</p>
-                     </div>
-                      <div class="card-footer">
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-             <button type="button" class="btn btn-sm btn-outline-success" id="btn${p.id}">Agregar al carrito</button>
-           </div>
-                         <small class="text-muted">$${p.precio}</small>
-                       </div>
-                     
-                    </div>
-                  </div>
-                 </div>
+                   <div class="col">
+    <div class="card h-100"  id="card">
+      <img src="${p.url_imagen}" class="card-img-top" alt="..." id="cardproducto">
+      <div class="card-body">
+        <h5 class="card-title">${p.nombre}</h5>
+        <p class="card-text" id="precio">$${p.precio}</p>
+      </div>
+      <a href="#" id="addcart"><i class="bi bi-cart-plus-fill" id="btn${p.id}"> Agregar al carrito</i></a>
+    </div>
+  </div>
                 `;
             }); // foreach
         });//then

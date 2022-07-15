@@ -247,7 +247,7 @@ let elemento=`{"id":${contador},
     "Img":"${imagen}",
     "Descripcion":"${descProducto.value}"
 }`;
-
+POSTProd();
 // GUARDAMOS EN LOCAL STORAGE EL JSON Y EN CONSOLA IMPRIME LOS DATOS
 datos = JSON.parse(localStorage.getItem("Productoscargados")||"[]");
 datos.push(JSON.parse(elemento));
@@ -274,6 +274,48 @@ catSuplementos.style.border="";
 nombreProducto.focus();
 }); 
 // FIN DE EJECUCION DEL CUANDO SE PULSA EL BOTON AGREGAR
+
+function POSTProd(){
+    let pProduct = document.getElementById("Producto").value;
+    let pPrecio = document.getElementById("Precio").value;
+    let pCantidad = document.getElementById("Cantidad").value;
+    let pImagen = document.getElementById("Img").value;
+    let pDescripcion = document.getElementById("Descripcion").value;
+
+    
+    var url = 'http://localhost:8080/api/productos/';
+    var data = {nombre: pProduct ,
+        precio: pPrecio,
+        cantidad: pCantidad,
+        url_imagen: pImagen , 
+        descripcion: pDescripcion};
+    
+    fetch(url, {
+      method: 'POST', // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    })};
+
+
+
+
+
+
+
+
+
+
+
 
 /*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/
 

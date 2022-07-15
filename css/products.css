@@ -32,6 +32,19 @@ a, a:hover {
 #addcart:hover {
 	transform: scale(1.1);
 }
+.btnfake {
+    background-color: #66d701;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    padding: .6rem 1rem;
+    font-size: large;
+    border: none;
+    transition: transform 0.3s;
+}
+
+
+
 /*DISEÑO DE CONTENIDO DE TEXTO DE CARD TITUILO Y PRECIO*/
 #card{
     background-image: linear-gradient(190deg, #3262a8, #50ccff);

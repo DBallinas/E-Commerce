@@ -6,7 +6,7 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
         this.innerHTML = `
       <footer class="footer">
         <div class="footer-contenido">
-        <img src="../../img/G-SPORTS-LOGO.png" width="100px">
+        <img src="../../img/G-SPORTS-LOGO.png" width="200px">
            
               <a href="/html/politicas.html">
                 <p>Políticas de la empresa</p>
@@ -14,8 +14,6 @@ class footercomponent extends HTMLElement{  //Se define el nombre del componente
               <a href="/html/preguntasfrecuentes.html">
                 <p>Preguntas frecuentes</p>
               </a>
-          
-           
           <p>© 2022 G-Sports. Todos los Derechos Reservados.</p>
                      <h5>¡La nueva Generación en deportes!</h5>
           </div>

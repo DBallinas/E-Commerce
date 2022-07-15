@@ -221,7 +221,7 @@ btn_enviar.addEventListener('click',() => {
     //     evento.preventDefault();
     new Swal({ //sweetAlert
     icon: 'success',
-    title: 'Round 1',
+    title: 'Vendido',
     text: '¡Compra exitosa!',
     }) //sweetAlert    
 
@@ -264,10 +264,11 @@ if (usuario !== null) {
 }
 
 
-//**************** Cerrar sesion ***************************************/
-
+//Cerrar sesion/
+/*
 cerrarSesion.addEventListener("click", function(e) {
     sessionStorage.clear();    
 });
+*/
 
 

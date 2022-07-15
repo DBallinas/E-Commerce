@@ -93,21 +93,7 @@ h6 {
 
 .btn:hover {
 	letter-spacing: .1rem;
-}
-
-.btn {
-	margin-top: 1rem;
-	display: inline-block;
-	padding: .8rem 3rem;
-	background: #ffff;
-	font-weight: 500;
-	cursor: pointer;
-	color: #66d701;
-	font-size: 1.7rem;
-}
-
-.btn:hover {
-	letter-spacing: .1rem;
+	background-color: #f99c0e;
 }
 
 .terminos {
@@ -123,21 +109,23 @@ h6 {
 /*Diseño Slider Inicio*/
 
 .carousel-caption h5 {
-	font-size: 45px;
+	font-size: 70px;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 20px;
 	margin-top: 20px;
+	font-weight: bolder;
 }
 .carousel-caption p {
 	width: 60%;
 	margin: auto;
-	font-size: 18px;
+	font-size: 35px;
 	line-height: 1.9;
 }
 
 .carousel-caption a {
 	/*Botón Tienda*/
 	font-size: large;
+	font-size: 25px;
 	color: white;
 	background-color: #66d701;
 	padding: auto;
@@ -146,6 +134,10 @@ h6 {
 	padding: 1% 10%;
 	border: none;
 	transition: transform 0.3s;
+}
+
+.carousel-caption a:hover {
+	background-color: #f99c0e;
 }
 
 .w100 {

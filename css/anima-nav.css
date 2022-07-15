@@ -39,8 +39,8 @@
 	content: '';
 	right: 0;
 	top: 0;
-	border-top: 3px solid #f99c0e;
-	border-right: 3px solid #f99c0e;
+	border-top: 7px solid #f99c0e;
+	border-right: 7px solid #f99c0e;
 	transform: translate(-100%, 50%);
 }
 
@@ -48,8 +48,8 @@
 	content: '';
 	left: 0;
 	bottom: 0;
-	border-bottom: 3px solid #f99c0e;
-	border-left: 3px solid #f99c0e;
+	border-bottom: 7px solid #f99c0e;
+	border-left: 7px solid #f99c0e;
 	transform: translate(100%, -50%);
 }
 
@@ -59,10 +59,15 @@
 	opacity: 1;
 }
 
-.nav a:hover {
-	color: #f99c0e;
-}
+/* .nav a:hover {
+	border-top: 2px #f99c0e;
+} */
 
 .bi-caret-down-fill {
 	transform: rotate(45deg);
+}
+
+.nav-icon:hover {
+	color: #f99c0e;
+	background-color: #f99c0e;
 }

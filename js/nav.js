@@ -30,14 +30,14 @@ class navcomponent extends HTMLElement{  //Se define el nombre del componente co
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li class="nav"><a class="dropdown-item text-black" href="/html/sobrenosotros.html">Nosotros</a></li>
                   <li><a class="dropdown-item text-black" href="/html/formulariocontacto.html">Contacto</a></li>
-                  <li><a class="dropdown-item text-black" href="/html/preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                  <li><a class="dropdown-item text-black" href="/html/preguntasfrecuentes.html">Preguntas (FAQ)</a></li>
                   <li><a class="dropdown-item text-black" href="/html/formularioregistrousuarios.html">Regístrate</a></li>
                   </ul>
               </li>
             </ul>
             <form class="mt-8 mb-2">
-            <a href="/html/iniciodesesion.html"><i id="btn2" class="bi bi-person-fill mt-5 mb-0 ms-5 text-white h2"></i></a>
-            <a href="../carrito.html"><i id="btn3" class="bi bi-cart-plus-fill mt-5 mb-0 ms-3 me-5 h3 text-white"></i></a>
+            <a href="/html/iniciodesesion.html"><i id="btn2" class="bi bi-person-fill mt-5 mb-0 ms-5 text-white h2 nav-icon"></i></a>
+            <a href="../carrito.html"><i id="btn3" class="bi bi-cart-plus-fill mt-5 mb-0 ms-3 me-5 h3 text-white nav-icon"></i></a>
             </form>
           </div>
 

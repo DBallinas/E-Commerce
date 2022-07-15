@@ -20,7 +20,7 @@
 
 .nav a {
 	padding: .5em .8em;
-	color: white;
+	color: #f99c0e;
 	position: relative;
 	text-decoration: none;
 }
@@ -39,8 +39,8 @@
 	content: '';
 	right: 0;
 	top: 0;
-	border-top: 3px solid orange;
-	border-right: 3px solid white;
+	border-top: 3px solid #f99c0e;
+	border-right: 3px solid #f99c0e;
 	transform: translate(-100%, 50%);
 }
 
@@ -48,8 +48,8 @@
 	content: '';
 	left: 0;
 	bottom: 0;
-	border-bottom: 3px solid white;
-	border-left: 3px solid white;
+	border-bottom: 3px solid #f99c0e;
+	border-left: 3px solid #f99c0e;
 	transform: translate(100%, -50%);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .nav a:hover {
-	color: orange;
+	color: #f99c0e;
 }
 
 .bi-caret-down-fill {

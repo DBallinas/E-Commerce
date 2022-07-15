@@ -9,8 +9,10 @@ function addItem(item){
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text" id="precio">$${item.precio}</p>
       </div>
-      <a href="#" id="addcart"><i class="bi bi-cart-plus-fill" class="add-cart"> Agregar al carrito</i></a>
-    </div>
+      <button class="btnfake" id="btnfake${item.id}">
+      <a href="/./carrito.html" id="addcart"><i class="bi bi-cart-plus-fill" class="add-cart"> Agregar al carrito</i></a>
+      </button>    
+      </div>
   </div>
 `;
 // DEFINIMOS A QUE ID SE VAN A INSERTAR Y DECIMOS QUE HAGA UN + EN CADA TARJETA PARA QUE NO SE SOBREESCRIBAN
@@ -302,5 +304,40 @@ addItem({
     'description': 'Aumenta el nivel inmune del cuerpo. Suplemento alimenticio perfecto para deportistas',
     'categoria':'Suplementos',
   'id':'35'});
+
+
+// let datos = [];
+// let contador=0;
+
+// // COMPROBACION DE CAMPOS LLENADOS CORRECTAMENTE Y ALERTAS EN CASO INCORRECTO
+// let btnfake1=document.getElementsByClassName("btnfake");
+// btnfake1.addEventListener("click",(event)=>{
+//     event.preventDefault();
+
+// // CONTADOR DE PRODUCTOS REGISTRADOS Y ALMACENADOS EN LOCAL STORAGE
+
+// //JSON PRODUCTOS
+// let elemento=`{"id":${item.id}, 
+//     "nombre": "${item.name}", 
+//     "precio":${item.precio},
+//     "Img":"${item.img1}",
+// }`;
+
+
+// // GUARDAMOS EN LOCAL STORAGE EL JSON Y EN CONSOLA IMPRIME LOS DATOS
+// datos = JSON.parse(localStorage.getItem("ProductosCarrito"));
+// datos.push(JSON.parse(elemento));
+// localStorage.setItem("ProductosCarrito", JSON.stringify(datos));
+// console.log(datos);
+
+// });
+// // ALERTA ANIMADA DE REGISTRO EXITOSO
+// Swal.fire({
+//     icon: 'success',
+//     title: '¡AGREGADO CORRECTAMENTE!',
+//     showConfirmButton: false,
+//     timer: 2000
+//   })
+
 
 /*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

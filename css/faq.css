@@ -21,7 +21,7 @@ body {
 }
 :root {
 	--primario: #50ccff;
-	--gris-claro: #FFB40D;
+	--gris-claro: #f99c0e;
 	--sombra: 0 0 13px 0 rgba(185, 185, 185, .25);
 }
 
@@ -80,16 +80,17 @@ i {
 	align-items: center;
 }
 
-/* .pregunta img {
-	width: 14px;
-} */
-
 .respuesta {
 	color: #808080;
 	line-height: 30px;
 	max-height: 0;
 	opacity: 0;
 	transition: .3s ease all;
+}
+
+.contenedor-pregunta{
+	box-shadow: -2px -2px -10px #f99c0e;
+	box-shadow: -2px -2px -510px black;
 }
 
 .contenedor-pregunta.activa .respuesta {

@@ -80,12 +80,14 @@
 	width: 90px;
 }
 /*BOTON FKE PARA DAR ESTILO Y RESALTAR TEXTO SOBRE "NUESTRO EQUIPO"*/
-#nuestroequipo {
-	border-radius: 200px;
-	padding: 15px;
-	background-color: white;
-	border-style: none;
-	color: #1ba0ec;
+.nuestroequipo {
+	color: #3262a8;
+	font-size: 50px;
+	letter-spacing: 10px;
+	padding-top: 50px;
+	margin-top: 40px;
+	font-weight: bolder;
+	text-shadow: 0 0 50px #50ccff;
 }
 /*FORMATO DE DESCRIPCION TIPO CHAT*/
 #david {
@@ -141,5 +143,15 @@
 	border-start-start-radius: 60px;
 	color: white;
 	box-shadow: 0px 8px 10px -4px gainsboro;
+}
+
+.entrada {
+	margin-left: 80px;
+	margin-right: 80px;
+	text-align: justify;
+	line-height: 1.618;
+	font-size: 18px;
+	font-weight: bold;
+	color: #3f3844;
 }
 /*G-SPORTS TODOS LOS DERECHOS RESERVADOS 2022*/

@@ -5,6 +5,14 @@
 h1 {
 	text-align: center;
 }
+
+.mas-vendidos {
+	color: #3262a8;
+	font-weight: bolder;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	letter-spacing: 20px;
+}
+
 h2 {
 	padding: 20px;
 	text-align: center;
@@ -114,12 +122,15 @@ h6 {
 	letter-spacing: 20px;
 	margin-top: 20px;
 	font-weight: bolder;
+	text-shadow: 0 0 20px #50ccff;
 }
+
 .carousel-caption p {
 	width: 60%;
 	margin: auto;
 	font-size: 35px;
 	line-height: 1.9;
+	text-shadow: 0 0 20px #50ccff;
 }
 
 .carousel-caption a {

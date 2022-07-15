@@ -23,6 +23,7 @@
 	color: #f99c0e;
 	position: relative;
 	text-decoration: none;
+	text-shadow: 0 0 35px purple;
 }
 
 .nav a::before,
@@ -67,6 +68,9 @@
 	transform: rotate(45deg);
 }
 
+.nav-icon {
+	text-shadow: 0 0 30px purple;
+}
 .nav-icon:hover {
 	color: #f99c0e;
 	background-color: #f99c0e;
